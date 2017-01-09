@@ -6,7 +6,7 @@
 
 [Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: http://www.artistera.info/
 [trello]: https://trello.com/b/LajlqSYq/artistera
 
 ## Minimum Viable Product
