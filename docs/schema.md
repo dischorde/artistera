@@ -5,7 +5,7 @@ column name     | data type | details
 ----------------|-----------|-----------------------
 id              | integer   | not null, primary key
 email	      | string    | not null, indexed, unique
-gravatar_hash   | string    | 
+gravatar_hash   | string    |
 first_name   | string    | not null
 last_name   | string    | not null
 password_digest | string    | not null
@@ -19,9 +19,9 @@ title       | string    | not null
 description      | text      | not null
 assignment_summary      | string    | not null
 playlist_src | string | not null
-cover_img | attachment* | 
+cover_img | attachment* |
 
-* Using paperclip gem. Creates fields cover_img_file_name, cover_img_file_size, cover_img_content_type, cover_img_updated_at,
+* Using paperclip gem. Creates fields cover_img_file_name, cover_img_file_size, cover_img_content_type, cover_img_updated_at etc...
 
 has_one assignment
 has_many projects (through assignment)
@@ -33,8 +33,8 @@ column name | data type | details
 id          | integer   | not null, primary key
 class_id   | integer   | not null, foreign key (references classes), indexed
 title       | string    | not null
-description | text    |
-deliverable | text    |
+description | text    | not null
+deliverable | text    | not null
 materials | text    |
 resources | string    |
 
@@ -61,7 +61,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 attachable_id      | integer    | not null, foreign key (polymorphic association)
 attachable_type      | string    | not null
-document | attachment* | 
+document | attachment* |
 
 * through paperclip
 
@@ -72,4 +72,3 @@ id          | integer   | not null, primary key
 body     	 | text    |  not null
 user_id   | integer   | not null, foreign key (references users), indexed
 class_id | integer   | not null, foreign key (references classes), indexed
-
