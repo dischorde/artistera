@@ -35,9 +35,14 @@
 - `PATCH /api/assignments/:assign_id/projects/:id`
 - `DELETE /api/assignments/:assign_id/projects/:id`
 
+### Attachments
+
+- `POST /api/attachments`
+- `DELETE /api/attachments`
 
 ### Reviews
 
 - `GET /api/classes/:class_id/reviews`
 - `POST /api/classes/:class_id/reviews`
+- `PATCH /api/classes/:class_id/reviews`
 - `DELETE /api/classes/:class_id/reviews/:id`

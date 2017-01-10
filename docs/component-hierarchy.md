@@ -1,7 +1,7 @@
 
 # Component Hierarchy
 
-#### AuthFormContainer 
+#### AuthFormContainer
  - AuthForm (Sign Up & Sign In)
 
 
@@ -25,7 +25,7 @@
 
 #### ClassDetailContainer
  - ClassDetail
-	 - EmbeddedVideo 
+	 - EmbeddedVideo
 	 - ClassTabs
 	 - About
 		 - ProjectList
@@ -33,18 +33,22 @@
 	 - Reviews
 		 - ReviewsList
 			 - ReviewsListItem
+        - ReviewForm
 		 - ReviewForm
 	 - Assignment
 		 - AttachmentsList
 		 - ProjectForm
+        - AttachmentsList
 	 - Projects
 		 - ProjectsList
 			 - ProjectsListItem
 
-
 #### ProjectDetailContainer
-
- - AttachmentsList
+  - ProjectDetail
+    - ProjectData
+      - AttachmentsList
+    - ProjectForm
+      - AttachmentsList
 
 #### Footer
 

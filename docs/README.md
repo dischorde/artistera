@@ -40,7 +40,7 @@ and React/Redux.  By the end of Week 9, this app will - with smooth, bug-free na
 
 ### Phase 1: Backend setup and Front End User Authentication (1.5 days)
 
-**Objective:** Functioning rails project with front-end Authentication. Login / Sign Up forms. Footer and Nav Bar with gravatar.
+**Objective:** Functioning rails project with front-end Authentication. Login / Sign Up forms. Nav Bar with gravatar.
 
 ### Phase 2: Class Model and Components (1.5 days)
 
@@ -48,18 +48,19 @@ and React/Redux.  By the end of Week 9, this app will - with smooth, bug-free na
 
 ### Phase 3: Assignment and Project Models / Components (2.5 days)
 
-**Objective:** Assignment, Project Submission Form, Project Detail, Attachment list, and all class Projects components. Users can add and destroy projects through the api including uploading multiple images or files (pdfs or documents). Add class project list component to About component. Add additional seed data.
+**Objective:** Assignment, Project Submission Form, Project Detail, Attachment list, and all class Projects components. Users can create, read, update, and destroy projects through the api (including uploading multiple images or files, such as pdfs, documents, etc.). Add class project list component to About component. Add additional seed data.
 
-### Phase 4: Searching Classes By Keyword (1.5 days)
+### Phase 4: Reviews (1.5 day)
+
+**Objective:** Reviews list component and add/edit review form component (in reviews list component). Reviews CRUD.
+
+### Phase 5: Searching Classes By Keyword (1 days)
 **Objective:** Make search bar in nav component and make it functional. Display classes that match the keyword.
 
-### Phase 5: Splash Page and UI Improvements (1 days)
+### Phase 6: Splash Page and UI Improvements (1 days)
 
-**Objective:** Pretty splash page with video hero banner, limited all classes component, and limited all projects component. Spend time perfecting UI.
+**Objective:** Pretty splash page with video hero banner, limited all classes component, and limited all projects component. Spend time perfecting UI. If time allows, add footer.
 
-### Phase 6: Reviews (1 day)
-
-**Objective:** Reviews list component and add review form component (in reviews list component). Reviews can be added and destroyed through the api.
 
 ### Bonus Features (TBD)
 

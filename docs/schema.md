@@ -15,7 +15,7 @@ session_token   | string    | not null, indexed, unique
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-title       | string    | not null
+title       | string    | not null, indexed
 description      | text      | not null
 assignment_summary      | string    | not null
 playlist_src | string | not null
@@ -59,7 +59,7 @@ has_many attachments through attachable (polymorphic association)
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-attachable_id      | integer    | not null, foreign key (polymorphic association)
+attachable_id      | integer    | not null, foreign key (polymorphic association), indexed
 attachable_type      | string    | not null
 document | attachment* |
 
