@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store.js';
-import { signup, login, logout } from './actions/session_actions.js';
+import { signup, signin, logout } from './actions/session_actions.js';
 import Root from './components/root.jsx';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // TODO: remove testing
     window.signup = signup;
-    window.login = login;
+    window.signin = signin;
     window.logout = logout;
     window.store = store;
 

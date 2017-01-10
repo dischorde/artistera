@@ -1,8 +1,8 @@
 import * as APIUtil from '../util/session_api_util.js';
 
-export const LOGIN = "LOGIN";
-export const LOGOUT = "LOGOUT";
-export const SIGNUP = "SIGNUP";
+// export const SIGNIN = "SIGNIN";
+// export const LOGOUT = "LOGOUT";
+// export const SIGNUP = "SIGNUP";
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 
@@ -24,8 +24,8 @@ export const signup = user => dispatch => {
   );
 };
 
-export const login = user => dispatch => {
-  return APIUtil.login(user).then(
+export const signin = user => dispatch => {
+  return APIUtil.signin(user).then(
     currentUser => dispatch(receiveCurrentUser(currentUser))
   ).fail(
     error => dispatch(receiveErrors.responseJSON)

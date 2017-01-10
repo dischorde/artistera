@@ -14,6 +14,7 @@ class SessionForm extends React.Component {
       this.updateState = this.updateState.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
       this.makeLink = this.makeLink.bind(this);
+      this.demoLogin = this.demoLogin.bind(this);
   }
 
   componentDidUpdate() {
@@ -36,15 +37,21 @@ class SessionForm extends React.Component {
     });
   }
 
+  demoLogin(e) {
+    e.preventDefault();
+    const user = { email: "demo@artistera.info", password: "logmein123" };
+    this.props.processForm(user).then(() => this.redirect());
+  }
+
+
   makeLink() {
-    //TODO: add demo login
-    if (this.props.formType === '/login') {
+    if (this.props.formType === '/signin') {
       return (
         <span>
           {"Not a member?"}
           <br />
           <Link to="/signup">Sign Up.</Link>
-          {" "}Demo
+          {" "}<Link to="/" onClick={this.demoLogin}>Demo</Link>
         </span>
       );
     }
@@ -53,8 +60,8 @@ class SessionForm extends React.Component {
         <span>
           {"Already a member?"}
           <br />
-          <Link to="/login">Sign In.</Link>
-          {" "}Demo
+          <Link to="/signin">Sign In.</Link>
+          {" "}<Link onClick={this.demoLogin}>Demo</Link>
         </span>
       );
     }
