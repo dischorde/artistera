@@ -17,15 +17,15 @@
 - `POST /api/session`
 - `DELETE /api/session`
 
-### Classes
+### Courses
 
-- `GET /api/classes`
+- `GET /api/courses`
   - accepts query params for search by keyword
-- `GET /api/classes/:id`
+- `GET /api/courses/:id`
 
 ### Assignments
 
-- `GET /api/classes/:id/assignment`
+- `GET /api/courses/:id/assignment`
 
 ### Projects
 
@@ -42,7 +42,7 @@
 
 ### Reviews
 
-- `GET /api/classes/:class_id/reviews`
-- `POST /api/classes/:class_id/reviews`
-- `PATCH /api/classes/:class_id/reviews`
-- `DELETE /api/classes/:class_id/reviews/:id`
+- `GET /api/courses/:course_id/reviews`
+- `POST /api/courses/:course_id/reviews`
+- `PATCH /api/courses/:course_id/reviews`
+- `DELETE /api/courses/:course_id/reviews/:id`

@@ -11,22 +11,22 @@
 #### HomeContainer
  - Home
 	 - Splash
-	 	 - ClassList
-			 - ClassListItem
-	 - ClassIndex
-		 - ClassList
-			 - ClassListItem
+	 	 - CourseList
+			 - CourseListItem
+	 - CourseIndex
+		 - CourseList
+			 - CourseListItem
 	 - SearchResults
-		 - ClassList
-			 - ClassListItem
+		 - CourseList
+			 - CourseListItem
 	 - ProjectIndex
 		 - ProjectList
 			 - ProjectListItem
 
-#### ClassDetailContainer
- - ClassDetail
+#### CourseDetailContainer
+ - CourseDetail
 	 - EmbeddedVideo
-	 - ClassTabs
+	 - CourseTabs
 	 - About
 		 - ProjectList
 			 - ProjectListItem
@@ -59,11 +59,11 @@
 | "/sign-up" | "AuthFormContainer" |
 | "/sign-in" | "AuthFormContainer" |
 | "/" | "HomeContainer" |
-| "/classes" | "HomeContainer", "ClassIndex" |
+| "/courses" | "HomeContainer", "CourseIndex" |
 | "/projects" | "HomeContainer", "ProjectIndex" |
 | "/search" | "HomeContainer", "Search Results" |
 | "/projects/:projectid" | "ProjectDetailContainer" |
-| "/classes/:classid" | "ClassDetailContainer", "About" |
-| "/classes/:classid/assignment" | "ClassDetailContainer", "Assignment" |
-| "/classes/:classid/projects" | "ClassDetailContainer", "Projects" |
-| "/classes/:classid/reviews" | "ClassDetailContainer", "Reviews" |
+| "/courses/:courseid" | "CourseDetailContainer", "About" |
+| "/courses/:courseid/assignment" | "CourseDetailContainer", "Assignment" |
+| "/courses/:courseid/projects" | "CourseDetailContainer", "Projects" |
+| "/courses/:courseid/reviews" | "CourseDetailContainer", "Reviews" |

@@ -9,7 +9,7 @@
     signUp: {errors: []},
     logIn: {errors: []}
   },
-  classes: {
+  courses: {
     1: {
       title: "Modern Calligraphy",
       cover_img_url: "/some/url/here"
@@ -34,7 +34,7 @@
     id: 1,
     name: "Katie's Calendar",
     description: "A cute calendar with modern calligraphy lettering..."
-    author: { 
+    author: {
       id: 24,
       first_name: "Katie",   
       last_name: "ExamplePants",   
@@ -48,7 +48,7 @@
       // ...
     ]
   },
-  classDetail: {
+  courseDetail: {
     id: 1,
     title: "Modern Calligraphy",
     playlist_src: "youtube/playlist/embed/url"
@@ -59,7 +59,7 @@
       id: 45,
       title: "Modern Calligraphy Calendar DIY",
       description: "To show off what you learned, you will be adding ...",
-      deliverable: "Digital pdf of calendar with added lettering...", 
+      deliverable: "Digital pdf of calendar with added lettering...",
       materials: "Nibs, Ink, Paper, Holders ...",
       resources: "Check out my site for more lettering tutorials ... ",
       attachments: [
@@ -72,8 +72,8 @@
     reviews: [
       {
         id: 1,
-        body: "I really enjoyed this class, learned a lot and my handwriting is better too!"
-        author: { 
+        body: "I really enjoyed this course, learned a lot and my handwriting is better too!"
+        author: {
           id: 24,
           first_name: "Katie",   
           last_name: "ExamplePants",   
