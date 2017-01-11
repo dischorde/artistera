@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "./node_modules/.bin/webpack"
   },
   "keywords": [],
   "author": "",
@@ -22,5 +22,9 @@
     "webpack": "^1.14.0"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "",
+  "engines": {
+    "node": "6.2.1",
+    "npm": "3.9.3"
+  }
 }
