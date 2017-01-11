@@ -8,17 +8,23 @@ class NavBar extends React.Component {
     this.navLoggedIn = this.navLoggedIn.bind(this);
     this.navLoggedOut = this.navLoggedOut.bind(this);
     this.goToSignIn = this.goToSignIn.bind(this);
+    this.logoutAndRedirect = this.logoutAndRedirect.bind(this);
   }
 
   navLoggedIn() {
-    let {currentUser, logout} = this.props;
+    let {currentUser} = this.props;
     return (
       <ul>
         <li><img className="gravatar" src={`https://www.gravatar.com/avatar/${currentUser.gravatar_hash}?d=blank`} /></li>
         <li>{currentUser.first_name}</li>
-        <li><button onClick={logout}>Log Out</button></li>
+        <li><button onClick={this.logoutAndRedirect}>Log Out</button></li>
       </ul>
     );
+  }
+
+  logoutAndRedirect(e) {
+      e.preventDefault();
+      this.props.logout().then(() => this.props.router.push("/signin"));
   }
 
   demoLogin(e) {

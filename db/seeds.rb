@@ -1,7 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Course.create!([
+  {title: "Pointed Pen Calligraphy 101", description: "A 9 video introduction to pointed pen calligraphy for beginners, from OpenInkStand Art & Calligraphy", assignment_summary: "I haven't made an assignment for this course yet I will need to add something at some point", playlist_src: "https://www.youtube.com/embed/rIN1zjrrf_Y?list=PL2697KRrpCC8kUWQs6Yqdv3Su3jYNJTG", cover_img_src: "https://images.unsplash.com/photo-1448361166128-5bb2fdfab84cdpr=1&auto=format&fit=crop&w=250&q=80&cs=tinysrgb"},
+  {title: "Modern Brush Calligraphy and Hand Lettering", description: "A currently unorganized collection of hand lettering, brush calligraphy, and otherwise interesting seeming videos", assignment_summary: "I haven't made an assignment for this course yet I will need to add something at some point", playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD1MatWNEZo-8s1k5h-9j65", cover_img_src: "https://images.unsplash.com/photo-1437750769465-301382cdf094?dpr=1&auto=format&fit=crop&w=250&q=80&cs=tinysrgb"}
+])
+User.create!([
+  {email: "katarina.n.rossi@gmail.com", gravatar_hash: "3ae05d6d1b8b0a23c4c6aeb061a13290", first_name: "Katarina", last_name: "Rossi", password_digest: "$2a$10$9GC3AiO0xaF5OTzuEHC5TO1QiFHIB8FIaHqgt9ycEGRXfKKuNYovC", session_token: "M7dyhRw9nsw-DA_d_W8ISA"},
+  {email: "mfrey@appacademy.io", gravatar_hash: "d64ebde99eedab021f709d5a707b246f", first_name: "Munyo", last_name: "Frey", password_digest: "$2a$10$bHjHmw/QaHJlWB/BJVcCCOTB/RBWfWrr5MnHBLDA9QV57dyZ.XCi.", session_token: "z_542gF_nqaO44Rl452H5Q"},
+  {email: "demo@artistera.info", gravatar_hash: "ecd49fd7190ec2cbe55015b7f7c0eb9a", first_name: "Demonstration", last_name: "User", password_digest: "$2a$10$LZ8w0dR6ixQmYmlgL2FG0e8d4grBRyv2I0z6MwUhM7fLy8Em5GiKS", session_token: "op3cbFC9lwtwXRctyFXJKQ"}
+])
