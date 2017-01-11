@@ -22,9 +22,5 @@
     "webpack": "^1.14.0"
   },
   "devDependencies": {},
-  "description": "",
-  "engines": {
-    "node": "6.2.1",
-    "npm": "3.9.3"
-  }
+  "description": ""
 }
