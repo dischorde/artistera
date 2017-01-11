@@ -50,8 +50,8 @@ class SessionForm extends React.Component {
         <span className="switch-form">
           {"Not a member?"}
           <br />
-          <Link to="/signup">Sign Up.</Link>
-          {" "}<Link to="/" onClick={this.demoLogin}>Demo</Link>
+          <Link className="session-switch" to="/signup">Sign Up</Link>
+          <Link to="/" onClick={this.demoLogin}>Demo</Link>
         </span>
       );
     }
@@ -60,8 +60,8 @@ class SessionForm extends React.Component {
         <span className="switch-form">
           {"Already a member?"}
           <br />
-          <Link to="/signin">Sign In.</Link>
-          {" "}<Link onClick={this.demoLogin}>Demo</Link>
+          <Link className="session-switch" to="/signin">Sign In</Link>
+          <Link onClick={this.demoLogin}>Demo</Link>
         </span>
       );
     }
@@ -87,7 +87,6 @@ class SessionForm extends React.Component {
       extraFields =  (
         <span className="extraFields">
           <input id="first-name" type="text" value={this.state.first_name} onChange={this.updateState("first_name")} placeholder="First Name" />
-          {'   '}
           <input id="last-name" type="text" value={this.state.last_name} onChange={this.updateState("last_name")} placeholder="Last Name"/>
           <br />
         </span>

@@ -1,0 +1,78 @@
+/* For Header */
+
+
+header {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  font-weight: 400;
+  justify-content: space-between;
+  align-items: center;
+  height: 33px;
+  border-bottom: 2px solid $lighter-grey;
+  padding-top: 0.938em;
+  padding-bottom: 0.938em;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  background: white;
+}
+
+header section {
+  display: flex;
+  flex-direction: row;
+}
+
+header section ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  padding-right: 0px;
+  background: $flying-bird; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, $red , $flying-bird); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, $red, $flying-bird); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, $red, $flying-bird); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, $red, $flying-bird); /* Standard syntax (must be last) */
+}
+
+.gravatar img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.nav-search {
+  width: 50%;
+  justify-content: center;
+}
+
+.nav-left li, .nav-left span {
+  padding-left: 22px;
+  padding-left: 22px;
+}
+
+.nav-right li, .nav-right span {
+  padding: 0px 0px 0px 15px;
+}
+
+#searchBar {
+  width: 90%;
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: 1px solid $lighter-grey;
+  color: $lighter-grey;
+}
+
+#logo {
+  height: 30px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: 1px solid $lighter-grey;
+}

@@ -14,7 +14,7 @@ class NavBar extends React.Component {
     let {currentUser, logout} = this.props;
     return (
       <ul>
-        <li><img src={`https://www.gravatar.com/avatar/${currentUser.gravatar_hash}`} /></li>
+        <li><img class="gravatar" src={`https://www.gravatar.com/avatar/${currentUser.gravatar_hash}?d=blank`} /></li>
         <li>{currentUser.first_name}</li>
         <li><button onClick={logout}>Log Out</button></li>
       </ul>

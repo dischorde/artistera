@@ -1,0 +1,33 @@
+/* General CSS */
+body {
+  font-family: $lato;
+  font-size: 16px;
+  color: $dark-grey;
+  background: $whitesmoke;
+}
+
+a {
+  color: $dark-grey;
+}
+
+a:hover {
+  color: $sage;
+}
+
+button {
+  font-size: 14px;
+  background: $light-coral;
+	color: white;
+	padding: 8px 15px;
+	border-radius: 6px;
+	text-align: center;
+  display: inline-block;
+  border-bottom: 1px solid $flying-bird;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: $flying-bird;
+}
