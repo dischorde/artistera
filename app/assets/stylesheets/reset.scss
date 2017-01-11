@@ -49,9 +49,14 @@ caption, th, td {
   font-weight: normal;
 }
 
-/*blockquote, q {
-	quotes: none;
-}*/
+button {
+	border: none;
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {

@@ -16,22 +16,36 @@
 
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
-@import url('https://fonts.googleapis.com/css?family=Lora:400i');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i');
+
 
 body {
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
   font-size: 16px;
+  color: #585957;
+}
+
+a {
+  color: #585957;
+}
+
+a:hover {
+  color: #F98261;
 }
 
 header {
   display: flex;
   flex-direction: row;
-  font-size: 0.875em;
+  font-size: 13px;
   font-weight: 400;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: 33px;
+  border-bottom: 2px solid #D1D1D1;
+  padding-top: 0.938em;
+  padding-bottom: 0.938em;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
 }
 
 header section {
@@ -41,12 +55,7 @@ header section {
 
 header section ul {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-
-header section li, header section span {
-  padding: 0.938em;
 }
 
 header section h3 {
@@ -56,7 +65,51 @@ header section h3 {
 }
 
 .nav-right img {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
+  padding-right: 0px;
+}
+
+.nav-left ul{
+}
+
+.nav-search {
+  width: 50%;
+  justify-content: center;
+}
+
+.nav-left li, span {
+  padding-left: 22px;
+  padding-left: 22px;
+}
+
+.nav-right li, span {
+  padding: 0px 0px 0px 15px;
+}
+
+#searchBar {
+  width: 90%;
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: 1px solid #D1D1D1;
+  color: #D1D1D1;
+}
+
+button {
+  font-size: 14px;
+  background: #FF9E8F;
+	color: white;
+	padding: 8px 15px;
+	border-radius: 6px;
+	text-align: center;
+  display: inline-block;
+  border-bottom: 1px solid #F98261;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: #F98261;
 }

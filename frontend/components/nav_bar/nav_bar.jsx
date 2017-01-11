@@ -59,7 +59,7 @@ class NavBar extends React.Component {
           </ul>
         </section>
         <section className="nav-search">
-          <span>The Search Bar Will Go Here</span>
+          <input type="text" id="searchBar" value="The Search Bar Will Go Here" />
         </section>
         <section className="nav-right">
           { currentUser ? this.navLoggedIn() : this.navLoggedOut()}

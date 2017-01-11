@@ -75,8 +75,8 @@ class SessionForm extends React.Component {
 
   render () {
     let errors;
-    if (this.state.errors !== [] && this.state.errors !== undefined) {
-      errors = this.state.errors.map( (message, i) => <li key={i}>{message}</li>);
+    if (this.props.errors.length > 0) {
+      errors = this.props.errors.map( (message, i) => <li key={i}>{message}</li>);
     }
 
     let headerText, extraFields, headerBlurb, submitText;
