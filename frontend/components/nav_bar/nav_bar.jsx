@@ -52,7 +52,7 @@ class NavBar extends React.Component {
     return (
       <header>
         <section className="nav-left">
-          <h3>Artistera</h3>
+          <span><h3>Artistera</h3></span>
           <ul>
             <li><Link to="/">All Classes</Link></li>
             <li><Link to="/">All Projects</Link></li>
