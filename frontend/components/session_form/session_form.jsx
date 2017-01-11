@@ -40,14 +40,14 @@ class SessionForm extends React.Component {
   demoLogin(e) {
     e.preventDefault();
     const user = { email: "demo@artistera.info", password: "logmein123" };
-    this.props.processForm(user).then(() => this.redirect());
+    this.props.signin(user).then(() => this.redirect());
   }
 
 
   makeLink() {
     if (this.props.formType === '/signin') {
       return (
-        <span>
+        <span className="switch-form">
           {"Not a member?"}
           <br />
           <Link to="/signup">Sign Up.</Link>
@@ -57,7 +57,7 @@ class SessionForm extends React.Component {
     }
     else {
       return (
-        <span>
+        <span className="switch-form">
           {"Already a member?"}
           <br />
           <Link to="/signin">Sign In.</Link>
@@ -85,10 +85,10 @@ class SessionForm extends React.Component {
       headerBlurb = "Sign up for hours of online art and crafting education!";
       submitText = "Sign Up";
       extraFields =  (
-        <span>
-          <input type="text" value={this.state.first_name} onChange={this.updateState("first_name")} placeholder="First Name" />
+        <span className="extraFields">
+          <input id="first-name" type="text" value={this.state.first_name} onChange={this.updateState("first_name")} placeholder="First Name" />
           {'   '}
-          <input type="text" value={this.state.last_name} onChange={this.updateState("last_name")} placeholder="Last Name"/>
+          <input id="last-name" type="text" value={this.state.last_name} onChange={this.updateState("last_name")} placeholder="Last Name"/>
           <br />
         </span>
       );
@@ -100,25 +100,32 @@ class SessionForm extends React.Component {
     }
 
     return (
-      <div>
-        <section>
-          <h2>{ headerText }</h2>
-          <br />
-          <span>{ headerBlurb }</span>
+      <div className="background">
+        <section className="session-form-wrapper">
+          <section className="session-box">
+            <section className="session-header">
+              <span><h2>{ headerText }</h2></span>
+              <div className="small-border"></div>
+              <br />
+              <span>{ headerBlurb }</span>
+            </section>
+            <section className="session-form">
+              <form onSubmit={this.handleSubmit}>
+                <ul className="errors">
+                  { errors }
+                </ul>
+                { extraFields }
+                <input type="text" value={this.state.email} onChange={this.updateState("email")} placeholder="Email" />
+                <br />
+                <input type="password" value={this.state.password} onChange={this.updateState("password")} placeholder="Password"/>
+                <br />
+                <button>{submitText}</button>
+                <br />
+                {this.makeLink()}
+              </form>
+            </section>
+          </section>
         </section>
-        <form onSubmit={this.handleSubmit}>
-          <ul>
-            { errors }
-          </ul>
-          { extraFields }
-          <input type="text" value={this.state.email} onChange={this.updateState("email")} placeholder="Email" />
-          <br />
-          <input type="password" value={this.state.password} onChange={this.updateState("password")} placeholder="Password"/>
-          <br />
-          <button>{submitText}</button>
-          <br />
-          {this.makeLink()}
-        </form>
       </div>
     );
   }

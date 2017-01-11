@@ -52,14 +52,14 @@ class NavBar extends React.Component {
     return (
       <header>
         <section className="nav-left">
-          <span><h3>Artistera</h3></span>
+          <span><img id="logo" src="/assets/artistera-logo.svg"/></span>
           <ul>
             <li><Link to="/">All Classes</Link></li>
             <li><Link to="/">All Projects</Link></li>
           </ul>
         </section>
         <section className="nav-search">
-          <input type="text" id="searchBar" value="The Search Bar Will Go Here" />
+          <input type="text" id="searchBar" placeholder="The Search Bar Will Go Here" />
         </section>
         <section className="nav-right">
           { currentUser ? this.navLoggedIn() : this.navLoggedOut()}

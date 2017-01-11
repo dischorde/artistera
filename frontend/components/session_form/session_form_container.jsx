@@ -13,7 +13,8 @@ const mapDispatchToProps = (dispatch, { location }) => {
   const processForm = (location.pathname === '/signin') ? signin : signup;
 
   return {
-    processForm: user => dispatch(processForm(user))
+    processForm: user => dispatch(processForm(user)),
+    signin: user => dispatch(signin(user))
   };
 };
 

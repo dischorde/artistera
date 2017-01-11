@@ -1,0 +1,230 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+/* General CSS */
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #585957;
+  background: whitesmoke;
+}
+
+a {
+  color: #585957;
+}
+
+a:hover {
+  color: #A4CDBB;
+}
+
+button {
+  font-size: 14px;
+  background: #FF9E8F;
+	color: white;
+	padding: 8px 15px;
+	border-radius: 6px;
+	text-align: center;
+  display: inline-block;
+  border-bottom: 1px solid #F98261;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+button:hover {
+  background: #F98261;
+}
+
+/* For Header */
+
+
+header {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  font-weight: 400;
+  justify-content: space-between;
+  align-items: center;
+  height: 33px;
+  border-bottom: 2px solid #D1D1D1;
+  padding-top: 0.938em;
+  padding-bottom: 0.938em;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  background: white;
+}
+
+header section {
+  display: flex;
+  flex-direction: row;
+}
+
+header section ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  padding-right: 0px;
+}
+
+.nav-search {
+  width: 50%;
+  justify-content: center;
+}
+
+.nav-left li, .nav-left span {
+  padding-left: 22px;
+  padding-left: 22px;
+}
+
+.nav-right li, .nav-right span {
+  padding: 0px 0px 0px 15px;
+}
+
+#searchBar {
+  width: 90%;
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: 1px solid #D1D1D1;
+  color: #D1D1D1;
+}
+
+#logo {
+  height: 30px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: 1px solid #D1D1D1;
+}
+
+/* For Session Form */
+
+.session-form-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.session-box {
+  width: 550px;
+  min-height: 400px;
+  margin: auto;
+  background: whitesmoke;
+  border-radius: 5px;
+  display: flex;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 26px 0px rgba(50, 50, 50, 0.65);
+}
+
+.session-header {
+  display: flex;
+  box-sizing: border-box;
+  width: 42%;
+  padding: 20px;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #E1EDE9;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.session-header h2 {
+  font-size: 24px;
+}
+
+.session-form {
+  display: flex;
+  box-sizing: border-box;
+  width: 58%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.session-form a {
+  color: #4B755F;
+}
+
+.session-form span {
+  margin: 0 auto;
+}
+
+.session-form form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+}
+
+#first-name {
+  margin-right: 2%;
+}
+
+
+.session-form .extraFields {
+  display: flex;
+  margin: 0;
+  margin-bottom: 5%;
+}
+
+.extraFields input {
+  width: 49%;
+}
+
+.session-form input {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-image: url("marble.jpg");
+    background-size: cover;
+    background-color: white;
+}
+
+.small-border {
+  width: 50px;
+  border-bottom: 5px solid #585957;
+  padding: 10px 0 10px 0;
+}
+
+.switch-form {
+  font-size: 15px;
+}
+
+.errors {
+  padding-bottom: 5%;
+  color: #F98261;
+}
