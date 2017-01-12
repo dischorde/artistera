@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store.js';
 import { requestAllCourses, requestCourse, receiveAllCourses, receiveCourse } from './actions/courses_actions.js';
-// import { fetchCourses, fetchCourse } from './util/courses_api_util.js';
+import { fetchCourses, fetchCourse } from './util/courses_api_util.js';
 import { selectAllCourses } from './reducers/selectors.js';
 import Root from './components/root.jsx';
 
@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // TODO: remove testing
     window.requestCourse = requestCourse;
     window.requestAllCourses = requestAllCourses;
-    // window.fetchCourse = fetchCourse;
-    // window.fetchCourses = fetchCourses;
+    window.fetchCourse = fetchCourse;
+    window.fetchCourses = fetchCourses;
     window.receiveCourse = receiveCourse;
     window.receiveAllCourses = receiveAllCourses;
     window.selectAllCourses = selectAllCourses;

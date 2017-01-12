@@ -20,5 +20,5 @@ export const requestAllCourses = () => dispatch => {
 
 export const requestCourse = id => dispatch => {
   return CoursesAPIUtil.fetchCourse(id)
-  .then(course => dispatch(receiveCourse(id)));
+  .then(course => dispatch(receiveCourse(course)));
 };
