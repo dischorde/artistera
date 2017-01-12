@@ -1,0 +1,19 @@
+.course-tabs {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #D1D1D1;
+}
+
+.tab-items {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+}
+.tab-items li {
+  padding: 2.5% 2%;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-items li:hover {
+  border-bottom: 2px solid $sage;
+}

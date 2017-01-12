@@ -50,6 +50,11 @@
   color: $dark-green;
 }
 
+.session-form a:hover {
+  cursor: pointer;
+  color: $flying-bird;
+}
+
 .session-form span {
   margin: 0 auto;
 }
