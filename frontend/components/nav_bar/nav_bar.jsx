@@ -60,7 +60,7 @@ class NavBar extends React.Component {
         <section className="nav-left">
           <span><img id="logo" src="/assets/artistera-logo.svg"/></span>
           <ul>
-            <li><Link to="/">All Courses</Link></li>
+            <li><Link to="/courses">All Courses</Link></li>
             <li><Link to="/">All Projects</Link></li>
           </ul>
         </section>
