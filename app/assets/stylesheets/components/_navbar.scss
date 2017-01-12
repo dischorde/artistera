@@ -32,17 +32,7 @@ header section ul {
   height: 28px;
   border-radius: 50%;
   padding-right: 0px;
-  background: $flying-bird; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, $red , $flying-bird); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, $red, $flying-bird); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, $red, $flying-bird); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, $red, $flying-bird); /* Standard syntax (must be last) */
-}
-
-.gravatar img {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
+/* Standard syntax (must be last) */
 }
 
 .nav-search {
@@ -75,4 +65,31 @@ input {
   border-radius: 5px;
   padding: 8px 15px;
   border: 1px solid $lighter-grey;
+}
+
+.gravatar-letter {
+  position: absolute;
+  top: 8px;
+  left: -6px;
+  color: $white;
+  z-index: 1;
+}
+
+.gravatar img {
+  width: 28px;
+  height: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.gravatar {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: $flying-bird; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, $red , $flying-bird); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, $red, $flying-bird); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, $red, $flying-bird); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, $red, $flying-bird);
 }
