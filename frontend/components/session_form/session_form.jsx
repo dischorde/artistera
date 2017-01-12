@@ -15,6 +15,7 @@ class SessionForm extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this);
       this.makeLink = this.makeLink.bind(this);
       this.demoLogin = this.demoLogin.bind(this);
+      this.clearAndGo = this.clearAndGo.bind(this);
   }
 
   componentDidUpdate() {
@@ -27,8 +28,8 @@ class SessionForm extends React.Component {
 		}
 	}
 
-  redirect() {
-    this.props.router.push("/");
+  redirect(where) {
+    this.props.router.push(where);
   }
 
   updateState(field) {
@@ -40,7 +41,15 @@ class SessionForm extends React.Component {
   demoLogin(e) {
     e.preventDefault();
     const user = { email: "demo@artistera.info", password: "logmein123" };
-    this.props.signin(user).then(() => this.redirect());
+    this.props.signin(user).then(() => this.redirect("/"));
+  }
+
+  clearAndGo(where) {
+    return e => {
+      e.preventDefault();
+      this.props.receiveErrors([]);
+      this.redirect(where);
+    };
   }
 
 
@@ -50,7 +59,7 @@ class SessionForm extends React.Component {
         <span className="switch-form">
           {"Not a member?"}
           <br />
-          <Link className="session-switch" to="/signup">Sign Up</Link>
+          <Link className="session-switch" to="/signup" onClick={this.clearAndGo("/signup")}>Sign Up</Link>
           <Link to="/" onClick={this.demoLogin}>Demo</Link>
         </span>
       );
@@ -60,7 +69,7 @@ class SessionForm extends React.Component {
         <span className="switch-form">
           {"Already a member?"}
           <br />
-          <Link className="session-switch" to="/signin">Sign In</Link>
+          <Link className="session-switch" onClick={this.clearAndGo("/signin")}>Sign In</Link>
           <Link onClick={this.demoLogin}>Demo</Link>
         </span>
       );

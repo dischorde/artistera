@@ -27,6 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.selectAllCourses = selectAllCourses;
     window.store = store;
     window.selectAllCourses = selectAllCourses;
-    
+
     ReactDOM.render(<Root store={ store }/>, root);
 });
