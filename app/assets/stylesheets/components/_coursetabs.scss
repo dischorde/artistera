@@ -9,11 +9,23 @@
   flex-direction: row;
   width: 75%;
 }
-.tab-items li {
-  padding: 2.5% 2%;
-  border-bottom: 2px solid transparent;
+.tab-items a {
+  padding: 26px 21px;
+
 }
 
-.tab-items li:hover {
-  border-bottom: 2px solid $sage;
+.active-tab {
+  color: $darker-sage;
+  border-bottom: 2px solid $darker-sage;
+}
+
+.tab-items .active-tab:hover {
+  color: $darker-sage;
+  border-bottom: 2px solid $darker-sage;
+}
+
+
+.tab-items a:hover {
+  color: $dark-grey;
+  border-bottom: 2px solid $lighter-grey;
 }

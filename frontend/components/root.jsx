@@ -5,6 +5,7 @@ import App from './app.jsx';
 import SessionFormContainer from './session_form/session_form_container.jsx';
 import CourseIndexContainer from './courses/course_index_container.jsx';
 import CourseDetailContainer from './courses/course_detail_container.jsx';
+import AboutContainer from './courses/about_container.jsx';
 
 
 
@@ -29,8 +30,10 @@ const Root = ({ store }) => {
         <Route path="/" component={ App } onEnter={ _ensureSignedIn } >
           <IndexRoute component={ CourseIndexContainer } />
           <Route path="/courses" component={ CourseIndexContainer } />
-
-          <Route path="/courses/:courseId" component={ CourseDetailContainer } />
+          <Route path="/courses/:courseId" component={ CourseDetailContainer } >
+            <IndexRoute component={ AboutContainer } />
+            <Route path="about" component={ AboutContainer } />
+          </Route>
         </Route>
       </Router>
     </Provider>
