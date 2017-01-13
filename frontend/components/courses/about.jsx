@@ -10,7 +10,6 @@ class About extends React.Component {
     let { description, title, assignment_summary} = this.props.courseDetail;
     if ( description !== undefined ) {
       description = description.replace(/\n/g, "<br /><br />");
-      console.log(description);
     }
     return (
       <section className="about">

@@ -34,7 +34,7 @@ title       | string    | not null
 description | text    | not null
 deliverable | text    | not null
 materials | text    |
-resources | string    |
+resources | text    |
 
 has_many projects
 has_many attachments through attachable (polymorphic association)

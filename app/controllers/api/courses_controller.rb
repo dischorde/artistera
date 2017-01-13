@@ -5,7 +5,7 @@ class Api::CoursesController < ApplicationController
   end
 
   def show
-    @course = Course.find(params[:id])
+    @course = Course.includes(:assignment, :projects).find(params[:id])
   end
-  
+
 end

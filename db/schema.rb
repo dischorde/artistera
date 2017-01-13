@@ -10,10 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170111220918) do
+ActiveRecord::Schema.define(version: 20170113182219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "assignments", force: :cascade do |t|
+    t.integer  "course_id",   null: false
+    t.string   "title",       null: false
+    t.text     "description", null: false
+    t.text     "deliverable", null: false
+    t.text     "materials"
+    t.text     "resources"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["course_id"], name: "index_assignments_on_course_id", using: :btree
+  end
+
+  create_table "attachments", force: :cascade do |t|
+    t.string   "attachable_type"
+    t.integer  "attachable_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["attachable_type", "attachable_id"], name: "index_attachments_on_attachable_type_and_attachable_id", using: :btree
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string   "title",              null: false
@@ -24,6 +44,17 @@ ActiveRecord::Schema.define(version: 20170111220918) do
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
     t.index ["title"], name: "index_courses_on_title", using: :btree
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "title",         null: false
+    t.text     "description",   null: false
+    t.integer  "user_id",       null: false
+    t.integer  "assignment_id", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["assignment_id"], name: "index_projects_on_assignment_id", using: :btree
+    t.index ["user_id"], name: "index_projects_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
