@@ -7,13 +7,17 @@ class About extends React.Component {
   }
 
   render () {
-    const course = this.props.courseDetail;
+    let { description, title, assignment_summary} = this.props.courseDetail;
+    if ( description !== undefined ) {
+      description = description.replace(/\n/g, "<br /><br />");
+      console.log(description);
+    }
     return (
       <section className="about">
-        <h3>About {course.title}</h3>
-        <p>{course.description}</p>
+        <h3>About {title}</h3>
+        <p dangerouslySetInnerHTML={{__html: description}}></p>
         <h4>Assignment Summary</h4>
-        <p>{course.assignment_summary}</p>
+        <p>{assignment_summary}</p>
       </section>
     );
   }
