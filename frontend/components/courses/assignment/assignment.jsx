@@ -1,4 +1,5 @@
 import React from 'react';
+import AttachmentList from '../../shared/attachment-list.jsx';
 
 class Assignment extends React.Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class Assignment extends React.Component {
           {resourcesHeader}
           {resources}
         </section>
-        <div>Attachments will go here</div>
+        <AttachmentList attachments={assignment.attachments} />
       </div>
     );
   }

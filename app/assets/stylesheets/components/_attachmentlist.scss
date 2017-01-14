@@ -1,0 +1,24 @@
+
+.attachment-li {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.attachment-li::before {
+    content: "\f003";
+    // content: "\f0c6"; <-- TODO: paperclip instead of envelope?
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    padding: 0 8px 0 0;
+}
+
+.attachment-list a {
+  color: $flying-bird;
+}
+
+.attachment-list a:hover {
+  color: $red-orange;
+}
