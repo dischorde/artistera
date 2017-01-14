@@ -1,5 +1,5 @@
 import React from 'react';
-import List from '../shared/list.jsx';
+import List from '../../shared/list.jsx';
 
 class Projects extends React.Component {
   constructor(props) {

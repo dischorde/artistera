@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { requestCourse } from '../../actions/courses_actions.js';
+import { requestCourse } from '../../../actions/courses_actions.js';
 import Projects from './projects.jsx';
 
 const mapStateToProps = state => ({

@@ -1,6 +1,4 @@
 json.extract! @course, :id, :title, :description, :assignment_summary, :playlist_src, :cover_img_src
-empty = ""
-
 
 if @course.assignment
   json.assignment do
@@ -34,7 +32,6 @@ end
 #     json.body review.body
 #     json.author json.extract! review.author, :id, :first_name, :last_name, :gravatar_hash
 #   end
-
 
 # if @course.assignment.attachments
 #   json.array! @course.assignment.attachments do |attachment|
