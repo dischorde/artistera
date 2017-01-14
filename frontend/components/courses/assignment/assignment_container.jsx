@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import Projects from './projects.jsx';
+import Assignment from './assignment.jsx';
 
 const mapStateToProps = state => ({
-  projects: state.courseDetail.projects
+  assignment: state.courseDetail.assignment
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -11,4 +11,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Projects);
+)(Assignment);

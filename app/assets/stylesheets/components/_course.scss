@@ -6,22 +6,6 @@
   padding-top: 40px;
 }
 
-.about h3, .projects h3 {
-  font-size: 18px;
-  margin-bottom: 40px;
-  font-weight: 700;
-}
-
-.about h4, .projects h4 {
-  margin: 3% 0;
-  font-weight: 700;
-}
-
-.about p, .projects p {
-  font-family: $open-sans;
-  font-size: 15px;
-}
-
 .projects {
   width: 75%;
   padding-top: 60px;
@@ -29,4 +13,19 @@
   flex-direction: column;
   box-sizing: border-box;
   justify-content: center;
+}
+
+.assignment {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  padding-top: 40px;
+}
+
+.assignment-details {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-right: 5%;
 }

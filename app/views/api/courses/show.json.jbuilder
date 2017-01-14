@@ -15,7 +15,7 @@ if @course.assignment
     json.array! @course.projects do |proj|
       json.id proj.id
       json.title proj.title
-      json.cover_img_src proj.cover_img.url(:cover)
+      json.cover_img_src proj.cover_img.url
     end
   end
 

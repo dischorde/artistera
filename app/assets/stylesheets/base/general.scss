@@ -4,11 +4,29 @@ body {
   font-size: 16px;
   color: $dark-grey;
   background: $almost-white;
+  margin-bottom: 100px;
 }
 
 h1, h2 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+h3 {
+ font-size: 18px;
+ margin-bottom: 40px;
+  font-weight: 700;
+}
+
+h4 {
+  margin: 3% 0;
+  font-weight: 700;
+}
+
+p {
+  font-family: $open-sans;
+  font-size: 15px;
 }
 
 

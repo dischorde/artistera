@@ -7,6 +7,7 @@ import CourseIndexContainer from './courses/course_index_container.jsx';
 import CourseDetailContainer from './courses/course_detail_container.jsx';
 import AboutContainer from './courses/about/about_container.jsx';
 import ProjectsContainer from './courses/projects/projects_container.jsx';
+import AssignmentContainer from './courses/assignment/assignment_container.jsx';
 
 
 const Root = ({ store }) => {
@@ -34,6 +35,7 @@ const Root = ({ store }) => {
             <IndexRoute component={ AboutContainer } />
             <Route path="about" component={ AboutContainer } />
             <Route path="projects" component={ ProjectsContainer } />
+            <Route path="assignment" component={ AssignmentContainer } />
           </Route>
         </Route>
       </Router>
