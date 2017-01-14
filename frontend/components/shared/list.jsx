@@ -2,9 +2,13 @@ import React from 'react';
 import ListItem from './list-item.jsx';
 
 const List = ({elements, listType}) => {
-  const listItems = elements.map(element => (
-    <ListItem key={element.id} id={element.id} element={element} listType={listType} />
-  ));
+
+  let listItems;
+  if (elements !== undefined) {
+    listItems = elements.map(element => (
+      <ListItem key={element.id} id={element.id} element={element} listType={listType} />
+    ));
+  }
 
   // TODO: Remove fake classes here for styling
   return (

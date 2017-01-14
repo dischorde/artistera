@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113182219) do
+ActiveRecord::Schema.define(version: 20170113230309) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,8 +30,12 @@ ActiveRecord::Schema.define(version: 20170113182219) do
   create_table "attachments", force: :cascade do |t|
     t.string   "attachable_type"
     t.integer  "attachable_id"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
     t.index ["attachable_type", "attachable_id"], name: "index_attachments_on_attachable_type_and_attachable_id", using: :btree
   end
 
@@ -47,12 +51,16 @@ ActiveRecord::Schema.define(version: 20170113182219) do
   end
 
   create_table "projects", force: :cascade do |t|
-    t.string   "title",         null: false
-    t.text     "description",   null: false
-    t.integer  "user_id",       null: false
-    t.integer  "assignment_id", null: false
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "title",                  null: false
+    t.text     "description",            null: false
+    t.integer  "user_id",                null: false
+    t.integer  "assignment_id",          null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "cover_img_file_name"
+    t.string   "cover_img_content_type"
+    t.integer  "cover_img_file_size"
+    t.datetime "cover_img_updated_at"
     t.index ["assignment_id"], name: "index_projects_on_assignment_id", using: :btree
     t.index ["user_id"], name: "index_projects_on_user_id", using: :btree
   end
