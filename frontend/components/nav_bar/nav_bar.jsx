@@ -55,14 +55,13 @@ class NavBar extends React.Component {
 
   render() {
     let {currentUser, logout} = this.props;
-    //TODO: change link to proper route for all courses and all projects
     return (
       <header>
         <section className="nav-left">
           <span><img id="logo" src="/assets/artistera-logo.svg"/></span>
           <ul>
             <li><Link to="/courses">All Courses</Link></li>
-            <li><Link to="/">All Projects</Link></li>
+            <li><Link to="/projects">All Projects</Link></li>
           </ul>
         </section>
         <section className="nav-search">

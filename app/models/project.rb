@@ -5,5 +5,6 @@ class Project < ApplicationRecord
 
   has_many :attachments, as: :attachable
   belongs_to :assignment
+  belongs_to :user
   has_one :course, through: :assignment, source: :course
 end

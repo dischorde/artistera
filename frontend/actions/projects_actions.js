@@ -64,7 +64,7 @@ export const destroyProject = project => dispatch => {
 // WITH ATTACHMENTS
 // TODO: pass in all the attachments to create from the form as an array of attachments.
 // may also have to do someting with the cover_img
-
+//
 // export const createNewProject = formInput => dispatch => {
 //   return ProjectsAPIUtil.createProject({project: formInput.project})
 //   .then(newProj => {
@@ -83,7 +83,9 @@ export const destroyProject = project => dispatch => {
 // const handleAttachments(attachments, project) {
 //   const createAttachments = (idx) => {
 //      if (idx < attachments.length) {
-//        AttachmentApiUtil.createAttachment(attachments[idx])
+//        let newAttachment = attachments[idx];
+//        newAttachment.project_id = project.id;
+//        AttachmentApiUtil.createAttachment(newAttachment)
 //        .then(() => createAttachments(idx + 1))
 //      }
 //      else {
