@@ -1,4 +1,5 @@
 import * as ProjectsAPIUtil from '../util/projects_api_util.js';
+import * as AttachmentsAPIUtil from '../util/attachments_api_util.js';
 
 export const RECEIVE_ALL_PROJECTS = "RECEIVE_ALL_PROJECTS";
 export const RECEIVE_PROJECT_DETAILS = "RECEIVE_PROJECT_DETAILS";
@@ -37,11 +38,11 @@ export const requestProject = id => dispatch => {
   });
 };
 
-export const createNewProject = (formData, assignmentId) => dispatch => {
-  return ProjectsAPIUtil.createProject(formData, assignmentId)
-  .then(newProj => {
-    dispatch(receiveProject(newProj));
-    return newProj;
+
+export const destroyProject = id => dispatch => {
+  return ProjectsAPIUtil.deleteProject(id).then(deleted => {
+    dispatch(removeProject(deleted));
+    return deleted;
   });
 };
 
@@ -53,24 +54,28 @@ export const updateProject = (formData, ids) => dispatch => {
   });
 };
 
-export const destroyProject = id => dispatch => {
-  return ProjectsAPIUtil.deleteProject(id).then(deleted => {
-    dispatch(removeProject(deleted));
-    return deleted;
-  });
-};
-
 
 // WITH ATTACHMENTS
 // TODO: pass in all the attachments to create from the form as an array of attachments.
 // may also have to do someting with the cover_img
 //
-// export const createNewProject = formInput => dispatch => {
-//   return ProjectsAPIUtil.createProject({project: formInput.project})
+
+// export const createNewProject = (formData, assignmentId) => dispatch => {
+//   return ProjectsAPIUtil.createProject(formData, assignmentId)
 //   .then(newProj => {
-//     handleAttachments(formInput.attachments, newProj);
+//     dispatch(receiveProject(newProj));
+//     return newProj;
 //   });
 // };
+
+export const createNewProject = (project, attachments) => dispatch => {
+  return ProjectsAPIUtil.createProject(project.formData, project.assignmentId)
+  .then(newProj => {
+    handleAttachments(attachments, newProj, dispatch);
+    return newProj;
+  });
+};
+
 //
 // export const updateProject = formInput => dispatch => {
 //   return ProjectsAPIUtil.updateProject({project: formInput.project})
@@ -80,18 +85,19 @@ export const destroyProject = id => dispatch => {
 // };
 //
 //
-// const handleAttachments(attachments, project) {
-//   const createAttachments = (idx) => {
-//      if (idx < attachments.length) {
-//        let newAttachment = attachments[idx];
-//        newAttachment.project_id = project.id;
-//        AttachmentApiUtil.createAttachment(newAttachment)
-//        .then(() => createAttachments(idx + 1))
-//      }
-//      else {
-//        dispatch(receiveProject(project));
-//      }
-//   };
-//
-//   createAttachments(0);
-// }
+
+const handleAttachments = (attachments, project, dispatch) => {
+  const createAttachments = (idx) => {
+     if (idx < attachments.length) {
+       let newAttachment = attachments[idx];
+       newAttachment.append("attachment[attachable_id]", project.id);
+       AttachmentsAPIUtil.attach(newAttachment)
+       .then(() => createAttachments(idx + 1));
+     }
+     else {
+       dispatch(receiveProject(project));
+     }
+  };
+
+  createAttachments(0);
+};

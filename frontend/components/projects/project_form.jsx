@@ -5,11 +5,13 @@ class ProjectForm extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = this.getInitialState();
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.getInitialState = this.getInitialState.bind(this);
     this.updateFile = this.updateFile.bind(this);
-    this.state = this.getInitialState();
+    this.readyAttachments = this.readyAttachments.bind(this);
+    this.updateAttachments = this.updateAttachments.bind(this);
   }
 
   getInitialState() {
@@ -19,7 +21,8 @@ class ProjectForm extends React.Component {
       coverFile: null,
       coverUrl: null,
       assignmentId: this.props.assignmentId,
-      user_id: this.props.userId
+      user_id: this.props.userId,
+      attachments: []
     });
   }
 
@@ -27,22 +30,50 @@ class ProjectForm extends React.Component {
     this.props.router.push(where);
   }
 
+  readyAttachments() {
+    return this.state.attachments.map((attachmentFile) => {
+      let formData = new FormData();
+      formData.append("attachment[document]", attachmentFile);
+      formData.append("attachment[attachable_type]", "Project");
+      return formData;
+    });
+  }
+
   handleSubmit(e) {
     e.preventDefault;
     let formData = new FormData();
     formData.append("project[title]", this.state.title);
     formData.append("project[description]", this.state.description);
-    formData.append("project[cover_img]", this.state.coverFile);
     formData.append("project[assignment_id]", this.state.assignmentId);
     formData.append("project[user_id]", this.state.user_id);
 
-    this.props.createNewProject(formData, this.state.assignmentId).then((proj) => this.redirect(`projects/${proj.id}`));
+    if (this.state.coverFile) {
+      formData.append("project[cover_img]", this.state.coverFile);
+    }
+
+    const attachments = this.readyAttachments();
+    const project = {formData: formData, assignmentId:this.state.assignmentId};
+    let proj = this.props.createNewProject(project, attachments);
+    debugger;
+    // .then((proj) => {
+    //   debugger;
+    //   this.redirect(`projects/${proj.id}`);
+    // });
   }
 
   handleChange(field) {
     return e => (
       this.setState({[field]: e.currentTarget.value})
     );
+  }
+
+  updateAttachments(e) {
+    const allFiles = e.currentTarget.files;
+    let updatedAttachments = [];
+    for (let i = 0; i < allFiles.length; i++) {
+      updatedAttachments.push(allFiles[i]);
+    }
+    this.setState({attachments: updatedAttachments});
   }
 
   updateFile(e) {
@@ -58,6 +89,12 @@ class ProjectForm extends React.Component {
   }
 
   render() {
+    let currentAttachments = [];
+    currentAttachments = this.state.attachments.map((file, i) => (
+      <li key={i}>{file.name}</li>
+    ));
+
+
     return (
     <div className="project-form">
         <form >
@@ -71,7 +108,10 @@ class ProjectForm extends React.Component {
           <section className="project-attachments">
             <input type="file" onChange={this.updateFile} />
             <img className="preview" src={this.state.coverUrl} />
-            This is where the attachment part will go
+            <input type="file" onChange={this.updateAttachments} multiple />
+              <ul>
+                {currentAttachments}
+              </ul>
           </section>
         </form>
       </div>
