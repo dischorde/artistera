@@ -1,5 +1,3 @@
-
-
 export const fetchProjects = () => (
   $.ajax({
     method: "GET",
@@ -7,14 +5,12 @@ export const fetchProjects = () => (
   })
 );
 
-
 export const fetchProject = (id) => (
   $.ajax({
     method: "GET",
     url: `/api/projects/${id}`
   })
 );
-
 
 export const createProject = (project) => (
   $.ajax({
@@ -32,9 +28,9 @@ export const updateProject = (project) => (
   })
 );
 
-export const deleteProject = (assignId, id) => (
+export const deleteProject = (project) => (
   $.ajax({
     method: "DELETE",
-    url: `/api/assignments/${assignId}/projects/${id}`
+    url: `/api/assignments/${project.assignment_id}/projects/${project.id}`
   })
 );
