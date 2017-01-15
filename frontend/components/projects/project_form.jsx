@@ -7,7 +7,20 @@ class ProjectForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.state = { title: "", description: "", assignment_id: this.props.assignmentId, user_id: this.props.userId };
+    this.getInitialState = this.getInitialState.bind(this);
+    this.updateFile = this.updateFile.bind(this);
+    this.state = this.getInitialState();
+  }
+
+  getInitialState() {
+    return ({
+      title: "",
+      description: "",
+      coverFile: null,
+      coverUrl: null,
+      assignment_id: this.props.assignmentId,
+      user_id: this.props.userId
+    });
   }
 
   redirect(where) {
@@ -16,8 +29,13 @@ class ProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault;
+    let formData = new FormData();
+    // formData.append("project[title]", this.state.title);
+    // formData.append("project[description]", this.state.description);
+    // formData.append("project[cover_img]", this.state.coverFile);
+     
     const project = Object.assign({}, this.state);
-    this.props.createProject(project).then((proj) => this.redirect(`projects/${proj.id}`));
+    this.props.createNewProject(project).then((proj) => this.redirect(`projects/${proj.id}`));
   }
 
   handleChange(field) {
@@ -26,15 +44,34 @@ class ProjectForm extends React.Component {
     );
   }
 
+  updateFile(e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({ coverFile: file, coverUrl: fileReader.result });
+    };
+
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
+  }
+
   render() {
     return (
     <div className="project-form">
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="project-title">Project Title</label>
-            <input type="text" onChange={this.handleChange('title')} value={this.state.title} />
-          <label htmlFor="project-description">Project Description</label>
+        <form >
+          <section className="project-fields">
+            <label htmlFor="project-title">Project Title</label>
+            <input type="text" id="project-title" onChange={this.handleChange('title')} value={this.state.title} />
+            <label htmlFor="project-description">Project Description</label>
             <textarea onChange={this.handleChange('description')} value={this.state.description} />
-          <input type="submit" value={"Create"} />
+            <button onClick={this.handleSubmit}>{"Create"}</button>
+          </section>
+          <section className="project-attachments">
+            <input type="file" onChange={this.updateFile} />
+            <img className="preview" src={this.state.coverUrl} />
+            This is where the attachment part will go
+          </section>
         </form>
       </div>
     );

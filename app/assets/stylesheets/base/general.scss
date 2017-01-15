@@ -1,7 +1,7 @@
 /* General CSS */
 body {
   font-family: $lato;
-  font-size: 16px;
+  font-size: 15px;
   color: $dark-grey;
   background: $almost-white;
   margin-bottom: 100px;
@@ -42,7 +42,7 @@ a:hover {
   color: $red-orange;
 }
 
-button {
+button, .button {
   font-size: 14px;
   background: $light-coral;
 	color: white;
@@ -56,6 +56,19 @@ button {
   white-space: nowrap;
 }
 
-button:hover {
+button:hover, .button:hover {
   background: $flying-bird;
+}
+
+textarea {
+  border: 1px solid $lighter-grey;
+  color: $dark-grey;
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: 1px solid $lighter-grey;
 }

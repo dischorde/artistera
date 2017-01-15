@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createProject } from '../../actions/projects_actions';
+import { createNewProject } from '../../actions/projects_actions';
 import ProjectForm from './project_form';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-	createProject: project => dispatch(createProject(project))
+	createNewProject: project => dispatch(createNewProject(project))
 });
 
 export default connect(

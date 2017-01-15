@@ -39,9 +39,13 @@ header section ul {
   justify-content: center;
 }
 
-.nav-left li, .nav-left span {
-  padding-left: 22px;
-  padding-left: 22px;
+.nav-left li {
+  padding-right: 11px;
+  padding-left: 11px;
+}
+
+.nav-left span {
+  padding-right: 11px;
 }
 
 .nav-right li, .nav-right span {
@@ -58,12 +62,6 @@ header section ul {
 
 #logo {
   height: 30px;
-}
-
-input {
-  border-radius: 5px;
-  padding: 8px 15px;
-  border: 1px solid $lighter-grey;
 }
 
 .gravatar-letter {

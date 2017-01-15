@@ -28,7 +28,7 @@ class Assignment extends React.Component {
       resourcesHeader = <h4>Resources</h4>;
       resources = <p>{assignment.resources}</p>;
     }
-    
+
     return (
       <div className="assignment-wrapper">
         <div className="assignment">
@@ -44,7 +44,9 @@ class Assignment extends React.Component {
           </section>
           <AttachmentList attachments={assignment.attachments} />
         </div>
-        <ProjectFormContainer assignmentId={assignment.id} />
+        <section className="project-form-wrapper">
+          <ProjectFormContainer assignmentId={assignment.id} />
+        </section>
       </div>
     );
   }
