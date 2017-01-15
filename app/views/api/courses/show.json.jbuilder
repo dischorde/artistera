@@ -5,8 +5,9 @@ if @course.assignment
     json.extract! @course.assignment, :title, :description, :deliverable, :materials, :resources
     json.attachments do
         json.array! @course.assignment.attachments do |attachment|
-          json.filename attachment.document_file_name
+          json.file_name attachment.document_file_name
           json.file_src attachment.document.url
+          json.file_size number_to_human_size(attachment.document_file_size)
         end
     end
   end

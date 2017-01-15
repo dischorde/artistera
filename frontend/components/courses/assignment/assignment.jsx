@@ -18,12 +18,12 @@ class Assignment extends React.Component {
       assignment.description = assignment.description.replace(/\n/g, "<br /><br />");
     }
 
-    if (assignment.materials !== null) {
+    if (assignment.materials) {
       materialsHeader = <h4>Materials</h4>;
       materials = <p>{assignment.materials}</p>;
     }
 
-    if (assignment.resources !== null) {
+    if (assignment.resources) {
       resourcesHeader = <h4>Resources</h4>;
       resources = <p>{assignment.resources}</p>;
     }

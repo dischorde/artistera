@@ -23,10 +23,6 @@
   - accepts query params for search by keyword
 - `GET /api/courses/:id`
 
-### Assignments
-
-- `GET /api/courses/:id/assignment`
-
 ### Projects
 
 - `GET /api/projects`

@@ -3,7 +3,12 @@ import React from 'react';
 const AttachmentList = ({attachments}) => {
   // let attachments = props.attachments || []
   let listItems = attachments.map((attachment, i) => (
-      <li key={i} className="attachment-li"><a href={attachment.file_src}>{attachment.filename}</a></li>
+      <li key={i} className="attachment-li">
+        <a href={attachment.file_src}>{attachment.file_name}</a>
+        <br />
+        <div className="attachment-file-size">{attachment.file_size}</div>
+      </li>
+
   ));
 
   return (
