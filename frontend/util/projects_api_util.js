@@ -12,19 +12,24 @@ export const fetchProject = (id) => (
   })
 );
 
-export const createProject = (project) => {
+export const createProject = (formData, assignmentId) => {
+  debugger;
   return $.ajax({
+    url: `/api/assignments/${assignmentId}/projects`,
     method: "POST",
-    url: `/api/assignments/${project.assignment_id}/projects`,
-    data: { project }
+    contentType: false,
+    processData: false,
+    data: formData
   });
 };
 
-export const updateProject = (project) => (
+export const updateProject = (formData, ids) => (
   $.ajax({
     method: "PATCH",
-    url:`/api/assignments/${project.assignment_id}/projects/${project.id}`,
-    data: { project }
+    contentType: false,
+    processData: false,
+    url:`/api/assignments/${ids.assignment_id}/projects/${ids.id}`,
+    data: formData
   })
 );
 

@@ -18,7 +18,7 @@ class ProjectForm extends React.Component {
       description: "",
       coverFile: null,
       coverUrl: null,
-      assignment_id: this.props.assignmentId,
+      assignmentId: this.props.assignmentId,
       user_id: this.props.userId
     });
   }
@@ -30,12 +30,13 @@ class ProjectForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault;
     let formData = new FormData();
-    // formData.append("project[title]", this.state.title);
-    // formData.append("project[description]", this.state.description);
-    // formData.append("project[cover_img]", this.state.coverFile);
-     
-    const project = Object.assign({}, this.state);
-    this.props.createNewProject(project).then((proj) => this.redirect(`projects/${proj.id}`));
+    formData.append("project[title]", this.state.title);
+    formData.append("project[description]", this.state.description);
+    formData.append("project[cover_img]", this.state.coverFile);
+    formData.append("project[assignment_id]", this.state.assignmentId);
+    formData.append("project[user_id]", this.state.user_id);
+
+    this.props.createNewProject(formData, this.state.assignmentId).then((proj) => this.redirect(`projects/${proj.id}`));
   }
 
   handleChange(field) {

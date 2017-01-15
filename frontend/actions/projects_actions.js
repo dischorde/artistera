@@ -37,16 +37,16 @@ export const requestProject = id => dispatch => {
   });
 };
 
-export const createNewProject = project => dispatch => {
-  return ProjectsAPIUtil.createProject(project)
+export const createNewProject = (formData, assignmentId) => dispatch => {
+  return ProjectsAPIUtil.createProject(formData, assignmentId)
   .then(newProj => {
     dispatch(receiveProject(newProj));
     return newProj;
   });
 };
 
-export const updateProject = project => dispatch => {
-  return ProjectsAPIUtil.updateProject(project)
+export const updateProject = (formData, ids) => dispatch => {
+  return ProjectsAPIUtil.updateProject(formData, ids)
   .then(updatedProj => {
     dispatch(receiveProject(updatedProj));
     return updatedProj;

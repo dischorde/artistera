@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-	createNewProject: project => dispatch(createNewProject(project))
+	createNewProject: (formData, assignmentId) => dispatch(createNewProject(formData, assignmentId))
 });
 
 export default connect(
