@@ -1,5 +1,6 @@
 import React from 'react';
 import AttachmentList from '../../shared/attachment-list.jsx';
+import ProjectFormContainer from '../../projects/project_form_container.jsx';
 
 class Assignment extends React.Component {
   constructor(props) {
@@ -27,20 +28,23 @@ class Assignment extends React.Component {
       resourcesHeader = <h4>Resources</h4>;
       resources = <p>{assignment.resources}</p>;
     }
-
+    
     return (
-      <div className="assignment">
-        <section className="assignment-details">
-          <h3>{assignment.title}</h3>
-          <p dangerouslySetInnerHTML={{__html: assignment.description}}></p>
-          <h4>Assignment Deliverable</h4>
-          <p>{assignment.deliverable}</p>
-          {materialsHeader}
-          {materials}
-          {resourcesHeader}
-          {resources}
-        </section>
-        <AttachmentList attachments={assignment.attachments} />
+      <div className="assignment-wrapper">
+        <div className="assignment">
+          <section className="assignment-details">
+            <h3>{assignment.title}</h3>
+            <p dangerouslySetInnerHTML={{__html: assignment.description}}></p>
+            <h4>Assignment Deliverable</h4>
+            <p>{assignment.deliverable}</p>
+            {materialsHeader}
+            {materials}
+            {resourcesHeader}
+            {resources}
+          </section>
+          <AttachmentList attachments={assignment.attachments} />
+        </div>
+        <ProjectFormContainer assignmentId={assignment.id} />
       </div>
     );
   }

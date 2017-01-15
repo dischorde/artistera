@@ -2,7 +2,7 @@ json.extract! @course, :id, :title, :description, :assignment_summary, :playlist
 
 if @course.assignment
   json.assignment do
-    json.extract! @course.assignment, :title, :description, :deliverable, :materials, :resources
+    json.extract! @course.assignment, :id, :title, :description, :deliverable, :materials, :resources
     json.attachments do
         json.array! @course.assignment.attachments do |attachment|
           json.file_name attachment.document_file_name
