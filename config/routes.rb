@@ -10,9 +10,9 @@ Rails.application.routes.draw do
       resources :reviews, except: [:show, :new, :edit]
     end
     resources :assignments, only: [:index] do
-      resources :projects, except: [:index, :new, :edit]
+      resources :projects, only: [:update, :create]
     end
-    resources :projects, only: [:index, :show]
+    resources :projects, only: [:index, :show, :destroy]
     resources :attachments, only: [:create, :destroy]
   end
 end

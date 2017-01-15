@@ -21,8 +21,6 @@ export const requestAllCourses = () => dispatch => {
 export const requestCourse = id => dispatch => {
   return CoursesAPIUtil.fetchCourse(id)
   .then(course => {
-    // TODO: remove log
-    console.log(course);
     dispatch(receiveCourse(course));
   }
   );

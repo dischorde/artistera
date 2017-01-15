@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store.js';
 import { requestAllCourses, requestCourse, receiveAllCourses, receiveCourse } from './actions/courses_actions.js';
-import { requestAllProjects, requestProject } from './actions/projects_actions.js';
+import { requestAllProjects, requestProject, createNewProject, updateProject, destroyProject } from './actions/projects_actions.js';
 import { selectAllCourses } from './reducers/selectors.js';
 import Root from './components/root.jsx';
 
@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.selectAllCourses = selectAllCourses;
     window.requestAllProjects = requestAllProjects;
     window.requestProject = requestProject;
+    window.createNewProject = createNewProject;
+    window.updateProject = updateProject;
+    window.destroyProject = destroyProject;
     window.store = store;
     window.selectAllCourses = selectAllCourses;
 

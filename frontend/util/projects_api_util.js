@@ -12,13 +12,13 @@ export const fetchProject = (id) => (
   })
 );
 
-export const createProject = (project) => (
-  $.ajax({
+export const createProject = (project) => {
+  return $.ajax({
     method: "POST",
-    url: `/api/assignments/${project.id}`,
+    url: `/api/assignments/${project.assignment_id}/projects`,
     data: { project }
-  })
-);
+  });
+};
 
 export const updateProject = (project) => (
   $.ajax({
@@ -28,9 +28,9 @@ export const updateProject = (project) => (
   })
 );
 
-export const deleteProject = (project) => (
+export const deleteProject = (id) => (
   $.ajax({
     method: "DELETE",
-    url: `/api/assignments/${project.assignment_id}/projects/${project.id}`
+    url: `/api/projects/${id}`
   })
 );

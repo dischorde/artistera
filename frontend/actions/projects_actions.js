@@ -53,8 +53,8 @@ export const updateProject = project => dispatch => {
   });
 };
 
-export const destroyProject = project => dispatch => {
-  return ProjectsAPIUtil.deleteProject(project).then(deleted => {
+export const destroyProject = id => dispatch => {
+  return ProjectsAPIUtil.deleteProject(id).then(deleted => {
     dispatch(removeProject(deleted));
     return deleted;
   });

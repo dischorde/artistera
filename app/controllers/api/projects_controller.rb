@@ -1,5 +1,5 @@
 class Api::ProjectsController < ApplicationController
-  before_action :find_project, only: [:show, :update, :delete]
+  before_action :find_project, only: [:show, :update, :destroy]
 
   def index
     @projects = Project.all
@@ -26,7 +26,7 @@ class Api::ProjectsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @project.destroy
     render :show
   end
@@ -38,7 +38,7 @@ class Api::ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:title, :description)
+    params.require(:project).permit(:title, :description, :user_id, :assignment_id)
   end
 
 end
