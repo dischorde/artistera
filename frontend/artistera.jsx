@@ -5,8 +5,10 @@ import { requestAllCourses, requestCourse, receiveAllCourses, receiveCourse } fr
 import { requestAllProjects, requestProject, createNewProject, updateProject, destroyProject } from './actions/projects_actions.js';
 import { selectAllCourses } from './reducers/selectors.js';
 import Root from './components/root.jsx';
+import Modal from 'react-modal';
 
 document.addEventListener('DOMContentLoaded', () => {
+    Modal.setAppElement(document.body);
     const root = document.getElementById('root');
     let store;
     if (window.currentUser) {

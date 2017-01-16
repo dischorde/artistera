@@ -45,7 +45,7 @@ class Assignment extends React.Component {
           <AttachmentList attachments={assignment.attachments} />
         </div>
         <section className="project-form-wrapper">
-          <ProjectFormContainer assignmentId={assignment.id} />
+          <ProjectFormContainer assignmentId={assignment.id} formType={'new'} />
         </section>
       </div>
     );

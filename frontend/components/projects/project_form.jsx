@@ -6,6 +6,7 @@ class ProjectForm extends React.Component {
     super(props);
 
     this.state = this.getInitialState();
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.getInitialState = this.getInitialState.bind(this);
@@ -15,15 +16,28 @@ class ProjectForm extends React.Component {
   }
 
   getInitialState() {
-    return ({
-      title: "",
-      description: "",
-      coverFile: null,
-      coverUrl: null,
-      assignmentId: this.props.assignmentId,
-      user_id: this.props.userId,
-      attachments: []
-    });
+    if (this.props.formType === 'new') {
+      return ({
+        title: "",
+        description: "",
+        coverFile: null,
+        coverUrl: null,
+        assignmentId: this.props.assignmentId,
+        user_id: this.props.userId,
+        attachments: []
+      });
+    }
+    else {
+      return ({
+        title: this.props.projectDetail.title,
+        description: this.props.projectDetail.title,
+        coverFile: null,
+        coverUrl: this.props.projectDetail.cover_img_src,
+        assignmentId: this.props.assignmentId,
+        user_id: this.props.userId,
+        attachments: []
+      });
+    }
   }
 
   redirect(where) {
@@ -52,8 +66,16 @@ class ProjectForm extends React.Component {
     }
 
     const attachments = this.readyAttachments();
-    const project = {formData: formData, assignmentId:this.state.assignmentId};
-    this.props.createNewProject(project, attachments);
+
+    if (this.props.formType === 'new') {
+      const project = {formData: formData, assignmentId: this.state.assignmentId};
+      this.props.createNewProject(project, attachments);
+    }
+    else {
+      const ids = {assignment_id: this.state.assignmentId, id: this.props.projectId};
+      const project = {formData: formData, ids: ids};
+      this.props.updateProject(project, attachments);
+    }
   }
 
   handleChange(field) {

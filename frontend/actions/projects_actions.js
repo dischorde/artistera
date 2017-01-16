@@ -47,15 +47,6 @@ export const destroyProject = id => dispatch => {
   });
 };
 
-export const updateProject = (formData, ids) => dispatch => {
-  return ProjectsAPIUtil.updateProject(formData, ids)
-  .then(updatedProj => {
-    dispatch(receiveProject(updatedProj));
-    return updatedProj;
-  });
-};
-
-
 // WITH ATTACHMENTS
 // TODO: pass in all the attachments to create from the form as an array of attachments.
 // may also have to do someting with the cover_img
@@ -68,15 +59,14 @@ export const createNewProject = (project, attachments) => dispatch => {
   });
 };
 
-//
-// export const updateProject = formInput => dispatch => {
-//   return ProjectsAPIUtil.updateProject({project: formInput.project})
-//   .then(updatedProj => {
-//     handleAttachments(formInput.attachments, updatedProj);
-//   });
-// };
-//
-//
+
+export const updateProject = (project, attachments) => dispatch => {
+  return ProjectsAPIUtil.updateProject(project.formData, project.ids)
+  .then(updatedProj => {
+    return dispatch(handleAttachments(attachments, updatedProj));
+  });
+};
+
 
 const handleAttachments = (attachments, project) => dispatch => {
   const createAttachments = (idx) => {

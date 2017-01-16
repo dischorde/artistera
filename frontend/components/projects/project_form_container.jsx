@@ -1,14 +1,18 @@
 import { connect } from 'react-redux';
-import { createNewProject } from '../../actions/projects_actions';
+import { createNewProject, updateProject } from '../../actions/projects_actions';
 import ProjectForm from './project_form';
 
 const mapStateToProps = (state, ownProps) => ({
   assignmentId: ownProps.assignmentId,
-  userId: state.session.currentUser.id
+  projectId: ownProps.projectId,
+  userId: state.session.currentUser.id,
+  formType: ownProps.formType,
+  projectDetail: state.projectDetail
 });
 
 const mapDispatchToProps = dispatch => ({
-	createNewProject: (project, attachments) => dispatch(createNewProject(project, attachments))
+	createNewProject: (project, attachments) => dispatch(createNewProject(project, attachments)),
+	updateProject: (project, attachments) => dispatch(updateProject(project, attachments)),
 });
 
 export default connect(
