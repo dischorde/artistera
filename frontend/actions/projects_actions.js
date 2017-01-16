@@ -60,19 +60,10 @@ export const updateProject = (formData, ids) => dispatch => {
 // may also have to do someting with the cover_img
 //
 
-// export const createNewProject = (formData, assignmentId) => dispatch => {
-//   return ProjectsAPIUtil.createProject(formData, assignmentId)
-//   .then(newProj => {
-//     dispatch(receiveProject(newProj));
-//     return newProj;
-//   });
-// };
-
 export const createNewProject = (project, attachments) => dispatch => {
   return ProjectsAPIUtil.createProject(project.formData, project.assignmentId)
   .then(newProj => {
-    handleAttachments(attachments, newProj, dispatch);
-    return newProj;
+    return dispatch(handleAttachments(attachments, newProj));
   });
 };
 
@@ -86,7 +77,7 @@ export const createNewProject = (project, attachments) => dispatch => {
 //
 //
 
-const handleAttachments = (attachments, project, dispatch) => {
+const handleAttachments = (attachments, project) => dispatch => {
   const createAttachments = (idx) => {
      if (idx < attachments.length) {
        let newAttachment = attachments[idx];
@@ -96,6 +87,7 @@ const handleAttachments = (attachments, project, dispatch) => {
      }
      else {
        dispatch(receiveProject(project));
+       return project;
      }
   };
 

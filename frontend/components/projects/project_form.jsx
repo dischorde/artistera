@@ -53,12 +53,9 @@ class ProjectForm extends React.Component {
 
     const attachments = this.readyAttachments();
     const project = {formData: formData, assignmentId:this.state.assignmentId};
-    let proj = this.props.createNewProject(project, attachments);
-    debugger;
-    // .then((proj) => {
-    //   debugger;
-    //   this.redirect(`projects/${proj.id}`);
-    // });
+    this.props.createNewProject(project, attachments).then((proj) => {
+      this.redirect(`projects/${proj.id}`);
+    });
   }
 
   handleChange(field) {
