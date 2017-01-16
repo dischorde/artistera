@@ -1,5 +1,6 @@
 import * as ProjectsAPIUtil from '../util/projects_api_util.js';
 import * as AttachmentsAPIUtil from '../util/attachments_api_util.js';
+import { hashHistory } from 'react-router';
 
 export const RECEIVE_ALL_PROJECTS = "RECEIVE_ALL_PROJECTS";
 export const RECEIVE_PROJECT_DETAILS = "RECEIVE_PROJECT_DETAILS";
@@ -87,7 +88,7 @@ const handleAttachments = (attachments, project) => dispatch => {
      }
      else {
        dispatch(receiveProject(project));
-       return project;
+       hashHistory.push(`projects/${project.id}`);
      }
   };
 
