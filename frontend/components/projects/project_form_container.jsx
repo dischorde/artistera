@@ -10,6 +10,7 @@ const mapStateToProps = (state, ownProps) => ({
   projectDetail: state.projectDetail,
   closeModal: ownProps.closeModal,
   setUpdated: ownProps.setUpdated,
+  errors: state.projectDetail.errors
 });
 
 const mapDispatchToProps = dispatch => ({

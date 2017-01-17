@@ -118,7 +118,6 @@ assign8 = Assignment.create!(
   resources: nil
 )
 
-
 project1 = Project.create!({title: "A Sample Submission", description: "Howl on top of tall thing attack feet sit on human for use lap as chair jump off balcony, onto stranger's head, or licks your face for friends are not food. Gate keepers of hell meowing non stop for food why must they do that. Lies down meow all night having their mate disturbing sleeping humans and thug cat meowzer! so chew foot, or sit in window and stare ooo, a bird! yum yet lick yarn hanging out of own butt. Brown cats with pink ears destroy couch, or who's the baby. Sit on the laptop hide from vacuum cleaner.", user_id: user1.id, assignment_id: painting.id, cover_img_file_name: "watercolor-in-progress.jpeg", cover_img_content_type: "image/jpeg", cover_img_file_size: 16283, cover_img_updated_at: "2017-01-13 22:52:39"})
 
 attachment1 = Attachment.create!({attachable_type: "Assignment", attachable_id: painting.id, document_file_name: "Watercolor-For-Beginners.pdf", document_content_type: "application/pdf", document_file_size: 234278, document_updated_at: "2017-01-14 02:05:13"})

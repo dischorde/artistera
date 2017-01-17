@@ -7,6 +7,7 @@ export const RECEIVE_PROJECT_DETAILS = "RECEIVE_PROJECT_DETAILS";
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 export const REMOVE_PROJECT = "REMOVE_PROJECT";
 export const REPLACE_ATTACHMENTS = "REPLACE_ATTACHMENTS";
+export const RECEIVE_PROJ_ERRORS = "RECEIVE_PROJ_ERRORS";
 
 export const receiveAllProjects = projects => ({
   type: RECEIVE_ALL_PROJECTS,
@@ -32,6 +33,12 @@ export const replaceAttachments = attachments => ({
   type: REPLACE_ATTACHMENTS,
   attachments
 });
+
+export const receiveProjErrors = errors => ({
+  type: RECEIVE_PROJ_ERRORS,
+  errors
+});
+
 
 export const requestAllProjects = () => dispatch => {
   return ProjectsAPIUtil.fetchProjects()
@@ -62,9 +69,9 @@ export const deleteAttachment = id => dispatch => {
 
 export const createNewProject = (project, attachments) => dispatch => {
   return ProjectsAPIUtil.createProject(project.formData, project.assignmentId)
-  .then(newProj => {
+  .then( newProj => {
     return dispatch(handleAttachments(attachments, newProj, "new"));
-  });
+  }).fail( error => dispatch(receiveProjErrors(error.responseJSON)));
 };
 
 

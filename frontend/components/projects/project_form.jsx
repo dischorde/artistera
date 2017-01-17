@@ -17,7 +17,7 @@ class ProjectForm extends React.Component {
   }
 
   getInitialState() {
-    if (this.props.formType === 'new') {
+    if (this.props.formType === 'new' && this.props.errors.length == 0) {
       return ({
         title: "",
         description: "",
@@ -50,6 +50,15 @@ class ProjectForm extends React.Component {
       disabled: true,
       loaderOn: 'loader-on'
     });
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (newProps.errors.length > 0) {
+      this.setState({
+        disabled: false,
+        loaderOn: 'loader-off'
+      });
+    }
   }
 
   redirect(where) {
@@ -133,6 +142,13 @@ class ProjectForm extends React.Component {
   }
 
   render() {
+    let errors;
+    let errorStatus = "hidden-errors";
+    if (this.props.errors.length > 0) {
+      errors = this.props.errors.map( (message, i) => <li key={i}>{message}</li>);
+      errorStatus = "errors";
+    }
+
     let currentAttachments = [];
     currentAttachments = this.state.attachments.map((file, i) => (
       <li key={i}>{file.name}</li>
@@ -154,6 +170,9 @@ class ProjectForm extends React.Component {
             <input type="text" id="project-title" onChange={this.handleChange('title')} value={this.state.title} />
             <label htmlFor="project-description">Project Description</label>
             <textarea onChange={this.handleChange('description')} value={this.state.description} />
+            <ul className={errorStatus}>
+              {errors}
+            </ul>
             <button onClick={this.handleSubmit} disabled={this.state.disabled}>{buttonText}</button>
           </section>
           <section className="project-attachments">

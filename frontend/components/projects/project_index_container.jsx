@@ -4,7 +4,7 @@ import { selectAllProjects } from '../../reducers/selectors.js';
 import ProjectIndex from './project_index.jsx';
 
 const mapStateToProps = state => ({
-  projects: selectAllProjects(state)
+  projects: selectAllProjects(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
