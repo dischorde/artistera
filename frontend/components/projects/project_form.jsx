@@ -112,6 +112,13 @@ class ProjectForm extends React.Component {
       <li key={i}>{file.name}</li>
     ));
 
+    let buttonText;
+    if (this.props.formType === 'new') {
+      buttonText = 'Create';
+    }
+    else {
+      buttonText = 'Update';
+    }
 
     return (
     <div className="project-form">
@@ -121,13 +128,19 @@ class ProjectForm extends React.Component {
             <input type="text" id="project-title" onChange={this.handleChange('title')} value={this.state.title} />
             <label htmlFor="project-description">Project Description</label>
             <textarea onChange={this.handleChange('description')} value={this.state.description} />
-            <button onClick={this.handleSubmit}>{"Create"}</button>
+            <button onClick={this.handleSubmit}>{buttonText}</button>
           </section>
           <section className="project-attachments">
-            <input type="file" onChange={this.updateFile} />
+            <label htmlFor="cover-image">Cover Image</label><br />
+            <div className="cover-image-button">
+              <input className="file-button" type="file" onChange={this.updateFile} />
+            </div>
             <img className="preview" src={this.state.coverUrl} />
-            <input type="file" onChange={this.updateAttachments} multiple />
-              <ul>
+            <label htmlFor="attachments-uploading">Attachments</label><br />
+            <div className="attachments-button">
+              <input className="file-button" type="file" onChange={this.updateAttachments} multiple />
+            </div>
+              <ul className="to-upload">
                 {currentAttachments}
               </ul>
           </section>

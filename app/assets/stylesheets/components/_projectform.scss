@@ -11,10 +11,10 @@
 }
 
 .project-form-modal {
-  width: 75%;
-  margin: 40px auto 0 auto;
+  width: 56%;
   padding: 10px 35px 35px 35px;
-  background-color: $it-will;
+  background-color: $dark-grey;
+  color: $white;
   box-sizing: border-box;
   border-radius: 8px;
   position: relative;
@@ -51,6 +51,13 @@
   padding: 22px 0 22px 0;
 }
 
+.project-attachments label {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 22px 0 5px 0;
+}
+
 .project-form button {
   max-width: 77px;
   border: 0px;
@@ -77,6 +84,7 @@
 .preview {
   max-width: 100%;
   max-height: 140px;
+  padding-top: 25px;
 }
 
 .project-detail-header {
@@ -106,4 +114,70 @@
 
 .proj-edit-and-delete {
   width: 30%;
+}
+
+.cover-image-button {
+  display: flex;
+  position: relative;
+}
+
+.attachments-button {
+  display: flex;
+  position: relative;
+}
+
+.cover-image-button::before {
+  content: 'Upload Image';
+  font-size: 14px;
+  background: $light-coral;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-align: center;
+  display: inline-block;
+  border-bottom: 1px solid $flying-bird;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.attachments-button::before {
+  content: 'Upload Files';
+  font-size: 14px;
+  background: $light-coral;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-align: center;
+  display: inline-block;
+  border-bottom: 1px solid $flying-bird;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.cover-image-button:hover::before {
+  cursor: pointer;
+  background: $flying-bird;
+}
+
+.attachments-button:hover::before {
+  cursor: pointer;
+  background: $flying-bird;
+}
+
+.file-button {
+  cursor: pointer;
+  position: absolute;
+  top: -6px;
+  max-width: 100px;
+  opacity: 0;
+}
+
+.to-upload {
+  padding: 4px 0 4px 0;
+}
+
+.to-upload li {
+  padding-top: 4px;
 }

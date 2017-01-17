@@ -92,7 +92,14 @@ class ProjectDetail extends React.Component {
 					contentLabel="Modal"
 					isOpen={this.state.modalOpen}
 					onRequestClose={this.closeModal}
-					className="project-form-modal">
+					className="project-form-modal"
+          style={{ content : {
+            top                   : '50%',
+            left                  : '50%',
+            right                 : 'auto',
+            bottom                : 'auto',
+            transform             : 'translate(-50%, -50%)'
+          } }}>
           <ProjectFormContainer assignmentId={project.assignment_id} projectId={project.id} formType={'update'} setUpdated={this.setUpdated} />
         </Modal>
       </div>
