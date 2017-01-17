@@ -96,6 +96,7 @@ class ProjectForm extends React.Component {
     else {
       const ids = {assignment_id: this.state.assignmentId, id: this.props.projectId};
       const project = {formData: formData, ids: ids};
+      this.props.receiveProjErrors([]);
       this.props.updateProject(project, attachments);
       this.props.setUpdated();
     }

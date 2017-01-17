@@ -22,19 +22,19 @@ class ProjectDetail extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-
     if (newProps.params.projectId !== this.props.params.projectId) {
       this.props.requestProject(parseInt(newProps.params.projectId));
+      this.props.receiveProjErrors([]);
     }
 
-    if (this.state.updated) {
+    if (this.state.updated && newProps.projectDetail.errors.length === 0) {
       this.closeModal();
       this.setState({updated: false});
     }
   }
 
-
   openModal(e) {
+    this.props.receiveProjErrors([]);
 		this.setState({
 			modalOpen: true,
 		});
@@ -42,6 +42,7 @@ class ProjectDetail extends React.Component {
 
 	closeModal() {
 		this.setState({modalOpen: false});
+    this.props.receiveProjErrors([]);
 	}
 
   setUpdated() {

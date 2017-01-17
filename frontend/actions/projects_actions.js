@@ -79,7 +79,7 @@ export const updateProject = (project, attachments) => dispatch => {
   return ProjectsAPIUtil.updateProject(project.formData, project.ids)
   .then(updatedProj => {
     return dispatch(handleAttachments(attachments, updatedProj, "update"));
-  });
+  }).fail( error => dispatch(receiveProjErrors(error.responseJSON)));
 };
 
 
