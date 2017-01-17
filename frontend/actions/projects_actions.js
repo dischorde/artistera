@@ -85,6 +85,7 @@ export const updateProject = (project, attachments) => dispatch => {
 
 const handleAttachments = (attachments, project, formType) => dispatch => {
   let newProj = project;
+  let errors = [];
   const createAttachments = (idx) => {
      if (idx < attachments.length) {
        let newAttachment = attachments[idx];
@@ -93,9 +94,14 @@ const handleAttachments = (attachments, project, formType) => dispatch => {
        .then((proj) => {
          newProj = proj;
          createAttachments(idx + 1);
+       }).fail((error) => {
+         let file = newAttachment.get("attachment[document]");
+         errors.push(`Error uploading ${file.name}`);
+         createAttachments(idx + 1);
        });
      }
      else {
+       dispatch(receiveProjErrors(errors));
        dispatch(receiveProjectDetails(newProj));
        if (formType === "new") {
          hashHistory.push(`projects/${project.id}`);

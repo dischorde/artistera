@@ -74,6 +74,11 @@ class ProjectDetail extends React.Component {
                         deleteAttachment={this.props.deleteAttachment}/>;
     }
 
+    let errors;
+    if (project.errors.length > 0) {
+      errors = project.errors.map( (message, i) => <li key={i}>{message}</li>);
+    }
+
     return (
       <div className="project-detail-wrapper">
         <div className="project-detail-header">
@@ -82,6 +87,9 @@ class ProjectDetail extends React.Component {
             <h2>by {project.author_name}</h2>
           </div>
         </div>
+        <ul className="errors">
+          { errors }
+        </ul>
         <section className="project-cover-attachment-wrapper">
           <section className="project-cover-img">
             <img src={project.cover_img_src} />
