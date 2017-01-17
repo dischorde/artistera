@@ -1,4 +1,5 @@
-import { RECEIVE_PROJECT_DETAILS, REPLACE_ATTACHMENTS } from '../actions/projects_actions.js';
+import { RECEIVE_PROJECT_DETAILS, REPLACE_ATTACHMENTS, REMOVE_PROJECT } from '../actions/projects_actions.js';
+import { hashHistory } from 'react-router';
 import merge from 'lodash/merge';
 
 const ProjectDetailReducer = (state = {}, action) => {
@@ -11,6 +12,9 @@ const ProjectDetailReducer = (state = {}, action) => {
       let newState = merge({}, state);
       newState.attachments = action.attachments;
       return newState;
+    case REMOVE_PROJECT:
+      hashHistory.push("/");
+      return state;
     default:
       return state;
   }

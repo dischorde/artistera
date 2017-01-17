@@ -13,6 +13,7 @@ class ProjectForm extends React.Component {
     this.updateFile = this.updateFile.bind(this);
     this.readyAttachments = this.readyAttachments.bind(this);
     this.updateAttachments = this.updateAttachments.bind(this);
+    this.disable = this.disable.bind(this);
   }
 
   getInitialState() {
@@ -24,20 +25,31 @@ class ProjectForm extends React.Component {
         coverUrl: null,
         assignmentId: this.props.assignmentId,
         user_id: this.props.userId,
+        disabled: false,
+        loaderOn: "loader-off",
         attachments: []
       });
     }
     else {
       return ({
         title: this.props.projectDetail.title,
-        description: this.props.projectDetail.title,
+        description: this.props.projectDetail.description,
         coverFile: null,
         coverUrl: this.props.projectDetail.cover_img_src,
         assignmentId: this.props.assignmentId,
         user_id: this.props.userId,
+        disabled: false,
+        loaderOn: "loader-off",
         attachments: []
       });
     }
+  }
+
+  disable() {
+    this.setState({
+      disabled: true,
+      loaderOn: 'loader-on'
+    });
   }
 
   redirect(where) {
@@ -55,6 +67,7 @@ class ProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault;
+    this.disable();
     let formData = new FormData();
     formData.append("project[title]", this.state.title);
     formData.append("project[description]", this.state.description);
@@ -106,6 +119,19 @@ class ProjectForm extends React.Component {
     }
   }
 
+  catLoader() {
+    return (
+      <div class="box">
+        <div class="cat">
+          <div class="cat__body"></div>
+          <div class="cat__body"></div>
+          <div class="cat__tail"></div>
+          <div class="cat__head"></div>
+        </div>
+      </div>
+    );
+  }
+
   render() {
     let currentAttachments = [];
     currentAttachments = this.state.attachments.map((file, i) => (
@@ -122,13 +148,13 @@ class ProjectForm extends React.Component {
 
     return (
     <div className="project-form">
-        <form >
+        <form>
           <section className="project-fields">
             <label htmlFor="project-title">Project Title</label>
             <input type="text" id="project-title" onChange={this.handleChange('title')} value={this.state.title} />
             <label htmlFor="project-description">Project Description</label>
             <textarea onChange={this.handleChange('description')} value={this.state.description} />
-            <button onClick={this.handleSubmit}>{buttonText}</button>
+            <button onClick={this.handleSubmit} disabled={this.state.disabled}>{buttonText}</button>
           </section>
           <section className="project-attachments">
             <label htmlFor="cover-image">Cover Image</label><br />

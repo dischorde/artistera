@@ -14,6 +14,7 @@ class ProjectDetail extends React.Component {
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.setUpdated = this.setUpdated.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentDidMount() {
@@ -21,6 +22,7 @@ class ProjectDetail extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
+
     if (newProps.params.projectId !== this.props.params.projectId) {
       this.props.requestProject(parseInt(newProps.params.projectId));
     }
@@ -46,15 +48,21 @@ class ProjectDetail extends React.Component {
 		this.setState({updated: true});
 	}
 
+  handleDelete(e) {
+    this.props.destroyProject(this.props.params.projectId);
+  }
+
   render () {
     let project = this.props.projectDetail;
     let deleteable = false;
-    let attachments, editButton;
+    let attachments, editButton, deleteButton;
 
     if (project.user_id === this.props.userId) {
       editButton =
-        <button id="edit-project"
+        <button className="edit-delete"
                 onClick={this.openModal}>Edit</button>;
+      deleteButton =  <button className="edit-delete"
+                onClick={this.handleDelete}>Delete</button>;
       deleteable = true;
     }
 
@@ -72,9 +80,6 @@ class ProjectDetail extends React.Component {
             <h1>{project.title}</h1><br/>
             <h2>by {project.author_name}</h2>
           </div>
-          <div className="proj-edit-and-delete">
-            {editButton}
-          </div>
         </div>
         <section className="project-cover-attachment-wrapper">
           <section className="project-cover-img">
@@ -83,7 +88,10 @@ class ProjectDetail extends React.Component {
           {attachments}
         </section>
         <section className="project-details">
-          <h3>Uploaded to {project.course_title}</h3>
+          <div className="proj-edit-and-delete">
+            <h3>Uploaded to {project.course_title}</h3>
+            {editButton}{deleteButton}
+          </div>
           <h4>Updated {project.updated_at} ago</h4>
           <p>{project.description}</p>
         </section>

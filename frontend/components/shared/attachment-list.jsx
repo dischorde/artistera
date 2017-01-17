@@ -7,16 +7,17 @@ const AttachmentList = ({attachments, deleteable, deleteAttachment}) => {
       }
 
       return (
-        <button onClick={e => deleteAttachment(id)}></button>
+        <button className="delete-attachment" onClick={e => deleteAttachment(id)} alt="delete attachment"></button>
       );
   };
 
   let listItems = attachments.map((attachment, i) => (
       <li key={i} className="attachment-li">
-        <a href={attachment.file_src}>{attachment.file_name}</a>
+        <span className="delete"><a href={attachment.file_src}>{attachment.file_name}</a>
+        {deleteButton(attachment.id)}
+        </span>
         <br />
         <div className="attachment-file-size">{attachment.file_size}</div>
-        {deleteButton(attachment.id)}
       </li>
 
   ));
