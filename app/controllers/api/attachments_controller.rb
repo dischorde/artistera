@@ -14,8 +14,12 @@ class Api::AttachmentsController < ApplicationController
 
   def destroy
     @attachment = Attachment.find(params[:id])
+    if @attachment.attachable_type === "Project"
+      @project = Project.find(@attachment.attachable_id)
+    end
+
     @attachment.destroy
-    @attachment
+    render :destroy
   end
 
   private

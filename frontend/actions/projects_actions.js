@@ -6,6 +6,7 @@ export const RECEIVE_ALL_PROJECTS = "RECEIVE_ALL_PROJECTS";
 export const RECEIVE_PROJECT_DETAILS = "RECEIVE_PROJECT_DETAILS";
 export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 export const REMOVE_PROJECT = "REMOVE_PROJECT";
+export const REPLACE_ATTACHMENTS = "REPLACE_ATTACHMENTS";
 
 export const receiveAllProjects = projects => ({
   type: RECEIVE_ALL_PROJECTS,
@@ -25,6 +26,11 @@ export const receiveProject = project => ({
 export const removeProject = project => ({
   type: REMOVE_PROJECT,
   project
+});
+
+export const replaceAttachments = attachments => ({
+  type: REPLACE_ATTACHMENTS,
+  attachments
 });
 
 export const requestAllProjects = () => dispatch => {
@@ -47,6 +53,12 @@ export const destroyProject = id => dispatch => {
   });
 };
 
+export const deleteAttachment = id => dispatch => {
+  return AttachmentsAPIUtil.remove(id).then(
+    attachments => {
+      dispatch(replaceAttachments(attachments)); }
+  );
+};
 
 export const createNewProject = (project, attachments) => dispatch => {
   return ProjectsAPIUtil.createProject(project.formData, project.assignmentId)
@@ -78,7 +90,6 @@ const handleAttachments = (attachments, project, formType) => dispatch => {
      }
      else {
        dispatch(receiveProjectDetails(newProj));
-       debugger;
        if (formType === "new") {
          hashHistory.push(`projects/${project.id}`);
        }

@@ -1,12 +1,22 @@
 import React from 'react';
 
-const AttachmentList = ({attachments}) => {
-  // let attachments = props.attachments || []
+const AttachmentList = ({attachments, deleteable, deleteAttachment}) => {
+  const deleteButton = (id) => {
+      if (!deleteable) {
+        return null;
+      }
+
+      return (
+        <button onClick={e => deleteAttachment(id)}></button>
+      );
+  };
+
   let listItems = attachments.map((attachment, i) => (
       <li key={i} className="attachment-li">
         <a href={attachment.file_src}>{attachment.file_name}</a>
         <br />
         <div className="attachment-file-size">{attachment.file_size}</div>
+        {deleteButton(attachment.id)}
       </li>
 
   ));

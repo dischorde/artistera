@@ -48,14 +48,21 @@ class ProjectDetail extends React.Component {
 
   render () {
     let project = this.props.projectDetail;
-    let attachments;
-    if (project.attachments) {
-      attachments = <AttachmentList attachments={project.attachments} />;
+    let deleteable = false;
+    let attachments, editButton;
+
+    if (project.user_id === this.props.userId) {
+      editButton =
+        <button id="edit-project"
+                onClick={this.openModal}>Edit</button>;
+      deleteable = true;
     }
 
-    let editButton;
-    if (project.user_id === this.props.userId) {
-      editButton = <button id="edit-project" onClick={this.openModal}>Edit</button>;
+    if (project.attachments) {
+      attachments =
+        <AttachmentList attachments={project.attachments}
+                        deleteable={deleteable}
+                        deleteAttachment={this.props.deleteAttachment}/>;
     }
 
     return (
