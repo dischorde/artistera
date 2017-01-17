@@ -24,17 +24,16 @@ class ProjectDetail extends React.Component {
   componentWillReceiveProps(newProps) {
     if (newProps.params.projectId !== this.props.params.projectId) {
       this.props.requestProject(parseInt(newProps.params.projectId));
-      this.props.receiveProjErrors([]);
+      this.props.clearErrors();
     }
 
-    if (this.state.updated && newProps.projectDetail.errors.length === 0) {
+    if (this.state.updated && newProps.projectErrors.length === 0) {
       this.closeModal();
       this.setState({updated: false});
     }
   }
 
   openModal(e) {
-    this.props.receiveProjErrors([]);
 		this.setState({
 			modalOpen: true,
 		});
@@ -42,7 +41,7 @@ class ProjectDetail extends React.Component {
 
 	closeModal() {
 		this.setState({modalOpen: false});
-    this.props.receiveProjErrors([]);
+    this.props.clearErrors();
 	}
 
   setUpdated() {
@@ -75,8 +74,8 @@ class ProjectDetail extends React.Component {
     }
 
     let errors;
-    if (project.errors.length > 0) {
-      errors = project.errors.map( (message, i) => <li key={i}>{message}</li>);
+    if (this.props.attachmentErrors.length > 0) {
+      errors = this.props.attachmentErrors.map( (message, i) => <li key={i}>{message}</li>);
     }
 
     return (

@@ -7,6 +7,10 @@ class Assignment extends React.Component {
     super(props);
   }
 
+  componentWillUnmount() {
+    this.props.clearProjErrors();
+  }
+
   render () {
     let assignment = this.props.assignment;
     if (assignment === undefined) {

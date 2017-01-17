@@ -15,7 +15,7 @@ class CourseDetail extends React.Component {
   componentWillReceiveProps(newProps) {
     if (newProps.params.courseId !== this.props.params.courseId) {
       this.props.requestCourse(parseInt(newProps.params.courseId));
-      this.props.receiveProjErrors([]);
+      this.props.clearErrors();
     }
   }
 

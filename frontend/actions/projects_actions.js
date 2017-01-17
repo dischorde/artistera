@@ -8,6 +8,8 @@ export const RECEIVE_PROJECT = "RECEIVE_PROJECT";
 export const REMOVE_PROJECT = "REMOVE_PROJECT";
 export const REPLACE_ATTACHMENTS = "REPLACE_ATTACHMENTS";
 export const RECEIVE_PROJ_ERRORS = "RECEIVE_PROJ_ERRORS";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
+export const CLEAR_PROJ_ERRORS = "CLEAR_PROJ_ERRORS";
 
 export const receiveAllProjects = projects => ({
   type: RECEIVE_ALL_PROJECTS,
@@ -38,6 +40,15 @@ export const receiveProjErrors = errors => ({
   type: RECEIVE_PROJ_ERRORS,
   errors
 });
+
+export const clearErrors = () => ({
+  type: CLEAR_ERRORS
+});
+
+export const clearProjErrors = () => ({
+  type: CLEAR_PROJ_ERRORS
+});
+
 
 
 export const requestAllProjects = () => dispatch => {
@@ -71,7 +82,7 @@ export const createNewProject = (project, attachments) => dispatch => {
   return ProjectsAPIUtil.createProject(project.formData, project.assignmentId)
   .then( newProj => {
     return dispatch(handleAttachments(attachments, newProj, "new"));
-  }).fail( error => dispatch(receiveProjErrors(error.responseJSON)));
+  }).fail( error => dispatch(receiveProjErrors({ project: error.responseJSON})));
 };
 
 
@@ -79,7 +90,7 @@ export const updateProject = (project, attachments) => dispatch => {
   return ProjectsAPIUtil.updateProject(project.formData, project.ids)
   .then(updatedProj => {
     return dispatch(handleAttachments(attachments, updatedProj, "update"));
-  }).fail( error => dispatch(receiveProjErrors(error.responseJSON)));
+  }).fail( error => dispatch(receiveProjErrors({ project: error.responseJSON})));
 };
 
 
@@ -101,7 +112,7 @@ const handleAttachments = (attachments, project, formType) => dispatch => {
        });
      }
      else {
-       dispatch(receiveProjErrors(errors));
+       dispatch(receiveProjErrors({attachments: errors}));
        dispatch(receiveProjectDetails(newProj));
        if (formType === "new") {
          hashHistory.push(`projects/${project.id}`);

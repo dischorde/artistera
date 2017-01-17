@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createNewProject, updateProject, receiveProjErrors } from '../../actions/projects_actions';
+import { createNewProject, updateProject, clearErrors } from '../../actions/projects_actions';
 import ProjectForm from './project_form';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -10,13 +10,14 @@ const mapStateToProps = (state, ownProps) => ({
   projectDetail: state.projectDetail,
   closeModal: ownProps.closeModal,
   setUpdated: ownProps.setUpdated,
-  errors: state.projectDetail.errors
+  projectErrors: state.projectDetail.errors.project,
+  attachmentErrors: state.projectDetail.errors.attachments
 });
 
 const mapDispatchToProps = dispatch => ({
 	createNewProject: (project, attachments) => dispatch(createNewProject(project, attachments)),
 	updateProject: (project, attachments) => dispatch(updateProject(project, attachments)),
-  receiveProjErrors: (errors) => dispatch(receiveProjErrors(errors))
+  clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(

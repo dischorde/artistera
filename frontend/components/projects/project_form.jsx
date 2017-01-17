@@ -17,7 +17,7 @@ class ProjectForm extends React.Component {
   }
 
   getInitialState() {
-    if (this.props.formType === 'new' && this.props.errors.length == 0) {
+    if (this.props.formType === 'new' && this.props.projectErrors.length == 0) {
       return ({
         title: "",
         description: "",
@@ -53,7 +53,7 @@ class ProjectForm extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    if (newProps.errors.length > 0) {
+    if (newProps.projectErrors.length > 0) {
       this.setState({
         disabled: false,
         loaderOn: 'loader-off'
@@ -96,7 +96,7 @@ class ProjectForm extends React.Component {
     else {
       const ids = {assignment_id: this.state.assignmentId, id: this.props.projectId};
       const project = {formData: formData, ids: ids};
-      this.props.receiveProjErrors([]);
+      this.props.clearErrors();
       this.props.updateProject(project, attachments);
       this.props.setUpdated();
     }
@@ -145,8 +145,9 @@ class ProjectForm extends React.Component {
   render() {
     let errors;
     let errorStatus = "hidden-errors";
-    if (this.props.errors.length > 0) {
-      errors = this.props.errors.map( (message, i) => <li key={i}>{message}</li>);
+    const allErrors = this.props.projectErrors.concat(this.props.attachmentErrors);
+    if (allErrors.length > 0) {
+      errors = allErrors.map( (message, i) => <li key={i}>{message}</li>);
       errorStatus = "errors";
     }
 
