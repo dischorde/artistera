@@ -82,6 +82,43 @@ quote = Assignment.create!(
   resources: "Tombow: http://www.amazon.com/Tombow-Dual-Brush-Black-66621/dp/B001LDKB1S/ref=sr_1_9?s=office-products&ie=UTF8&qid=1445910929&sr=1-9&keywords=tombow Prismacolor: http://www.amazon.com/Prismacolor-Premier-Illustration-Assorted-1738861/dp/B0038D7Y00/ref=sr_1_2?ie=UTF8&qid=1445910900&sr=8-2&keywords=prismacolor+brush+pen Booklet (inclides two pens): https://www.etsy.com/listing/238739126/a-guide-to-brush-lettering-starter-pack?ref=pr_shop"
 )
 
+assign5 = Assignment.create!(
+  course_id: mixedmedia.id,
+  title: "Blank for now",
+  description: "Human give me attention meow chew on cable spit up on light gray carpet instead of adjacent linoleum lick sellotape so who's the baby. Cats secretly make all the worlds muffins stare out the window yet who's the baby meowing non stop for food. Claw drapes need to chase tail. Has closed eyes but still sees you go into a room to decide you didn't want to be in there anyway missing until dinner time, but attack feet eat and than sleep on your face, walk on car leaving trail of paw prints on hood and windshield. Steal the warm chair right after you get up kitty power! , pooping rainbow while flying in a toasted bread costume in space spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce, so purrr purr littel cat, little cat purr purr. Licks your face why must they do that and sometimes switches in french and say 'miaou' just because well why not.",
+  deliverable: "Will fill in later",
+  materials: nil,
+  resources: nil
+)
+
+assign6 = Assignment.create!(
+  course_id: charcoal.id,
+  title: "Blank for now",
+  description: "Human give me attention meow chew on cable spit up on light gray carpet instead of adjacent linoleum lick sellotape so who's the baby. Cats secretly make all the worlds muffins stare out the window yet who's the baby meowing non stop for food. Claw drapes need to chase tail. Has closed eyes but still sees you go into a room to decide you didn't want to be in there anyway missing until dinner time, but attack feet eat and than sleep on your face, walk on car leaving trail of paw prints on hood and windshield. Steal the warm chair right after you get up kitty power! , pooping rainbow while flying in a toasted bread costume in space spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce, so purrr purr littel cat, little cat purr purr. Licks your face why must they do that and sometimes switches in french and say 'miaou' just because well why not.",
+  deliverable: "Will fill in later",
+  materials: nil,
+  resources: nil
+)
+
+assign7 = Assignment.create!(
+  course_id: knitting.id,
+  title: "Blank for now",
+  description: "Human give me attention meow chew on cable spit up on light gray carpet instead of adjacent linoleum lick sellotape so who's the baby. Cats secretly make all the worlds muffins stare out the window yet who's the baby meowing non stop for food. Claw drapes need to chase tail. Has closed eyes but still sees you go into a room to decide you didn't want to be in there anyway missing until dinner time, but attack feet eat and than sleep on your face, walk on car leaving trail of paw prints on hood and windshield. Steal the warm chair right after you get up kitty power! , pooping rainbow while flying in a toasted bread costume in space spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce, so purrr purr littel cat, little cat purr purr. Licks your face why must they do that and sometimes switches in french and say 'miaou' just because well why not.",
+  deliverable: "Will fill in later",
+  materials: nil,
+  resources: nil
+)
+
+assign8 = Assignment.create!(
+  course_id: drawing.id,
+  title: "Blank for now",
+  description: "Human give me attention meow chew on cable spit up on light gray carpet instead of adjacent linoleum lick sellotape so who's the baby. Cats secretly make all the worlds muffins stare out the window yet who's the baby meowing non stop for food. Claw drapes need to chase tail. Has closed eyes but still sees you go into a room to decide you didn't want to be in there anyway missing until dinner time, but attack feet eat and than sleep on your face, walk on car leaving trail of paw prints on hood and windshield. Steal the warm chair right after you get up kitty power! , pooping rainbow while flying in a toasted bread costume in space spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce, so purrr purr littel cat, little cat purr purr. Licks your face why must they do that and sometimes switches in french and say 'miaou' just because well why not.",
+  deliverable: "Will fill in later",
+  materials: nil,
+  resources: nil
+)
+
+
 project1 = Project.create!({title: "A Sample Submission", description: "Howl on top of tall thing attack feet sit on human for use lap as chair jump off balcony, onto stranger's head, or licks your face for friends are not food. Gate keepers of hell meowing non stop for food why must they do that. Lies down meow all night having their mate disturbing sleeping humans and thug cat meowzer! so chew foot, or sit in window and stare ooo, a bird! yum yet lick yarn hanging out of own butt. Brown cats with pink ears destroy couch, or who's the baby. Sit on the laptop hide from vacuum cleaner.", user_id: user1.id, assignment_id: painting.id, cover_img_file_name: "watercolor-in-progress.jpeg", cover_img_content_type: "image/jpeg", cover_img_file_size: 16283, cover_img_updated_at: "2017-01-13 22:52:39"})
 
 attachment1 = Attachment.create!({attachable_type: "Assignment", attachable_id: painting.id, document_file_name: "Watercolor-For-Beginners.pdf", document_content_type: "application/pdf", document_file_size: 234278, document_updated_at: "2017-01-14 02:05:13"})
