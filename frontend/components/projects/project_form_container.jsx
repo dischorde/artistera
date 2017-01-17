@@ -7,7 +7,9 @@ const mapStateToProps = (state, ownProps) => ({
   projectId: ownProps.projectId,
   userId: state.session.currentUser.id,
   formType: ownProps.formType,
-  projectDetail: state.projectDetail
+  projectDetail: state.projectDetail,
+  closeModal: ownProps.closeModal,
+  setUpdated: ownProps.setUpdated,
 });
 
 const mapDispatchToProps = dispatch => ({

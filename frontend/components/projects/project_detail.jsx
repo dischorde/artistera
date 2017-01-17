@@ -8,10 +8,12 @@ class ProjectDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalOpen: false
+      modalOpen: false,
+      updated: false
     };
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.setUpdated = this.setUpdated.bind(this);
   }
 
   componentDidMount() {
@@ -22,7 +24,13 @@ class ProjectDetail extends React.Component {
     if (newProps.params.projectId !== this.props.params.projectId) {
       this.props.requestProject(parseInt(newProps.params.projectId));
     }
+
+    if (this.state.updated) {
+      this.closeModal();
+      this.setState({updated: false});
+    }
   }
+
 
   openModal(e) {
 		this.setState({
@@ -32,6 +40,10 @@ class ProjectDetail extends React.Component {
 
 	closeModal() {
 		this.setState({modalOpen: false});
+	}
+
+  setUpdated() {
+		this.setState({updated: true});
 	}
 
   render () {
@@ -74,7 +86,7 @@ class ProjectDetail extends React.Component {
 					isOpen={this.state.modalOpen}
 					onRequestClose={this.closeModal}
 					className="project-form-modal">
-          <ProjectFormContainer assignmentId={project.assignment_id} projectId={project.id} formType={'update'} />
+          <ProjectFormContainer assignmentId={project.assignment_id} projectId={project.id} formType={'update'} setUpdated={this.setUpdated} />
         </Modal>
       </div>
     );

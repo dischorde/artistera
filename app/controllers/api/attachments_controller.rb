@@ -2,7 +2,12 @@ class Api::AttachmentsController < ApplicationController
   def create
     @attachment = Attachment.new(attachment_params)
 
-    if !@attachment.save
+    if @attachment.save
+      if attachment_params[:attachable_type] === "Project"
+        @project = Project.find(attachment_params[:attachable_id])
+        render 'api/projects/show'
+      end
+    else
       render json: @attachment.errors.full_messages, status: 422
     end
   end
