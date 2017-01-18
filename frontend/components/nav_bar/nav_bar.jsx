@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import SearchBar from '../search/search_bar.jsx';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -64,9 +65,7 @@ class NavBar extends React.Component {
             <li><Link to="/projects">All Projects</Link></li>
           </ul>
         </section>
-        <section className="nav-search">
-          <input type="text" id="searchBar" placeholder="The Search Bar Will Go Here" />
-        </section>
+        <SearchBar searchCourses={this.props.searchCourses} />
         <section className="nav-right">
           { currentUser ? this.navLoggedIn() : this.navLoggedOut()}
         </section>

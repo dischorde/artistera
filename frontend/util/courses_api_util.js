@@ -11,3 +11,11 @@ export const fetchCourse = (id) => (
     url: `/api/courses/${id}`
   })
 );
+
+export const searchCourses = (search) => (
+  $.ajax({
+    method: "GET",
+    url: "/api/courses",
+    data: { search }
+  })
+);

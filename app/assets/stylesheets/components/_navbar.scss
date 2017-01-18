@@ -37,6 +37,7 @@ header section ul {
 .nav-search {
   width: 50%;
   justify-content: center;
+  position: relative;
 }
 
 .nav-left li {
@@ -52,12 +53,25 @@ header section ul {
   padding: 0px 0px 0px 15px;
 }
 
-#searchBar {
+.search-bar {
   width: 90%;
   border-radius: 5px;
-  padding: 8px 15px;
+  padding: 8px 15px 8px 30px;
   border: 1px solid $lighter-grey;
-  color: $lighter-grey;
+  font-size: 12px;
+}
+
+.nav-search::before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding: 0 0 0 0;
+  color: $medium-grey;
+  position: absolute;
+  top: 9px;
+  left: 16px;
 }
 
 #logo {

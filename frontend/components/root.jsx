@@ -11,6 +11,7 @@ import AboutContainer from './courses/about/about_container.jsx';
 import ProjectsContainer from './courses/projects/projects_container.jsx';
 import AssignmentContainer from './courses/assignment/assignment_container.jsx';
 import ReviewsContainer from './courses/reviews/reviews_container.jsx';
+import SearchIndexContainer from './search/search_index_container.jsx';
 
 
 const Root = ({ store }) => {
@@ -43,6 +44,7 @@ const Root = ({ store }) => {
             <Route path="reviews" component={ ReviewsContainer } />
           </Route>
           <Route path="/projects/:projectId" component={ ProjectDetailContainer } />
+          <Route path="/search" component={ SearchIndexContainer } />
         </Route>
       </Router>
     </Provider>

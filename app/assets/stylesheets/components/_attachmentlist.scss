@@ -11,8 +11,7 @@
 }
 
 .attachment-li::before {
-    // content: "\f003";
-    content: "\f0c6"; //<-- TODO: paperclip instead of envelope?
+    content: "\f0c6";
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;

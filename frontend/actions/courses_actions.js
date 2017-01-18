@@ -25,3 +25,8 @@ export const requestCourse = id => dispatch => {
   }
   );
 };
+
+export const searchCourses = (keyword) => dispatch => {
+  return CoursesAPIUtil.searchCourses(keyword)
+  .then(courses => dispatch(receiveAllCourses(courses)));
+};
