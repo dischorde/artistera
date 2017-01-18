@@ -1,0 +1,102 @@
+.individual-review {
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    margin: 20px 0;
+    max-width: 1150px;
+}
+
+.individual-review:first-of-type {
+  margin-top: 0;
+}
+
+.individual-review:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.individual-review p {
+  align-self: center;
+  text-align: justify;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.review-header h4 {
+  text-align: center;
+}
+
+.review-body {
+  display: flex;
+  width: 100%;
+  background: $it-will;
+  margin: 0 3%;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.individual-review:nth-of-type(even) .review-body {
+  background: $sage;
+}
+
+.rev-gravatar-letter {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: $white;
+  z-index: 1;
+  font-size: 22px;
+}
+
+.rev-gravatar img {
+  width: 62px;
+  height: 62px;
+  position: relative;
+  z-index: 2;
+  top: -1px;
+  left: -1px;
+  border-radius: 50%;
+}
+
+.reviews-list {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.rev-gravatar {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $flying-bird; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, $red , $flying-bird); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, $red, $flying-bird); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, $red, $flying-bird); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, $red, $flying-bird);
+  margin: 0 auto;
+}
+
+.review-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space:nowrap;
+  align-items: center;
+}
+
+.review-buttons {
+  flex-direction: row;
+  display: flex;
+  max-width: 100%;
+}
+
+.review-buttons button {
+  margin: 0;
+  padding: 2px 6px 3px;
+  border-radius: 4px;
+}
+
+
+.individual-review:nth-of-type(even) .review-buttons {
+  text-align: left;
+}
