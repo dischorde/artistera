@@ -103,23 +103,24 @@
 
 
 .review-form-modal {
-  width: 56%;
-  padding: 10px 35px 35px 35px;
+  max-width: 75%;
+  padding: 30px 30px 20px 15px;
   background-color: $dark-grey;
   color: $white;
   box-sizing: border-box;
-  border-radius: 8px;
+  border-radius: 13px;
   position: relative;
 }
 
 .review-form-wrapper {
   width: 100%;
   margin: 40px auto 0 auto;
-  padding: 10px 35px 35px 35px;
+  padding: 30px 30px 20px 15px;
   background-color: $lightest-grey;
   box-sizing: border-box;
   border-radius: 8px;
   position: relative;
+  border-radius: 13px;
 }
 
 .review-form form {
@@ -154,16 +155,33 @@
 }
 
 .review-form button {
-  max-width: 77px;
+  max-width: 130px;
   border: 0px;
-  margin-top: 22px;
+  margin-top: 20px;
 }
 
+.rev-form-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.rev-form-body textarea {
+  min-height: 200px;
+  max-width: 1300px;
+  min-width: 100%;
+  resize: vertical;
+  box-sizing: border-box;
+  border-radius: 13px;
+  font-size: 14px;
+  font-family: $open-sans;
+  padding: 18px;
+}
 
 .rev-form-gravatar-letter {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 12px;
+  left: 15px;
   color: $white;
   z-index: 1;
   font-size: 22px;
@@ -171,19 +189,20 @@
 
 .rev-form-gravatar {
   position: relative;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background: $flying-bird; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left, $red , $flying-bird); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(right, $red, $flying-bird); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(right, $red, $flying-bird); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right, $red, $flying-bird);
+  margin-right: 15px;
 }
 
 .rev-form-gravatar img {
-  width: 62px;
-  height: 62px;
+  width: 47px;
+  height: 47px;
   position: relative;
   z-index: 2;
   top: -1px;

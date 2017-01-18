@@ -38,18 +38,19 @@ class ReviewForm extends React.Component {
     (this.props.formType === 'new' ? "Leave a Review" : "Update Review" );
 
     return (
-      <div className="review-form">
+      <section className="review-form">
         <form>
             <div className="rev-form-gravatar">
               <span className="rev-form-gravatar-letter">A</span>
               <img src={this.props.gravatarUrl}/>
             </div>
-
-          <textarea onChange={this.handleChange}
-            value={this.state.body} />
-          <button onClick={this.handleSubmit}>{buttonText}</button>
+          <section className="rev-form-body">
+            <textarea onChange={this.handleChange}
+              value={this.state.body} />
+            <button onClick={this.handleSubmit}>{buttonText}</button>
+          </section>
         </form>
-      </div>
+      </section>
   );
   }
 }
