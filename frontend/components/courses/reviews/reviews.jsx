@@ -1,6 +1,6 @@
 import React from 'react';
 import ReviewListItem from './review_list_item.jsx';
-import ReviewForm from './review_form.jsx';
+import ReviewFormContainer from './review_form_container.jsx';
 import Modal from 'react-modal';
 
 class Reviews extends React.Component {
@@ -9,7 +9,6 @@ class Reviews extends React.Component {
     this.state = {
       modalOpen: false,
       reviewId: null,
-      reviewText: null
     };
 
     this.openModal = this.openModal.bind(this);
@@ -22,16 +21,15 @@ class Reviews extends React.Component {
 
   openModal(id) {
     return e => {
-      let reviewText = this.props.reviews[id].body;
       this.setState({
         modalOpen: true,
         reviewId: id,
-        reviewText
       });
     };
   }
 
   closeModal() {
+    this.props.clearReviewErrors();
     this.setState({ modalOpen: false });
   }
 
@@ -55,11 +53,9 @@ class Reviews extends React.Component {
           {reviewList}
         </section>
         <section className="review-form-wrapper">
-          <ReviewForm
-            userId={currentUser.id}
+          <ReviewFormContainer
             courseId={this.props.params.courseId}
             formType="new"
-            createReview={this.props.createReview}
             gravatarUrl={`https://www.gravatar.com/avatar/${currentUser.gravatar_hash}?d=blank`} />
         </section>
 
@@ -80,13 +76,10 @@ class Reviews extends React.Component {
             transform             : 'translate(-50%, -50%)'
         } }}
         >
-          <ReviewForm
-            userId={currentUser.id}
+          <ReviewFormContainer
             courseId={this.props.params.courseId}
             formType="update"
-            updateReview={this.props.updateReview}
             closeModal={this.closeModal}
-            reviewText={this.state.reviewText}
             reviewId={this.state.reviewId}
             gravatarUrl={`https://www.gravatar.com/avatar/${this.props.currentUser.gravatar_hash}?d=blank`} />
         </Modal>

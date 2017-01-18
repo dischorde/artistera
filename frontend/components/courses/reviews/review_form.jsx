@@ -9,7 +9,9 @@ class ReviewForm extends React.Component {
   }
 
   makeReviewText() {
-    let body = (this.props.reviewText ? this.props.reviewText : "" );
+    let currentReview = this.props.reviews[this.props.reviewId];
+    let body = (currentReview ? currentReview.body : "" );
+
     return {
       user_id: this.props.userId,
       course_id: this.props.courseId,
@@ -18,19 +20,22 @@ class ReviewForm extends React.Component {
   }
 
   handleChange(e) {
-    // dispatch clear all
+    this.props.clearReviewErrors();
     this.setState({body: e.currentTarget.value});
   }
 
   handleSubmit(e) {
     e.preventDefault(e);
     let review = Object.assign({}, this.state);
-    // if (review.body === "") {
-    //   dispatch body cannot be blank
-    //   to review new error if new else to review edit error
-    // }
+    if (review.body === "") {
+      return this.props.receiveReviewErrors(
+        { [this.props.formType]: ["Body cannot be blank"]}
+      );
+    }
+
     if (this.props.formType === 'new') {
-      this.props.createReview(review);
+      this.props.createReview(review)
+      .then(() => this.setState({body: ""}));
     }
     else {
       review.id = this.props.reviewId;
@@ -39,8 +44,22 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-    let buttonText  =
-    (this.props.formType === 'new' ? "Leave a Review" : "Update Review" );
+    const { formType, gravatarUrl, allErrors } = this.props;
+    let buttonText, errors;
+    let errorStatus = "hidden-errors";
+
+    if ( formType === 'new') {
+      buttonText = "Leave a Review";
+    }
+    else {
+      buttonText = "Update Review";
+    }
+
+    if (allErrors[formType].length > 0) {
+      errors = allErrors[formType].map(
+        (message, i) => <li key={i}>{message}</li>);
+      errorStatus = "errors";
+    }
 
     return (
       <section className="review-form">
@@ -52,6 +71,9 @@ class ReviewForm extends React.Component {
           <section className="rev-form-body">
             <textarea onChange={this.handleChange}
               value={this.state.body} />
+            <ul className={errorStatus}>
+              {errors}
+            </ul>
             <button onClick={this.handleSubmit}>{buttonText}</button>
           </section>
         </form>
