@@ -100,3 +100,14 @@
 .individual-review:nth-of-type(even) .review-buttons {
   text-align: left;
 }
+
+
+.review-form-modal {
+  width: 56%;
+  padding: 10px 35px 35px 35px;
+  background-color: $dark-grey;
+  color: $white;
+  box-sizing: border-box;
+  border-radius: 8px;
+  position: relative;
+}

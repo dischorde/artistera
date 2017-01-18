@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const ReviewListItem = ({review, deleteReview, currentUser}) => {
+const ReviewListItem = ({review, deleteReview, currentUser, openModal}) => {
   const {id, body, author, gravatar_hash, author_id} = review;
   const handleDelete = e => {
     e.preventDefault();
@@ -13,7 +13,7 @@ const ReviewListItem = ({review, deleteReview, currentUser}) => {
   if (author_id === currentUser.id) {
     reviewButtons = (
       <section className="review-buttons">
-        <button>Edit</button>
+        <button onClick={openModal(id)}>Edit</button>
         &nbsp;
         <button onClick={handleDelete}>Delete</button>
       </section>
@@ -24,8 +24,10 @@ const ReviewListItem = ({review, deleteReview, currentUser}) => {
   return (
     <section className="individual-review">
       <section className="review-header">
-        <div className="rev-gravatar"><span className="rev-gravatar-letter">{author[0]}</span>
-        <img src={`https://www.gravatar.com/avatar/${gravatar_hash}?d=blank`} /></div>
+        <div className="rev-gravatar">
+          <span className="rev-gravatar-letter">{author[0]}</span>
+          <img src={`https://www.gravatar.com/avatar/${gravatar_hash}?d=blank`}/>
+        </div>
         <h4>
           {author}
         </h4>

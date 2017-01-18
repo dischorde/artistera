@@ -4,7 +4,7 @@ import { selectAllReviews } from '../../../reducers/selectors.js';
 import Reviews from './reviews.jsx';
 
 const mapStateToProps = state => ({
-  reviews: selectAllReviews(state),
+  reviews: state.reviews,
   currentUser: state.session.currentUser
 });
 
