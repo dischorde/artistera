@@ -6,10 +6,10 @@ export const fetchReviews = (course_id) => (
   })
 );
 
-export const fetchReview = (id, courseId) => (
+export const fetchReview = (id) => (
   $.ajax({
     method: "GET",
-    url:`/api/courses/${courseId}/reviews/${id}`,
+    url:`/api/reviews/${id}`,
   })
 );
 
@@ -24,14 +24,14 @@ export const createReview = (review) => (
 export const updateReview = (review) => (
   $.ajax({
     method: "PATCH",
-    url:`/api/courses/${review.course_id}/reviews/${review.id}`,
+    url:`/api/reviews/${review.id}`,
     data: { review }
   })
 );
 
-export const deleteReview = (id, courseId) => (
+export const deleteReview = (id) => (
   $.ajax({
     method: "DELETE",
-    url:`/api/courses/${courseId}/reviews/${id}`,
+    url:`/api/reviews/${id}`,
   })
 );

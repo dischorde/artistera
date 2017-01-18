@@ -12,8 +12,7 @@ class Api::ReviewsController < ApplicationController
     @review = Review.new(review_params)
 
     if @review.save
-      @reviews = @review.siblings
-      render :index
+      render :show
     else
       render json: @review.errors.full_messages, status: 422
     end
@@ -21,8 +20,7 @@ class Api::ReviewsController < ApplicationController
 
   def update
     if @review.update_attributes(review_params)
-      @reviews = @review.siblings
-      render :index
+      render :show
     else
       render json: @review.errors.full_messages, status: 422
     end

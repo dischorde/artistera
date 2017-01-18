@@ -7,12 +7,13 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :courses, only: [:index, :show] do
       resources :assignments, only: [:show]
-      resources :reviews, except: [:new, :edit]
+      resources :reviews, only: [:index, :create]
     end
     resources :assignments, only: [:index] do
       resources :projects, only: [:update, :create]
     end
     resources :projects, only: [:index, :show, :destroy]
     resources :attachments, only: [:create, :destroy]
+    resources :reviews, except: [:index, :create, :new, :edit]
   end
 end

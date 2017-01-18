@@ -7,3 +7,7 @@ export const selectAllCourses = (state) => {
 export const selectAllProjects = (state) => {
   return values(state.projects);
 };
+
+export const selectAllReviews = (state) => {
+  return values(state.reviews);
+};
