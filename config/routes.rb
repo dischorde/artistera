@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :courses, only: [:index, :show] do
       resources :assignments, only: [:show]
-      resources :reviews, except: [:show, :new, :edit]
+      resources :reviews, except: [:new, :edit]
     end
     resources :assignments, only: [:index] do
       resources :projects, only: [:update, :create]

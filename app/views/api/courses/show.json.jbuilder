@@ -26,19 +26,3 @@ else
    end
   json.projects []
 end
-
-# json.reviews do
-#   json.array! @course.reviews do |review|
-#     json.id review.id
-#     json.body review.body
-#     json.author json.extract! review.author, :id, :first_name, :last_name, :gravatar_hash
-#   end
-
-# if @course.assignment.attachments
-#   json.array! @course.assignment.attachments do |attachment|
-#     json.filename attachment.document_file_name
-#     json.file_src attachment.document.url
-#   end
-# else
-#   []
-# end
