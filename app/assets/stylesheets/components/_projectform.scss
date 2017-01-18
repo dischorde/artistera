@@ -13,7 +13,7 @@
 .project-form-modal {
   width: 56%;
   padding: 10px 35px 35px 35px;
-  background-color: $dark-grey;
+  background-color: $modal-grey;
   color: $white;
   box-sizing: border-box;
   border-radius: 8px;
@@ -135,6 +135,13 @@
   -webkit-font-smoothing: antialiased;
   line-height: 1;
   white-space: nowrap;
+}
+
+.project-form-modal .cover-image-button::before,
+.project-form-modal .attachments-button::before,
+.project-form-modal button {
+  background: $modal-coral;
+  border-bottom: 1px solid $modal-flying-bird;
 }
 
 .attachments-button::before {

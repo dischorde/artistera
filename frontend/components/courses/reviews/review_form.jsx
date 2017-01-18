@@ -18,12 +18,17 @@ class ReviewForm extends React.Component {
   }
 
   handleChange(e) {
+    // dispatch clear all
     this.setState({body: e.currentTarget.value});
   }
 
   handleSubmit(e) {
     e.preventDefault(e);
     let review = Object.assign({}, this.state);
+    // if (review.body === "") {
+    //   dispatch body cannot be blank
+    //   to review new error if new else to review edit error
+    // }
     if (this.props.formType === 'new') {
       this.props.createReview(review);
     }

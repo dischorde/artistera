@@ -105,7 +105,7 @@
 .review-form-modal {
   max-width: 75%;
   padding: 30px 30px 20px 15px;
-  background-color: $dark-grey;
+  background-color: $modal-grey;
   color: $white;
   box-sizing: border-box;
   border-radius: 13px;
@@ -208,4 +208,9 @@
   top: -1px;
   left: -1px;
   border-radius: 50%;
+}
+
+.review-form-modal button {
+  background: $modal-coral;
+  border-bottom: 1px solid $modal-flying-bird;
 }
