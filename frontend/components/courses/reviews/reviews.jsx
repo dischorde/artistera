@@ -54,12 +54,14 @@ class Reviews extends React.Component {
         <section className="reviews-list">
           {reviewList}
         </section>
-        <ReviewForm
-          userId={currentUser.id}
-          courseId={this.props.params.courseId}
-          formType="new"
-          createReview={this.props.createReview}
-          gravatarUrl={`https://www.gravatar.com/avatar/${currentUser.gravatar_hash}?d=blank`} />
+        <section className="review-form-wrapper">
+          <ReviewForm
+            userId={currentUser.id}
+            courseId={this.props.params.courseId}
+            formType="new"
+            createReview={this.props.createReview}
+            gravatarUrl={`https://www.gravatar.com/avatar/${currentUser.gravatar_hash}?d=blank`} />
+        </section>
 
       <Modal
         contentLabel="Modal"

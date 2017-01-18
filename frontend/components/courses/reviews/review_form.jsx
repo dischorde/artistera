@@ -38,9 +38,13 @@ class ReviewForm extends React.Component {
     (this.props.formType === 'new' ? "Leave a Review" : "Update Review" );
 
     return (
-      <div>
+      <div className="review-form">
         <form>
-          <img className="rev-form-gravatar" src={this.props.gravatarUrl} />
+            <div className="rev-form-gravatar">
+              <span className="rev-form-gravatar-letter">A</span>
+              <img src={this.props.gravatarUrl}/>
+            </div>
+
           <textarea onChange={this.handleChange}
             value={this.state.body} />
           <button onClick={this.handleSubmit}>{buttonText}</button>

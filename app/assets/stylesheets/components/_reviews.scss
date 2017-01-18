@@ -111,3 +111,82 @@
   border-radius: 8px;
   position: relative;
 }
+
+.review-form-wrapper {
+  width: 100%;
+  margin: 40px auto 0 auto;
+  padding: 10px 35px 35px 35px;
+  background-color: $lightest-grey;
+  box-sizing: border-box;
+  border-radius: 8px;
+  position: relative;
+}
+
+.review-form form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.review-form-wrapper:before {
+  position: absolute;
+  content: " ";
+  top: -15px;
+  left: 90px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid $lightest-grey;
+}
+
+.review-fields label {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 22px 0 22px 0;
+}
+
+.review-attachments label {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 22px 0 5px 0;
+}
+
+.review-form button {
+  max-width: 77px;
+  border: 0px;
+  margin-top: 22px;
+}
+
+
+.rev-form-gravatar-letter {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: $white;
+  z-index: 1;
+  font-size: 22px;
+}
+
+.rev-form-gravatar {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $flying-bird; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, $red , $flying-bird); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, $red, $flying-bird); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, $red, $flying-bird); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, $red, $flying-bird);
+}
+
+.rev-form-gravatar img {
+  width: 62px;
+  height: 62px;
+  position: relative;
+  z-index: 2;
+  top: -1px;
+  left: -1px;
+  border-radius: 50%;
+}
