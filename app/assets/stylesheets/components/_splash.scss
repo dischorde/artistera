@@ -1,0 +1,160 @@
+.hero-banner {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  background-color: $it-will;
+  background-image: url("https://s3.amazonaws.com/artistera-dev/hero-darker.jpg");
+  background-size: cover;
+}
+
+.splash-classes .all-classes-projects-wrapper {
+  padding-top: 40px;
+}
+
+.hero-banner h1 {
+  font-size: 48px;
+}
+
+.hero-banner h3 {
+  margin: 20px 0 45px;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.splash-classes h2 {
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.overlay {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.overlay button {
+  background-color: $modal-coral;
+  border-bottom: 1px solid $modal-flying-bird;
+}
+
+.splash-projects {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  max-width: 1440px;
+  margin-top: 22px;
+}
+.splash-classes {
+  margin-bottom: 40px;
+}
+
+.splash-projects-wrapper .all-classes-projects-wrapper {
+  width: 100%;
+}
+
+.splash-projects-wrapper ul {
+  max-width: 662px;
+}
+
+.splash-projects-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 20px;
+}
+
+.splash-projects-text p {
+  width: 65%;
+  text-align: justify;
+  padding-bottom: 20px;
+}
+
+.how-to-take {
+  background: rgba(111, 165, 141, .63);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  color: $white;
+}
+
+.how-to-take-wrapper {
+  background: url("https://s3.amazonaws.com/artistera-dev/paintbrushes.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+.how-to-steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 75%;
+}
+
+.splash-projects-wrapper {
+  width: 50%;
+}
+
+.splash-projects-text {
+  width: 50%;
+}
+
+.splash-projects-text h2 {
+  padding-bottom: 20px;
+}
+
+.how-to-take h2 {
+  padding-bottom: 40px;
+}
+
+.how-to-item {
+  padding: 30px 8%;
+  text-align: center;
+}
+
+.how-to-item span {
+  padding-top: 20px;
+  display: block;
+}
+
+#videos-icon::before {
+  content: "\f26c";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-size: 4em;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding: 0 0 0 0;
+}
+
+#project-icon::before {
+  content: "\f1fc";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-size: 4em;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding: 0 0 0 0;
+}
+
+#upload-icon::before {
+  content: "\f0ee";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-size: 4em;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding: 0 0 0 0;
+}

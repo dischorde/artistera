@@ -12,12 +12,12 @@ import ProjectsContainer from './courses/projects/projects_container.jsx';
 import AssignmentContainer from './courses/assignment/assignment_container.jsx';
 import ReviewsContainer from './courses/reviews/reviews_container.jsx';
 import SearchIndexContainer from './search/search_index_container.jsx';
-
+import SplashPageContainer from './splash_page/splash_page_container.jsx';
 
 const Root = ({ store }) => {
   const _redirectIfLoggedIn = (nextState, replace) => {
     if (store.getState().session.currentUser) {
-      replace('/');
+      replace('/courses');
     }
   };
 
@@ -32,19 +32,19 @@ const Root = ({ store }) => {
       <Router history={ hashHistory }>
         <Route path="/signin" component={ SessionFormContainer } onEnter={ _redirectIfLoggedIn } />
         <Route path="/signup" component={ SessionFormContainer } onEnter={ _redirectIfLoggedIn } />
-        <Route path="/" component={ App } onEnter={ _ensureSignedIn } >
-          <IndexRoute component={ CourseIndexContainer } />
-          <Route path="/courses" component={ CourseIndexContainer } />
-          <Route path="/projects" component={ ProjectIndexContainer } />
-          <Route path="/courses/:courseId" component={ CourseDetailContainer } >
+        <Route path="/" component={ App } >
+          <IndexRoute component={ SplashPageContainer } onEnter={ _redirectIfLoggedIn } />
+          <Route path="/courses" component={ CourseIndexContainer } onEnter={ _ensureSignedIn } />
+          <Route path="/projects" component={ ProjectIndexContainer } onEnter={ _ensureSignedIn } />
+          <Route path="/courses/:courseId" component={ CourseDetailContainer } onEnter={ _ensureSignedIn } >
             <IndexRoute component={ AboutContainer } />
             <Route path="about" component={ AboutContainer } />
             <Route path="projects" component={ ProjectsContainer } />
             <Route path="assignment" component={ AssignmentContainer } />
             <Route path="reviews" component={ ReviewsContainer } />
           </Route>
-          <Route path="/projects/:projectId" component={ ProjectDetailContainer } />
-          <Route path="/search" component={ SearchIndexContainer } />
+          <Route path="/projects/:projectId" component={ ProjectDetailContainer } onEnter={ _ensureSignedIn } />
+          <Route path="/search" component={ SearchIndexContainer } onEnter={ _ensureSignedIn } />
         </Route>
       </Router>
     </Provider>

@@ -38,6 +38,7 @@ header section ul {
   width: 50%;
   justify-content: center;
   position: relative;
+  max-width: 760px;
 }
 
 .nav-left li {
@@ -71,7 +72,7 @@ header section ul {
   color: $medium-grey;
   position: absolute;
   top: 9px;
-  left: 16px;
+  left: 3%;
 }
 
 #logo {
