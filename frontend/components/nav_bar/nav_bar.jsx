@@ -26,7 +26,7 @@ class NavBar extends React.Component {
 
   logoutAndRedirect(e) {
       e.preventDefault();
-      this.props.logout().then(() => this.props.router.push("/signin"));
+      this.props.logout().then(() => this.props.router.push("/"));
   }
 
   demoLogin(e) {
@@ -36,7 +36,7 @@ class NavBar extends React.Component {
   }
 
   redirect() {
-    this.props.router.push("/");
+    this.props.router.push("/courses");
   }
 
   goToSignIn(e) {

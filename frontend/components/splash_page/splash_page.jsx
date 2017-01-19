@@ -1,10 +1,11 @@
 import React from 'react';
 import List from '../shared/list.jsx';
-
+import { withRouter } from 'react-router';
 
 class SplashPage extends React.Component {
   constructor(props) {
     super(props);
+    this.goTo = this.goTo.bind(this);
   }
 
   componentDidMount() {
@@ -12,12 +13,13 @@ class SplashPage extends React.Component {
     this.props.requestAllCourses();
   }
 
-  // <div className="video-bg">
-  //   <video loop muted autoPlay poster="https://s3.amazonaws.com/artistera-dev/Orange-Ripple/Snapshots/Orange-Ripple.jpg" className="banner-bg-video">
-  //     <source src="https://s3.amazonaws.com/artistera-dev/Orange-Ripple/WEBM/Orange-Ripple.webm" type="video/webm" />
-  //     <source src="https://s3.amazonaws.com/artistera-dev/Orange-Ripple/MP4/Orange-Ripple.mp4" type="video/mp4" />
-  //     <source src="https://s3.amazonaws.com/artistera-dev/Orange-Ripple/OGV/Orange-Ripple.ogv" type="video/ogg" />
-  //   </video>
+  goTo(where) {
+    return e => {
+      e.preventDefault();
+      this.props.router.push(where);
+    };
+  }
+
   render() {
     return (
       <div className="splash-page">
@@ -25,7 +27,7 @@ class SplashPage extends React.Component {
             <div className="overlay">
               <h1>Learn Art Online</h1>
               <h3>Bite-sized art classes available anywhere</h3>
-              <button>Create An Account</button>
+              <button onClick={this.goTo("/signup")}>Create An Account</button>
             </div>
           </section>
 
@@ -70,7 +72,7 @@ class SplashPage extends React.Component {
           <section className="splash-projects-text">
             <h2>Student Projects</h2>
             <p>{"Every Artistera class has has a project that give students an opportunity to practice what they learned and hone their skills. Check out these exciting submissions from our community!"}</p>
-            <button>See Projects</button>
+            <button onClick={this.goTo("/projects")}>See Projects</button>
           </section>
         </section>
       </div>
@@ -78,4 +80,4 @@ class SplashPage extends React.Component {
   }
 }
 
-export default SplashPage;
+export default withRouter(SplashPage);

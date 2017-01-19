@@ -55,8 +55,7 @@ class Reviews extends React.Component {
         <section className="review-form-wrapper">
           <ReviewFormContainer
             courseId={this.props.params.courseId}
-            formType="new"
-            gravatarUrl={`https://www.gravatar.com/avatar/${currentUser.gravatar_hash}?d=blank`} />
+            formType="new" />
         </section>
 
       <Modal
@@ -80,8 +79,7 @@ class Reviews extends React.Component {
             courseId={this.props.params.courseId}
             formType="update"
             closeModal={this.closeModal}
-            reviewId={this.state.reviewId}
-            gravatarUrl={`https://www.gravatar.com/avatar/${this.props.currentUser.gravatar_hash}?d=blank`} />
+            reviewId={this.state.reviewId} />
         </Modal>
     </section>
 

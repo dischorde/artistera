@@ -65,7 +65,7 @@ class ReviewForm extends React.Component {
       <section className="review-form">
         <form>
             <div className="rev-form-gravatar">
-              <span className="rev-form-gravatar-letter">A</span>
+              <span className="rev-form-gravatar-letter">{this.props.firstLetter}</span>
               <img src={this.props.gravatarUrl}/>
             </div>
           <section className="rev-form-body">
