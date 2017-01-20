@@ -3,6 +3,7 @@ class Api::ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+    @projects = @projects.shuffle
   end
 
   def show

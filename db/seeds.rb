@@ -205,52 +205,86 @@ Review.create!([
   {body: "This is the best online drawing course I have taken! Definitely worth watching if you're wanting to improve your charcoal skills.", user_id: user3.id, course_id: charcoal.id},
 ])
 
-hiking = Project.create!(title: "Hiking at Dusk", description: "I have always had a love for watercolors and painting,  and now would like to concentrate on developing a painting style of my own. I was so excited when I found this class. I had a blast playing with different watercolor techniques and media. I'm love the way my landscape turned out, and the water was difficult but the whale photo turned into a painting I'm really proud of.",
-  user_id: user1.id, assignment_id: painting.id)
+#PROJECTS: charcoaldrawing, painting, galaxy, scarf, pencilportrait, envelope, quote
 
-charcoalp1 = Project.create!(title: "One of My Charcoals", description: "placeholder",
-  user_id: user1.id, assignment_id: charcoaldrawing.id)
+hiking = Project.create!({title: "Hiking at Dusk",
+  description: "I have always had a love for watercolors and painting,  and now would like to concentrate on developing a painting style of my own. I was so excited when I found this class. I had a blast playing with different watercolor techniques and media. I'm love the way my landscape turned out, and the water was difficult but the whale photo turned into a painting I'm really proud of.",
+  user_id: user3.id, assignment_id: painting.id, cover_img_file_name: "sunset-2.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 97601, cover_img_updated_at: "2017-01-20 17:40:33"})
 
-tricolorscarf = Project.create!({title: "Tri-Color Scarf", description: "I'm proud to present you my finished piece! I had a BLAST doing this part of the class. I was so excited when I found this class. Knitting this scarf brought me some years back when I made my very first, slightly imperfect scarf. This one turned out much better, but was just as fun to knit.",
-    user_id: user1.id, assignment_id: scarf.id})
+charcoalp1 = Project.create!({title: "One of My Charcoals",
+  description: "I made this charcoal dog portrait as a gift for a friend. Attached you can see photos from the process. I always feel like at first I have forgotten how to do charcoal, but it gradually takes shape every time! I prefer vine / willow charcoal to charcoal pencils because they blend better and using paintbrushes can be really helpful to get a smooth gradation. (Drawing By / Copyright Katarina Rossi)",
+  user_id: user2.id, assignment_id: charcoaldrawing.id, cover_img_file_name: "dog-cover.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 135902, cover_img_updated_at: "2017-01-20 17:58:32"})
 
-inksplotch = Project.create!(  {title: "Ink Splotch Galaxy", description: "Thanks for the great beginners watercolor class! I think my project could be better, but I feel like I really learned a lot. All of the techniques were all new to me, and I just completed this basic color study. It takes time and effort but I definitely think I am improving. I am excited to have a place to play and experiment.",
-    user_id: user1.id, assignment_id: galaxy.id})
+tricolorscarf = Project.create!({title: "Tri-Color Scarf",
+  description: "I'm proud to present you my finished piece! I had a BLAST doing this part of the class. I was so excited when I found this class. Knitting this scarf brought me some years back when I made my very first, slightly imperfect scarf. This one turned out much better, but was just as fun to knit.",
+  user_id: user15.id, assignment_id: scarf.id, cover_img_file_name: "scarf-2.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 104116, cover_img_updated_at: "2017-01-20 17:49:02"})
+
+inksplotch = Project.create!({title: "Ink Splotch Galaxy", description: "Thanks for the great beginners watercolor class! I think my project could be better, but I feel like I really learned a lot. All of the techniques were all new to me, and I just completed this basic color study. It takes time and effort but I definitely think I am improving. I am excited to have a place to play and experiment.",
+  user_id: user4.id, assignment_id: galaxy.id, cover_img_file_name: "galaxy-4.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 154458, cover_img_updated_at: "2017-01-20 17:59:26"})
 
 Project.create!([
-  {title: "Landscape", description: "Overall I couldn't be happier with the finished product and with this class!  I first did a pencil sketch first to use as a guide for the watercolor version. I combined a bunch of the techniques I learned in this class. Playing with different watercolor techniques and media was really fun. ",
-    user_id: user1.id, assignment_id: painting.id},
-  {title: "Galaxy Project", description: "I have always had a love for painting and design. This class looked really interesting and overall I couldn't be happier with the finished product and with this class!  In this project, I was playing with different styles of watercolor. I really like mixing colors and playing with transparencies. I'm pretty happy with the way it turned out, but mostly it was a lot of fun just to experiment!",
-  user_id: user1.id, assignment_id: galaxy.id},
-  {title: "My First Three Scarves!", description: "Thanks for the great first knitting project!  I combined a bunch of the techniques I learned in this class. I was really excited to begin this project and I'm really happy with the way they turned out, even though I had some challenges. ",
-    user_id: user1.id, assignment_id: scarf.id},
-    {title: "Placeholder Currently", description: "Fill in online",
-        user_id: user1.id, assignment_id: quote.id},
-  {title: "Great Face", description: "I had been curious about drawing portraits in pencil for a while until I saw this class and decided to finally start working on it. I only did the final project, but I'm really happy with the way it turned out. I usually use charcoal and pastels, but I think I will try it a few more times to see what else I can come up with. It is really interesting to use new materials and techniques.",
-    user_id: user1.id, assignment_id: pencilportrait.id},
-  {title: "Watercolor Animals", description: "After trying a lot of different papers and art techniques, i finally finished my Portrait Project.  I really like mixing colors and playing with transparencies. The techniques were not new to me, but they were very informative and useful in brushing up my skills. I have been practicing with different styles and also playing with different kinds of watercolor. I'm really happy with the way it turned out.",
-    user_id: user1.id, assignment_id: painting.id},
-    {title: "Placeholder Currently", description: "Fill in online",
-        user_id: tenminute.id, assignment_id: envelope.id},
-  {title: "Rainbow Galaxy", description: "There are so many beautiful galaxies... but I have to rely on photos to paint them. I've never used watercolor before so it was interesting to see how it turned out. It ended up being a little tougher that I thought it would be. It's amazing i to know how much goes into a piece of art! I'm looking forward to practicing more and I can't wait to try more of your classes...",
-    user_id: user1.id, assignment_id: galaxy.id},
-    {title: "It Matches My Hat", description: "Thanks for the great first knitting project! Learning to knit takes time and effort and it was frustrating when I skipped a stitch here and there. Learning to grip the needles the right way was quite the process. But in the end, I'm really happy with how it turned out. The techniques were all new to me, yet I found them to be intuitive and very relaxing.",
-      user_id: user1.id, assignment_id: scarf.id},
-  {title: "In Contemplation", description: "I would like to start off by saying that I LOVED this project so much.  I decided to use these lessons in my daily sketchbook journal. It was exciting to have a place to play, experiment, and develop my own style. So far I really love all the experiments and practice stuff we've been doing. I combined a bunch of the techniques I learned in this class and I've decided I love portrait drawing, especially with pencil! Thanks.",
-    user_id: user1.id, assignment_id: pencilportrait.id},
-  {title: "Pencil Portrait # 1", description: "This ended up being a little tougher that I thought it would be.  I typically draw in charcoal, and I've never used mechanical pencils for blending before so it was interesting to try new techniques. After much effort and diligent practice I bring you my final project. Overall I couldn't be happier with the finished product and with this class! ",
-    user_id: user1.id, assignment_id: pencilportrait.id,},
-  {title: "Nebulous Nebula", description: "I combined a bunch of the techniques I learned in this class. I was so excited when I found this class. It's just what I needed. I had a BLAST doing this part of the class -- the universe is fascinating! This is work in progress, but I'm really happy with what I have so far.",
-    user_id: user1.id, assignment_id: galaxy.id}
+  {title: "Landscape",
+    description: "Overall I couldn't be happier with the finished product and with this class!  I first did a pencil sketch first to use as a guide for the watercolor version. I combined a bunch of the techniques I learned in this class. Playing with different watercolor techniques and media was really fun. ",
+    user_id: user14.id, assignment_id: painting.id, cover_img_file_name: "landscape-1.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 84340, cover_img_updated_at: "2017-01-20 17:42:09"},
+  {title: "Galaxy Project",
+    description: "I have always had a love for painting and design. This class looked really interesting and overall I couldn't be happier with the finished product and with this class!  In this project, I was playing with different styles of watercolor. I really like mixing colors and playing with transparencies. I'm pretty happy with the way it turned out, but mostly it was a lot of fun just to experiment!",
+    user_id: user5.id, assignment_id: galaxy.id, cover_img_file_name: "galaxy-6.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 110128, cover_img_updated_at: "2017-01-20 17:51:22"},
+  {title: "My First Three Scarves!",
+    description: "Thanks for the great first knitting project!  I combined a bunch of the techniques I learned in this class. I was really excited to begin this project and I'm really happy with the way they turned out, even though I had some challenges. ",
+    user_id: user13.id, assignment_id: scarf.id, cover_img_file_name: "scarf-1.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 68009, cover_img_updated_at: "2017-01-20 17:50:07"},
+  {title: "Placeholder Currently",
+    description: "Fill in online",
+    user_id: user1.id, assignment_id: quote.id, cover_img_file_name: nil, cover_img_content_type: nil, cover_img_file_size: nil, cover_img_updated_at: nil},
+  {title: "Orvieto Duomo Sculptures",
+    description: "These charcoal drawings are from the reliefs on the side of the Duomo in Orvieto, Italy. I really enjoyed drawing the carvings with charcoal as you can capture so many different variations of light and shade so easily. I love that it almost looks 3D! Smaller size drawings are definitely harder, but luckily since the reliefs themselves are not perfect representations of people they are very forgiving to draw. (Drawings by / copyright Katarina Rossi)",
+    user_id: user2.id, assignment_id: charcoaldrawing.id, cover_img_file_name: "orvieto-cover.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 94010, cover_img_updated_at: "2017-01-20 18:16:12"},
+  {title: "Night Owl",
+    description: "After trying a lot of different papers and art techniques, i finally finished my Portrait Project.  I really like mixing colors and playing with transparencies. The techniques were not new to me, but they were very informative and useful in brushing up my skills. I have been practicing with different styles and also playing with different kinds of watercolor. I'm really happy with the way it turned out.",
+    user_id: user6.id, assignment_id: painting.id, cover_img_file_name: "owl.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 127671, cover_img_updated_at: "2017-01-20 17:42:34"},
+  {title: "Placeholder Currently",
+    description: "Fill in online",
+    user_id: user1.id, assignment_id: tenminute.id, cover_img_file_name: nil, cover_img_content_type: nil, cover_img_file_size: nil, cover_img_updated_at: nil},
+  {title: "Rainbow Galaxy",
+    description: "There are so many beautiful galaxies... but I have to rely on photos to paint them. I've never used watercolor before so it was interesting to see how it turned out. It ended up being a little tougher that I thought it would be. It's amazing i to know how much goes into a piece of art! I'm looking forward to practicing more and I can't wait to try more of your classes...",
+    user_id: user12.id, assignment_id: galaxy.id, cover_img_file_name: "galaxy-5.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 117653, cover_img_updated_at: "2017-01-20 17:51:11"},
+  {title: "It Matches My Hat",
+    description: "Thanks for the great first knitting project! Learning to knit takes time and effort and it was frustrating when I skipped a stitch here and there. Learning to grip the needles the right way was quite the process. But in the end, I'm really happy with how it turned out. The techniques were all new to me, yet I found them to be intuitive and very relaxing.",
+    user_id: user7.id, assignment_id: scarf.id, cover_img_file_name: "scarf-3.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 104653, cover_img_updated_at: "2017-01-20 17:55:17"},
+  {title: "In Contemplation",
+    description: "I would like to start off by saying that I LOVED this project so much.  I decided to use these lessons in my daily sketchbook journal. It was exciting to have a place to play, experiment, and develop my own style. So far I really love all the experiments and practice stuff we've been doing. I combined a bunch of the techniques I learned in this class and I've decided I love portrait drawing, especially with pencil! Thanks.",
+    user_id: user11.id, assignment_id: pencilportrait.id, cover_img_file_name: "portrait-2.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 69896, cover_img_updated_at: "2017-01-20 17:54:41"},
+  {title: "Pencil Portrait # 1",
+    description: "This ended up being a little tougher that I thought it would be.  I typically draw in charcoal, and I've never used mechanical pencils for blending before so it was interesting to try new techniques. After much effort and diligent practice I bring you my final project. Overall I couldn't be happier with the finished product and with this class! ",
+    user_id: user8.id, assignment_id: pencilportrait.id, cover_img_file_name: "portrait-1.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 128528, cover_img_updated_at: "2017-01-20 17:54:19"},
+  {title: "Nebulous Nebula",
+    description: "I combined a bunch of the techniques I learned in this class. I was so excited when I found this class. It's just what I needed. I had a BLAST doing this part of the class -- the universe is fascinating! This is work in progress, but I'm really happy with what I have so far.",
+    user_id: user10.id, assignment_id: galaxy.id, cover_img_file_name: "galaxy-3.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 144148, cover_img_updated_at: "2017-01-20 17:56:21"}
 ])
 
 calligraphy1 = Project.create!({title: "Placeholder Currently", description: "Fill in online",
     user_id: user1.id, assignment_id: envelope.id})
 
-motel = Project.create!(title: "On the Highway", description: "So far I really love all the experiments and practice stuff we've been doing. I really like mixing colors and playing with transparencies. This is work in progress,  I am experimenting with a bunch of the techniques I learned in this class. See the attachments for another version I did of this same photo. I am excited to have a place to play and experiment. Thanks for the great class and I can't wait to try more Artistera classes!",
-  user_id: user1.id, assignment_id: painting.id)
+motel = Project.create!({title: "On the Highway",
+  description: "So far I really love all the experiments and practice stuff we've been doing. I really like mixing colors and playing with transparencies. This is work in progress,  I am experimenting with a bunch of the techniques I learned in this class. See the attachments for another version I did of this same photo. I am excited to have a place to play and experiment. Thanks for the great class and I can't wait to try more Artistera classes!",
+  user_id: user9.id, assignment_id: painting.id, cover_img_file_name: "motel-2.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 80042, cover_img_updated_at: "2017-01-20 17:43:43"})
 
-food = Project.create!(title: "Coffee and Cake", description: "Thanks for the great watercolor class! The tutorials were really useful and I enjoyed practicing with different styles. I try to keep myself amused when practicing by choosing different subject matter, so I decided to go with food paintings for my project. The result is a combination of diligent practice and a combination of different watercolor techniques and tips learned from this course. Overall I couldn't be happier.",
-  user_id: user1.id, assignment_id: galaxy.id)
-plant = Project.create!(title: "Trio of Green", description: "I would like to start off by saying that I LOVED this project so much.  I decided to use those lessons in my daily sketchbook journal.  Here are some examples of what I've been working on. I combined a bunch of the techniques I learned in this class to make three different paintings of a plant from a photo I found online. I don't have a lot of brushes so it was a difficult to do the thin lines. Most of the techniques were new to me, yet I found them to be very useful and well explained.",
-  user_id: user1.id, assignment_id: painting.id)
+food = Project.create!({title: "Coffee and Cake",
+  description: "Thanks for the great watercolor class! The tutorials were really useful and I enjoyed practicing with different styles. I try to keep myself amused when practicing by choosing different subject matter, so I decided to go with food paintings for my project. The result is a combination of diligent practice and a combination of different watercolor techniques and tips learned from this course. Overall I couldn't be happier.",
+  user_id: user1.id, assignment_id: painting.id, cover_img_file_name: "coffeemug.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 106588, cover_img_updated_at: "2017-01-20 17:45:30"})
+
+plant = Project.create!({title: "Trio of Green",
+  description: "I would like to start off by saying that I LOVED this project so much.  I decided to use those lessons in my daily sketchbook journal.  Here are some examples of what I've been working on. I combined a bunch of the techniques I learned in this class to make three different paintings of a plant from a photo I found online. I don't have a lot of brushes so it was a difficult to do the thin lines. Most of the techniques were new to me, yet I found them to be very useful and well explained.",
+  user_id: user3.id, assignment_id: painting.id, cover_img_file_name: "plant-1.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 110363, cover_img_updated_at: "2017-01-20 17:44:13"})
+
+Attachment.create!([
+{attachable_type: "Project", attachable_id: 1, document_file_name: "whale-1.jpg", document_content_type: "image/jpeg", document_file_size: 100778, document_updated_at: "2017-01-20 17:40:34"},
+{attachable_type: "Project", attachable_id: 18, document_file_name: "motel-1.jpg", document_content_type: "image/jpeg", document_file_size: 78969, document_updated_at: "2017-01-20 17:43:44"},
+{attachable_type: "Project", attachable_id: 20, document_file_name: "plant-2.jpg", document_content_type: "image/jpeg", document_file_size: 110994, document_updated_at: "2017-01-20 17:44:14"},
+{attachable_type: "Project", attachable_id: 20, document_file_name: "plant-3.jpg", document_content_type: "image/jpeg", document_file_size: 122699, document_updated_at: "2017-01-20 17:44:15"},
+{attachable_type: "Project", attachable_id: 19, document_file_name: "breakfast.jpg", document_content_type: "image/jpeg", document_file_size: 146727, document_updated_at: "2017-01-20 17:45:31"},
+{attachable_type: "Project", attachable_id: 2, document_file_name: "finished-drawing.jpg", document_content_type: "image/jpeg", document_file_size: 60239, document_updated_at: "2017-01-20 18:05:55"},
+{attachable_type: "Project", attachable_id: 2, document_file_name: "wip-dog-1.jpg", document_content_type: "image/jpeg", document_file_size: 64574, document_updated_at: "2017-01-20 18:05:56"},
+{attachable_type: "Project", attachable_id: 2, document_file_name: "wip-dog-2.jpg", document_content_type: "image/jpeg", document_file_size: 59500, document_updated_at: "2017-01-20 18:05:57"},
+{attachable_type: "Project", attachable_id: 2, document_file_name: "wip-dog-3.jpg", document_content_type: "image/jpeg", document_file_size: 61420, document_updated_at: "2017-01-20 18:05:57"},
+{attachable_type: "Project", attachable_id: 21, document_file_name: "orvieto-2.jpg", document_content_type: "image/jpeg", document_file_size: 110968, document_updated_at: "2017-01-20 18:16:13"}
+])
