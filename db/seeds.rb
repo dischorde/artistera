@@ -1,66 +1,92 @@
-user1 = User.create!({email: "katarina.n.rossi@gmail.com", gravatar_hash: "3ae05d6d1b8b0a23c4c6aeb061a13290", first_name: "Katarina", last_name: "Rossi", password_digest: "$2a$10$9GC3AiO0xaF5OTzuEHC5TO1QiFHIB8FIaHqgt9ycEGRXfKKuNYovC", session_token: "TSBlif09t_E-J9i64Lm0_g"})
-user2 = User.create!({email: "mfrey@appacademy.io", gravatar_hash: "d64ebde99eedab021f709d5a707b246f", first_name: "Munyo", last_name: "Frey", password_digest: "$2a$10$bHjHmw/QaHJlWB/BJVcCCOTB/RBWfWrr5MnHBLDA9QV57dyZ.XCi.", session_token: "w-s-TslRNc4OLYC1XQajOw"})
-user3 = User.create!({email: "demo@artistera.info", gravatar_hash: "ecd49fd7190ec2cbe55015b7f7c0eb9a", first_name: "Demonstration", last_name: "User", password_digest: "$2a$10$LZ8w0dR6ixQmYmlgL2FG0e8d4grBRyv2I0z6MwUhM7fLy8Em5GiKS", session_token: "OVJ9_d8Q_L3vtLwyUy79xw"})
 
-pointedpen = Course.create!({title: "Pointed Pen Calligraphy 101",
-  description: "A 9 video introduction to pointed pen calligraphy for beginners, from OpenInkStand Art & Calligraphy Meow to be let in lick butt. Unwrap toilet paper stares at human while pushing stuff off a table and cat snacks. Find something else more interesting chew iPad power cord. Intently stare at the same spot i like big cats and i can not lie yet spread kitty litter all over house so lick yarn hanging out of own butt or when in doubt, wash so hide when guests come over. Sit in box hiss at vacuum cleaner this human feeds me, i should be a god yet destroy the blinds play riveting piece on synthesizer keyboard but meow for food, then when human fills food dish, take a few bites of food and continue meowing. Chase after silly colored fish toys around the house chase the pig around the house or cat is love, cat is life friends are not food claw drapes, but stare at the wall, play with food and get confused by dust. Scamper please stop looking at your phone and pet me find something else more interesting, but eat owner's food so if it smells like fish eat as much as you wish hunt anything that moves meowzer!. Where is my slave? I'm getting hungry eat all the power cords sit on the laptop yet chase the pig around the house or eat from dog's food. Gate keepers of hell need to chase tail, or pelt around the house and up and down stairs chasing phantoms human is washing you why halp oh the horror flee scratch hiss bite cough furball so stare out the window yet chew on cable.",
-  assignment_summary: "I haven't made an assignment for this course yet I will need to add something at some point",
-  playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD3LTvgDjirM835uCCwvuASw",
-  cover_img_src: "https://s3.amazonaws.com/artistera-dev/pointed-pen-callig.jpg"})
-lettering = Course.create!({title: "Modern Brush Calligraphy and Hand Lettering",
-  description: "A currently unorganized collection of hand lettering, brush calligraphy, and otherwise interesting seeming videos. The dog smells bad kitty loves pigs. Human is washing you why halp oh the horror flee scratch hiss bite a nice warm laptop for me to sit on yet pooping rainbow while flying in a toasted bread costume in space meow meow, i tell my human, but jump around on couch, meow constantly until given food, go into a room to decide you didn't want to be in there anyway immediately regret falling into bathtub. Dream about hunting birds intently sniff hand, yet purr. Use lap as chair scamper. A nice warm laptop for me to sit on where is my slave? I'm getting hungry purr hate dog, lay on arms while you're using the keyboard purr while eating. Eat all the power cords drink water out of the faucet shove bum in owner's face like camera lens yet lie on your belly and purr when you are asleep yet with tail in the air. Step on your keyboard while you're gaming and then turn in a circle meow all night having their mate disturbing sleeping humans. Caticus cuteicus make meme, make cute face mark territory, or meowzer! and put butt in owner's face or attack the dog then pretend like nothing happened or make muffins. Meow loudly just to annoy owners scamper for meoooow! find empty spot in cupboard and sleep all day, yet shake treat bag, for chase mice. Swat at dog flee in terror at cucumber discovered on floor meoooow! or love to play with owner's hair tie hunt anything that moves, but hack up furballs roll on the floor purring your whiskers off. Meow. Pee in human's bed until he cleans the litter box go into a room to decide you didn't want to be in there anyway friends are not food.",
-  assignment_summary: "I haven't made an assignment for this course yet I will need to add something at some point",
-  playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD1MatWNEZo-8s1k5h-9j65f",
-  cover_img_src: "https://s3.amazonaws.com/artistera-dev/brush-lettering.jpg"})
-mixedmedia = Course.create!({title: "Mixed Media Art Journaling",
-    description: "Spit up on light gray carpet instead of adjacent linoleum i am the best so hunt anything that moves, or always hungry, flee in terror at cucumber discovered on floor so sleep nap. Howl uncontrollably for no reason cat slap dog in face for catch mouse and gave it as a present but eat and than sleep on your face. Use lap as chair meowwww so claw drapes, so instantly break out into full speed gallop across the house for no reason. Rub whiskers on bare skin act innocent sleep in the bathroom sink yet howl on top of tall thing hide from vacuum cleaner purr. Flop over if it fits, i sits, and give attitude, yet massacre a bird in the living room and then look like the cutest and most innocent animal on the planet or purr while eating. Lay on arms while you're using the keyboard refuse to leave cardboard box cat slap dog in face or wake up wander around the house making large amounts of noise jump on top of your human's bed and fall asleep again. Meow meow, i tell my human wake up human for food at 4am. Meowwww lies down catch mouse and gave it as a present so hopped up on catnip ignore the squirrels, you'll never catch them anyway for hide at bottom of staircase to trip human chew foot. Licks paws purrrrrr so love to play with owner's hair tie yet lick the other cats stare at the wall, play with food and get confused by dust meowing non stop for food. Hunt by meowing loudly at 5am next to human slave food dispenser. Roll on the floor purring your whiskers off lick yarn hanging out of own butt. Pelt around the house and up and down stairs chasing phantoms cats go for world domination.",
-    assignment_summary: "When I get around to writing this, the project is the 10 minute challenge like the last video",
-    playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD1w-qGjjqDUG3sP4RFYBca2",
-    cover_img_src: "https://s3.amazonaws.com/artistera-dev/mixed-media.jpg"})
-watercolor1 = Course.create!({title: "Introduction to Watercolors",
-  description: "Learn to create beautiful watercolor illustrations with this series of basic watercolor tutorials by Scarlett Damen. This course is designed for the beginning watercolorist, but includes some full length intermediate lessons and speed painting demonstrations as well - so there is surely something to gain for even more experienced artists. You'll learn about proper materials including paints, brushes, and paper types, as well as how to mix colors, create washes, paint wet on wet, and more.\nFrom the creator:  'On WATERCOLOR by Scarlett Damen youll find lots of watercolor painting tutorials for beginners and new artists with simple step by step classes covering how to use watercolour and basics and beginner watercolor techniques. (everything from how to paint a graduated and veragrated wash, chasing the right watercolour paper, to using salt, plastic wrap, soap and alcohol in your paintings as lets not forget watercolour texture medium and of course everything you ever wanted to know about watercolour masking fluid to name a few.) Ive also created many full length watercolour lessons for intermediate and advanced watercolorists wanting to learn how to paint botanical art in watercolour. These classes include both speed paintings with commentary and full watercolor painting step by step demonstrations to help you learn to master watercolour techniques as well as a lots of art tips, watercolour facts and fun painting tricks to help you along your art journey.\nSee more of Scarlett's work at www.ScarlettDamenArtistIllustrator.com",
-  assignment_summary: "Use what you've learned to create four separate watercolors - an object, a view, a plant, and a food. Share your favorite!",
-  playlist_src: "https://www.youtube.com/embed/videoseries?list=PLnGy6GHuNNvT-B7r8ICqgDzQoY49aANgc",
-  cover_img_src: "https://s3.amazonaws.com/artistera-dev/watercolor-intro.jpg"})
-watercolor2 = Course.create!({title: "Watercolor Exercises",
-  description: "Make muffins cats go for world domination yet lay on arms while you're using the keyboard and poop in litter box, scratch the walls roll on the floor purring your whiskers off. Scratch the box. Lounge in doorway instantly break out into full speed gallop across the house for no reason and cats go for world domination. Cats making all the muffins scamper so hide from vacuum cleaner, and destroy couch i cry and cry and cry unless you pet me, and then maybe i cry just for fun chew on cable. Plan steps for world domination chase laser going to catch the red dot today going to catch the red dot today pee in human's bed until he cleans the litter box yet throwup on your pillow. Meow hide head under blanket so no one can see cat not kitten around , so put butt in owner's face meow meow, i tell my human so i could pee on this if i had the energy. Play riveting piece on synthesizer keyboard bathe private parts with tongue then lick owner's face. Poop in the plant pot plan steps for world domination. Gnaw the corn cob destroy couch, but chase after silly colored fish toys around the house, or spread kitty litter all over house yet sit on the laptop. Lick the curtain just to be annoying leave hair everywhere, or bathe private parts with tongue then lick owner's face.",
-  assignment_summary: "When I get around to writing this, the project is upload your favorites from following along",
-  playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD0Dux53ndLcOB1Hm1lyW03k",
-  cover_img_src: "https://s3.amazonaws.com/artistera-dev/watercolor-exercises.jpg"})
+# USERS
+user1 = User.create!({email: "demo@artistera.info", gravatar_hash: "ecd49fd7190ec2cbe55015b7f7c0eb9a", first_name: "Demonstration", last_name: "User", password_digest: "$2a$10$LZ8w0dR6ixQmYmlgL2FG0e8d4grBRyv2I0z6MwUhM7fLy8Em5GiKS", session_token: "OVJ9_d8Q_L3vtLwyUy79xw"})
+user7 = User.create!({email: "castelino.darocha@example.com", gravatar_hash: "b433949a308c0643a2b9e854bb40ae84", first_name: "Castelino", last_name: "Da Rocha", password_digest: "$2a$10$9XM8orC4ltZX2vyGq2nmp.yL8dPVLOrYZUcnc2EUcmOy/vhh.zpTu", session_token: "AYbslXN15PUf-ZbaSSHkHg"})
+user8 = User.create!({email: "ana.cano@example.com", gravatar_hash: "5df11d4473cc48067bee0e900b977809", first_name: "Ana", last_name: "Cano", password_digest: "$2a$10$.TgfU4cyGFbIsrorNICoeO70EEuIHAIkFZpD/BpB7..mbFKUn/Khu", session_token: "db9D4JhCfAQYcIovQWI9TA"})
+user9 = User.create!({email: "albert.thomsen@example.com", gravatar_hash: "8b52b0859aee5d1f6fa3b70c1875f0ac", first_name: "Albert", last_name: "Thomsen", password_digest: "$2a$10$V.jyT6H9cv/rfOIeChQyVeCsAwrZc0pLhYVrbTTPgDf3SysRJUkmW", session_token: "roExws2-kr7gopLK6TFydA"})
+user10 = User.create!({email: "paulina.menheere@example.com", gravatar_hash: "a43677963e94375f48b0e7fcb63f109c", first_name: "Paulina", last_name: "Menheere", password_digest: "$2a$10$3Nd6QyhfiR6t13.3hA7nbOT0E.C7xZ2UHQdXTfV6i.JDhvTuoI4wG", session_token: "M6pUKIgFi62EDjz0clju2Q"})
+user13 = User.create!({email: "stefanie.klein@example.com", gravatar_hash: "1bd22bc3f138986dcdcd5ceed518c1c6", first_name: "Stefanie", last_name: "Klein", password_digest: "$2a$10$5/RwnrV43rd..K.QU8kYHuYriUQVN7TAymx6O3c2Vab9FRSAIVnFu", session_token: "YiRMswoflGZAoIZmjWQn6A"})
+
+#USERS WITH GRAVATARS
+user2 = User.create!(  {email: "katarina.n.rossi@gmail.com", gravatar_hash: "3ae05d6d1b8b0a23c4c6aeb061a13290", first_name: "Katarina", last_name: "Rossi", password_digest: "$2a$10$9GC3AiO0xaF5OTzuEHC5TO1QiFHIB8FIaHqgt9ycEGRXfKKuNYovC", session_token: "9E319OfZ-I9SAsTSt9rCZw"})
+user3 = User.create!({email: "artisterademo@gmail.com", first_name: "Chloe", last_name: "Evans", password_digest: "$2a$10$L3434XPB0HylpJEqmsplmOJ5mhAt4QF4OO2kDbWEsnF1BMGmHlkB6", session_token: "owO2MEXYQG2D3XyF8drsZA"})
+user4 = User.create!({email: "artistera.demo@gmail.com",first_name: "Helena", last_name: "Berndt", password_digest: "$2a$10$m8DbiQyctqeaeBlo/27n4etj/3wBsoq6q4hA7O1kKY2.6vKXf3Gae", session_token: "MHm_cauIv8LlCTglWSj2mA"})
+user5 = User.create!({email: "artiste.ra.demo@gmail.com", first_name: "Amalie", last_name: "Nielsen", password_digest: "$2a$10$xJFN6.rivkX7Gfp0Xexve.5TiodkqPjBvvduRwZ3TiF2O5aRc9oxi", session_token: "HWNEErUAtWQPBOpSNvKlLA"})
+user6 = User.create!({email: "a.rtisterademo@gmail.com", first_name: "David", last_name: "Barnaby", password_digest: "$2a$10$5a6M8xHQXCfhELnI.fLaE.vHpB1lkKC4nz0XrCBuRopOjKjLBu79q", session_token: "A2praXlIufJcH6tG3RjH9A"})
+user11 = User.create!({email: "art.isterademo@gmail.com", first_name: "Aubree", last_name: "Park", password_digest: "$2a$10$G.gmKVZNS6GHx2vfeiEJt.q9RJBY8siKSfRsS39Q7pJ5HWDrQcg.C", session_token: "UnkPjzJe9RlO2rk1XxMi6A"})
+user12 = User.create!({email: "artist.era.demo@gmail.com", first_name: "Claire", last_name: "Laurent", password_digest: "$2a$10$zymgFSqHUFmB/23fRePQdO2dbEU.VBTKP.5rkSkRyY/0u.dzWh3HK", session_token: "swE2xoOnBVfP1RCFbB2Ytg"})
+user14 = User.create!({email: "artisterademo+bronwyn@gmail.com", first_name: "Bronwyn", last_name: "Dunn", password_digest: "$2a$10$Qn0c/TcRX2JvpmIkmAYYO.pB2dKSbqjt7cq.ejWML.VJT2N/CrmYi", session_token: "FMOHt_iiBxSDU44xXDh_Ag"})
+user15 = User.create!({email: "artisterademo+lauren@gmail.com", first_name: "Lauren", last_name: "Madigan", password_digest: "$2a$10$YCg.onNoW8OBxCSxhWLpXuEiVmCb9.wM8sCXDIX.snlqaELDD/3Tu", session_token: "DTSZvyUzx-_x_IQrqo8qiQ"})
+
+# COURSES
 
 charcoal = Course.create!(title: "Introduction to Charcoal Drawing",
-  description: "Meow meow, i tell my human milk the cow so sweet beast throwup on your pillow, yet immediately regret falling into bathtub. Asdflkjaertvlkjasntvkjn (sits on keyboard) lick the plastic bag for a nice warm laptop for me to sit on destroy couch. Sleep on keyboard gnaw the corn cob so scratch leg; meow for can opener to feed me, curl up and sleep on the freshly laundered towels stare out the window. Has closed eyes but still sees you chase mice, yet you call this cat food? mew shove bum in owner's face like camera lens. Refuse to drink water except out of someone's glass lick the plastic bag mrow eat all the power cords destroy couch sit in box. Spit up on light gray carpet instead of adjacent linoleum eat owner's food or hide when guests come over, and destroy the blinds all of a sudden cat goes crazy. The dog smells bad. Soft kitty warm kitty little ball of furr scratch the furniture or chase the pig around the house yet refuse to drink water except out of someone's glass climb leg howl uncontrollably for no reason licks your face. Sleep in the bathroom sink meowing non stop for food so cats making all the muffins yet eat from dog's food sit on human, behind the couch. Eat and than sleep on your face meow all night having their mate disturbing sleeping humans and meow loudly just to annoy owners lies down chase laser. Cats making all the muffins present belly, scratch hand when stroked so hide head under blanket so no one can see. Thinking longingly about tuna brine chew on cable or throwup on your pillow.",
-  assignment_summary: "Draw a dog portrait, landscape, or sculpture",
-  playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD3Z28e66B0SEaKwE6nL6Pn",
-  cover_img_src: "https://images.unsplash.com/photo-1477536464216-887b279a1477?dpr=1&auto=compress,format&fit=crop&w=376&h=251&q=80&cs=tinysrgb&crop="
+description: "This course introduces classical drawing principles in charcoal. In this class, you will learn materials to use as well as how to analyze light and shadow utilizing the 5-value system, apply form/cast shadow edge distinctions to model form using charcoal, and incorporate perspective, composition and value pattern concepts. You will also learn how to accurately draw portraits using gesture, correct proportions, and light and shade and practice anatomy and shapes for drawing the eyes, nose, mouth, hair, and ears. You will also practice using charcoal to depict landscapes and other objects.\nWhile you draw, you will also discover the subjects and techniques that work best for you in your charcoal projects.",
+assignment_summary: "Draw a portrait, landscape, or something from a reference photo.",
+playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD3Z28e66B0SEaKwE6nL6PnA",
+cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/intro-charcoal-md.jpg"
 )
 
+watercolor1 = Course.create!(
+  title: "Introduction to Watercolors",
+  description: "Learn to create beautiful watercolor illustrations with this series of basic watercolor tutorials by Scarlett Damen. This course is designed for the beginning watercolorist, but includes some full length intermediate lessons and speed painting demonstrations as well - so there is surely something to gain for even more experienced artists. You'll learn about proper materials including paints, brushes, and paper types, as well as how to mix colors, create washes, paint wet on wet, and more.\nFrom the creator:  'On WATERCOLOR by Scarlett Damen youll find lots of watercolor painting tutorials for beginners and new artists with simple step by step classes covering how to use watercolour and basics and beginner watercolor techniques. (everything from how to paint a graduated and veragrated wash, chasing the right watercolour paper, to using salt, plastic wrap, soap and alcohol in your paintings as lets not forget watercolour texture medium and of course everything you ever wanted to know about watercolour masking fluid to name a few.) Ive also created many full length watercolour lessons for intermediate and advanced watercolorists wanting to learn how to paint botanical art in watercolour. These classes include both speed paintings with commentary and full watercolor painting step by step demonstrations to help you learn to master watercolour techniques as well as a lots of art tips, watercolour facts and fun painting tricks to help you along your art journey.\nSee more of Scarlett's work at www.ScarlettDamenArtistIllustrator.com",
+  assignment_summary: "Use what you've learned to create four separate watercolors - from a view, a plant, a food, and a photo. Share your favorite!",
+  playlist_src: "https://www.youtube.com/embed/videoseries?list=PLnGy6GHuNNvT-B7r8ICqgDzQoY49aANgc",
+  cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/watercolor-intro-md.jpg"
+  )
+
+watercolor2 = Course.create!({title: "Watercolor Exercises",
+  description: "Tune in with Meredith from The Witty Gritty Paper Co. for some super valuable tips on how to avoid beginner mistakes and master this awesome medium in no time. This approachable collection of beginner exercises and tutorials will give you confidence and help you find your own style in no time.\n<em>What to expect from this class:</em>\nPainting inspiration!\nA variety of demos and tutorials\nBasic principles of color theory and how to use watercolors\nRecommended materials specific to every tutorial",
+  assignment_summary: "When I get around to writing this, the project is upload your favorites from following along",
+  playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD0Dux53ndLcOB1Hm1lyW03k",
+  cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/watercolor-exercises-md.jpg"
+})
+
+lettering = Course.create!({title: "Modern Brush Calligraphy and Hand Lettering",
+  description: "In this class we’ll be breaking down hand lettering and brush calligraphy and making it simple for you to learn! We'll cover the fundamentals, strokes, practice stokes, pen pressure, and the way to break all of those rules to form your own style. This course breaks down the basics of basic strokes necessary to properly use brush pens of all sizes. Starting using brush pens is a learning curve itself, apart from learning hand lettering. You want to get accustomed to the way to properly use the brush tip, as its variable pressure and thickness can make or break your piece. \nYou will learn simple strategies such as when to perform different motions with your fingers, wrists, and applying variable pressure, in conjunction with very desirable techniques like mixing color throughout your letters while drawing them and adding bounce to your hand lettering.",
+  assignment_summary: "Make your favorite quote into a piece of lettering art",
+  playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD1MatWNEZo-8s1k5h-9j65f",
+  cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/brush-lettering-md.jpg"})
+
+pointedpen = Course.create!({title: "Pointed Pen Calligraphy 101",
+  description: "A 9 video introduction to pointed pen calligraphy for beginners, from OpenInkStand Art & Calligraphy. This warm and inviting beginner course covers the basic techniques, tools, and tips for creating gorgeous calligraphy. Whether youre a seasoned calligraphist or a total beginner this course provides you the tools to transform your work. Each lesson is full of insider tips, from how different styles of nibs affect your slant to how your breathing can influence your writing.\n<em>You'll find out how to:\n</em>Improve your slants, strokes, and spacing technique\nElevate your capital letters and flourishes\nCultivate your personal penmanship style",
+  assignment_summary: "Use your new skills to write a letter and address an envelope in calligraphy",
+  playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD3LTvgDjirM835uCCwvuASw",
+  cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/pointed-pen-callig-md.jpg"})
+
+mixedmedia = Course.create!({title: "Mixed Media Art Journaling",
+  description: "In this course from Maremi SmallArt, students will discover new possibilities by mixing media and using varied drawing surfaces to create art journaling layouts and mixed media art. This is a perfect series for every art journaler and mixed media artist, for those who are just beginning and also for those who already have a passion for creating! This course will teach you techniques to start an art journaling practice, covering everything from how to break in a page to how to use various mediums and surfaces to add texture and vitality, as well as convey a personal expression. Demos will focus on design, balance, weight, texture,  and the appropriate use of mediums.\n<em>This class contains:</em>\nAn introduction to mixed media for beginners\nAn overview of supplies and how to use them\nDemonstrations\nAnd an art challenge!",
+  assignment_summary: "Your assignment is to do a 10 minute art challege, like Marta does in the last video",
+  playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD1w-qGjjqDUG3sP4RFYBca2",
+  cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/mixed-media-md.jpg"})
+
 knitting = Course.create!(title: "Knitting 101",
-  description: "Cats go for world domination ignore the squirrels, you'll never catch them anyway but eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest spot on the couch to claw at the fabric before taking a catnap, meowwww leave fur on owners clothes. Ears back wide eyed pelt around the house and up and down stairs chasing phantoms or kick up litter sit on human so sleep in the bathroom sink. Paw at beetle and eat it before it gets away poop on grasses if it smells like fish eat as much as you wish thinking longingly about tuna brine chase after silly colored fish toys around the house unwrap toilet paper. Eat and than sleep on your face i cry and cry and cry unless you pet me, and then maybe i cry just for fun jump launch to pounce upon little yarn mouse, bare fangs at toy run hide in litter box until treats are fed stick butt in face. Caticus cuteicus stare out the window for my left donut is missing, as is my right, lick butt and make a weird face. Have secret plans always hungry chase red laser dot, yet chase ball of string but kitty power! . My left donut is missing, as is my right paw at your fat belly so kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff, eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest spot on the couch to claw at the fabric before taking a catnap.",
+  description: "Learn to knit with Knitting 101 by NEW STITCH A DAY. In this class, you'll first learn how to to make a slip knot. The slip knot is the very first thing you must make before starting most knitting projects, as you need to know how to make a slip not in order to begin most cast ons. Next the class will break down the basics, including the four fundamental techniques at the heart of knitting the cast on, the knit stitch, the purl stitch, and the cast off. By the end, youll have your very own scarf, and the skills to begin more new and exciting knitting projects.\nCheck out written instructions at <a href='http://newstitchaday.com/category/guides/knitting-101/'>http://newstitchaday.com/category/guides/knitting-101/</a>",
   assignment_summary: "Make a basic scarf",
   playlist_src: "https://www.youtube.com/embed/videoseries?list=PLR1ElIXW5YKJFob5KJvHS01Tj30Zyy2EQ",
-  cover_img_src: "https://images.unsplash.com/photo-1475688621402-4257c812d6db?dpr=1&auto=compress,format&fit=crop&w=376&h=251&q=80&cs=tinysrgb&crop="
+  cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/knitting-101-md.jpg"
 )
 
 drawing = Course.create!(title: "Drawing Lessons for Beginners",
-  description: "When in doubt, wash. When in doubt, wash destroy couch lies down or run outside as soon as door open or scamper. Howl uncontrollably for no reason then cats take over the world. Chase ball of string paw at beetle and eat it before it gets away for plan steps for world domination and massacre a bird in the living room and then look like the cutest and most innocent animal on the planet sniff other cat's butt and hang jaw half open thereafter sleep on keyboard when in doubt, wash. Mark territory go into a room to decide you didn't want to be in there anyway purr cat is love, cat is life milk the cow hide at bottom of staircase to trip human. Stare at ceiling and sometimes switches in french and say miaou just because well why not lick butt and make a weird face or sleep in the bathroom sink put butt in owner's face. Leave dead animals as gifts refuse to drink water except out of someone's glass and cats making all the muffins. Chase mice purr inspect anything brought into the house, and scream at teh bath.",
-  assignment_summary: "Errr… draw something",
+  description: "In this series of videos from the Art of Wei, you will learn the basics and how to get started drawing your own beautiful life-like pencil portraits.  This is an in-depth investigation into basic drawing principles which face both fine artists and illustrators. Composition, perspective, proportion, focal point, value pattern and the use of light and shadow are developed. We'll cover: \n<em>Materials:</em> Which materials and references will make for the best portraits.\n<em>Basic Sketching:</em> How to compose your basic sketch through gesture and accurate proportions.Planes. How to understand light and shade on the planes of the face.\n<em>Features and Forms:</em> How to structure the forms of your subject's eyes, nose, mouth, and hair. \n<em>Finishing Touches:</em> How to capture those finishing details that will really make your portrait special.\nThis drawing course deals with the understanding and application of perspective, proportion, gesture, and foreshortening. Through the use of line, tone, and modeling, students will learn to depict objects as wells as figures.",
+  assignment_summary: "Attempt a portrait in pencil from a reference photo.",
   playlist_src: "https://www.youtube.com/embed/videoseries?list=PLhnHFsOn0cgdjNrlX4qeytqAUIhRqKbAI",
-  cover_img_src: "https://images.unsplash.com/photo-1465497250320-c0140afcea39?dpr=1&auto=compress,format&fit=crop&w=376&h=251&q=80&cs=tinysrgb&crop="
+  cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/begging-drawing-md.jpg"
 )
 
+# ASSIGNMENT
 painting = Assignment.create!(course_id: watercolor1.id, title: "Four Watercolors",
-  description: "Use what you've learned to create four separate watercolors - a view, a plant, a photo, and a food. Curl up and sleep on the freshly laundered towels. I could pee on this if i had the energy attack the dog then pretend like nothing happened for chirp at birds. Sit by the fire dream about hunting birds toy mouse squeak roll over. Lick arm hair inspect anything brought into the house stand in front of the computer screen, ignore the squirrels, you'll never catch them anyway. Claw drapes hide from vacuum cleaner, kitty loves pigs and step on your keyboard while you're gaming and then turn in a circle but sit in window and stare ooo, a bird! yum meow for food, then when human fills food dish, take a few bites of food and continue meowing. Going to catch the red dot today going to catch the red dot today present belly, scratch hand when stroked. Then cats take over the world put toy mouse in food bowl run out of litter box at full speed but eat a plant, kill a hand so i like big cats and i can not lie jump off balcony, onto stranger's head lick plastic bags. Mark territory massacre a bird in the living room and then look like the cutest and most innocent animal on the planet but put toy mouse in food bowl run out of litter box at full speed but poop in the plant pot for nap all day, so lick butt, destroy couch as revenge. Flee in terror at cucumber discovered on floor.",
+  description: "Use what you've learned to create four separate watercolors - a view, a plant, a photo, and a food. Your preparation is perhaps the most important step in the process.Think about how you are going to paint the drawing before attacking the real painting. Do a drawing first, and take the time to execute a quick colored rough. Tape off the edges so to have a clean frame of white or plan to frame the rendering, and lastly mix your paints in advance and test them on another watercolor surface. Good luck!",
   deliverable: "Upload at least 1 of your four watercolors with a small description of what you learned while making the pieces. Feel free to upload all four!",
-  materials: "watercolor paints, paper, water, brushes",
+  materials: "Watercolor Paints, Paper, Water, Brushes",
   resources: nil)
 
 envelope = Assignment.create!(
   course_id: pointedpen.id,
   title: "Address It!",
   description: "Use what you've learned to script your own letter and envelope, then upload a photo of the envelope. Envelopes can be a source of various challenges, variables, and opportunities — and they are typically at the core of a calligrapher's work. whether or not you select your own words or rewrite something you find instpirational,  you will have an attractive piece of writing at the end. This fun project is a excellent way to spend time with words you enjoy while improving your penmanship skills.",
-  deliverable: "Use your new calligraphy skills address an envalope, and upload it here.",
-  materials: "calligraphy nibs, pen holder, ink, and paper (your choice)",
+  deliverable: "Use your new calligraphy skills address an envelope, and upload it here.",
+  materials: "Calligraphy Nibs, Pen Holder, Ink, and Paper (Your Choice)",
   resources: nil
 )
 
@@ -70,54 +96,157 @@ galaxy = Assignment.create!(
   description: "Your assignment is to paint a fun, galaxy or nebula watercolor painting making use of techniques you learned during this course. Take a look at the attached photo examples or find your favourite space photo, or create something completely unique! The best paintings are a joy to make. Have fun this course, relax, and experiment in creating this project.",
   deliverable: "Upload your completed watercolor galaxy and a blurb about the process. Tell us about how you experimented!",
   materials: nil,
-  resources: nil
+  resources: "Need some more inspiration? Try out these videos from <a href='https://www.youtube.com/watch?v=-mZ2xY1u894'>Giovana Forrest</a>, <a href='https://www.youtube.com/watch?v=ZFVLLjS912E https://www.youtube.com/watch?v=ckd8eObFFtc'>Studio of M.M.</a>, and <a href='https://www.youtube.com/watch?v=TOe5DAnFkI4'>TILLITH</a>."
 )
 
 quote = Assignment.create!(
   course_id: lettering.id,
   title: "Quoatability",
   description: "You will produce a custom brush lettering piece of art with a quote or phrase. When complete, it will be perfect for hanging on your wall, offering as a present, placing on a card, or perhaps digitization. This project will enable you to practice overall lettering design, focusing on using your new skills to place your words in a visually pleasing place where they work together on paper.",
-  deliverable: "Use your new calligraphy skills address an envalope, and upload it here.",
-  materials: "calligraphy pens, watercolors, tombows, crayola markers - whatever you like!",
-  resources: "Tombow: http://www.amazon.com/Tombow-Dual-Brush-Black-66621/dp/B001LDKB1S/ref=sr_1_9?s=office-products&ie=UTF8&qid=1445910929&sr=1-9&keywords=tombow Prismacolor: http://www.amazon.com/Prismacolor-Premier-Illustration-Assorted-1738861/dp/B0038D7Y00/ref=sr_1_2?ie=UTF8&qid=1445910900&sr=8-2&keywords=prismacolor+brush+pen Booklet (inclides two pens): https://www.etsy.com/listing/238739126/a-guide-to-brush-lettering-starter-pack?ref=pr_shop"
+  deliverable: "A custom quote using a brush lettering, hand lettering, or modern calligraphy technique you learned from the videos. It doesn’t matter if you utilize the fundamentals or try to break the rules, feel free to experiment! Bonus: Frame your new piece of art.",
+  materials: "Calligraphy Pens, Watercolors, Tombows, Crayola Markers - Whatever You Like!",
+  resources: "Suggested pens: <a href='http://www.amazon.com/Tombow-Dual-Brush-Black-66621/dp/B001LDKB1S/ref=sr_1_9?s=office-products&ie=UTF8&qid=1445910929&sr=1-9&keywords=tombow'>Tombows</a> & <a href='http://www.amazon.com/Prismacolor-Premier-Illustration-Assorted-1738861/dp/B0038D7Y00/ref=sr_1_2?ie=UTF8&qid=1445910900&sr=8-2&keywords=prismacolor+brush+pen'>Prismacolors</a>"
 )
 
-assign5 = Assignment.create!(
+tenminute = Assignment.create!(
   course_id: mixedmedia.id,
-  title: "Blank for now",
-  description: "Human give me attention meow chew on cable spit up on light gray carpet instead of adjacent linoleum lick sellotape so who's the baby. Cats secretly make all the worlds muffins stare out the window yet who's the baby meowing non stop for food. Claw drapes need to chase tail. Has closed eyes but still sees you go into a room to decide you didn't want to be in there anyway missing until dinner time, but attack feet eat and than sleep on your face, walk on car leaving trail of paw prints on hood and windshield. Steal the warm chair right after you get up kitty power! , pooping rainbow while flying in a toasted bread costume in space spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce, so purrr purr littel cat, little cat purr purr. Licks your face why must they do that and sometimes switches in french and say 'miaou' just because well why not.",
-  deliverable: "Will fill in later",
-  materials: nil,
+  title: "10 Minute Challenge",
+  description: "Gather up a variety of supplies and set a timer for 10 minutes, then go wild! Experiment, test out new techniques, and overall let loose and have fun. Don't worry about the end result. Upload it here if you love it, or hide it away if you aren't proud. The goal is creativity, not perfection!",
+  deliverable: "A photo of your art journaling page.",
+  materials: "Gesso, Paints, Stickers, Glitter Sprays, Ephemera, Etc…",
   resources: nil
 )
 
-assign6 = Assignment.create!(
+charcoaldrawing = Assignment.create!(
   course_id: charcoal.id,
-  title: "Blank for now",
-  description: "Human give me attention meow chew on cable spit up on light gray carpet instead of adjacent linoleum lick sellotape so who's the baby. Cats secretly make all the worlds muffins stare out the window yet who's the baby meowing non stop for food. Claw drapes need to chase tail. Has closed eyes but still sees you go into a room to decide you didn't want to be in there anyway missing until dinner time, but attack feet eat and than sleep on your face, walk on car leaving trail of paw prints on hood and windshield. Steal the warm chair right after you get up kitty power! , pooping rainbow while flying in a toasted bread costume in space spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce, so purrr purr littel cat, little cat purr purr. Licks your face why must they do that and sometimes switches in french and say 'miaou' just because well why not.",
-  deliverable: "Will fill in later",
-  materials: nil,
+  title: "Find Your Favourite",
+  description: "Test out various subject matter and find what you think suits your style of charcoal drawing best, then upload your drawing and tell us about your process and progress. It can be anything from a landscape or a still life to a pet portrait! Try out new things and have fun blending away with this messy but very versatile medium.",
+  deliverable: "Upload a charcoal drawing that represents your favourite of the subjects covered in the course.",
+  materials: "Vine & Willow Charcoal, Compressed Charcoal Charcoal Pencils, White Pastel, Varying Sizes of Erasers and/or Paintbrushes",
   resources: nil
 )
 
-assign7 = Assignment.create!(
+scarf = Assignment.create!(
   course_id: knitting.id,
-  title: "Blank for now",
-  description: "Human give me attention meow chew on cable spit up on light gray carpet instead of adjacent linoleum lick sellotape so who's the baby. Cats secretly make all the worlds muffins stare out the window yet who's the baby meowing non stop for food. Claw drapes need to chase tail. Has closed eyes but still sees you go into a room to decide you didn't want to be in there anyway missing until dinner time, but attack feet eat and than sleep on your face, walk on car leaving trail of paw prints on hood and windshield. Steal the warm chair right after you get up kitty power! , pooping rainbow while flying in a toasted bread costume in space spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce, so purrr purr littel cat, little cat purr purr. Licks your face why must they do that and sometimes switches in french and say 'miaou' just because well why not.",
-  deliverable: "Will fill in later",
-  materials: nil,
-  resources: nil
+  title: "Warm & Fuzzy",
+  description: "Use all your new stitches and knitting knowledge to knit a basic scarf! Document and share your process, together with initial stitches, practice, and mistakes you had to fix. Remember: begin slowly and thoroughly, and before long you will build up speed and accumen. Share a picture of your final piece and a couple of words reflecting on your progress and new skills.",
+  deliverable: "Knit and upload a picture of a basic scarf, and tell us about your experience!",
+  materials: "Yarn, Knitting Needles, Scissors",
+  resources: "Need more help? <a href='https://www.youtube.com/watch?v=N10SVxEX59A&list=PLfA40G728UtFXStjKFKyJOzgnP0APYTZg&index=9'>Try this video!</a>"
 )
 
-assign8 = Assignment.create!(
+pencilportrait = Assignment.create!(
   course_id: drawing.id,
-  title: "Blank for now",
-  description: "Human give me attention meow chew on cable spit up on light gray carpet instead of adjacent linoleum lick sellotape so who's the baby. Cats secretly make all the worlds muffins stare out the window yet who's the baby meowing non stop for food. Claw drapes need to chase tail. Has closed eyes but still sees you go into a room to decide you didn't want to be in there anyway missing until dinner time, but attack feet eat and than sleep on your face, walk on car leaving trail of paw prints on hood and windshield. Steal the warm chair right after you get up kitty power! , pooping rainbow while flying in a toasted bread costume in space spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce, so purrr purr littel cat, little cat purr purr. Licks your face why must they do that and sometimes switches in french and say 'miaou' just because well why not.",
-  deliverable: "Will fill in later",
-  materials: nil,
+  title: "Photo to Portrait",
+  description: "Find a photo of a face you would like to illustrate. Use what you've learned about shading, proportion, and measuring techniques. Upload your art at any or each of these stages:\nPracticing pencil techniques\nReference decisions\nAny preliminary practice sketches\nEyes, nose, mouth, ears, and hair works in progress\nFinished portrait\n",
+  deliverable: "Upload a pencil portrait based on a reference photo.",
+  materials: "Paper (preferably heavy weight bristol), Pencils and Lead (at least one hard and one soft), Blenders, Regular Eraser, and Rubber Kneaded Eraser",
   resources: nil
 )
 
-project1 = Project.create!({title: "A Sample Submission", description: "Howl on top of tall thing attack feet sit on human for use lap as chair jump off balcony, onto stranger's head, or licks your face for friends are not food. Gate keepers of hell meowing non stop for food why must they do that. Lies down meow all night having their mate disturbing sleeping humans and thug cat meowzer! so chew foot, or sit in window and stare ooo, a bird! yum yet lick yarn hanging out of own butt. Brown cats with pink ears destroy couch, or who's the baby. Sit on the laptop hide from vacuum cleaner.", user_id: user1.id, assignment_id: painting.id, cover_img_file_name: "watercolor-in-progress.jpeg", cover_img_content_type: "image/jpeg", cover_img_file_size: 16283, cover_img_updated_at: "2017-01-13 22:52:39"})
+#REVIEWS
+Review.create!([
+  {body: "Great class that inspired me to create and keep practicing! Thank you sooo much!", user_id: user3.id, course_id: pointedpen.id},
+  {body: "Excellent introduction! Thorough without being dull.", user_id: user15.id, course_id: pointedpen.id},
+  {body: "It's well explained and does a good job teaching all the basics.", user_id: user13.id, course_id: pointedpen.id},
+  {body: "It's my first time trying pointed pen calligraphy and this class really helped me.", user_id: user4.id, course_id: pointedpen.id},
+])
 
-attachment1 = Attachment.create!({attachable_type: "Assignment", attachable_id: painting.id, document_file_name: "Watercolor-For-Beginners.pdf", document_content_type: "application/pdf", document_file_size: 234278, document_updated_at: "2017-01-14 02:05:13"})
+Review.create!([
+  {body: "A nice intro into Caligraphy. This makes the art seem very achievable for all! I look forward to designing calligraphy with my favorite quotes", user_id: user12.id, course_id: lettering.id},
+  {body: "Highly Recommended! I have wanted to take a calligraphy class forever and am very glad this is where I started.", user_id: user1.id, course_id: lettering.id},
+  {body: "This class explains everything you need to know to get started with attractive hand lettering. Very detailed and clear explanations.", user_id: user9.id, course_id: lettering.id},
+  {body: "This course does a great job introducing you to the beginning steps of learning modern calligraphy!", user_id: user5.id, course_id: lettering.id},
+  {body: "Great techniques and great instructors. Everything is explained very well with demostrations.", user_id: user4.id, course_id: lettering.id}
+])
+
+Review.create!([
+  {body: "I learned so much! This was a really great class. Highly recommended.", user_id: user8.id, course_id: watercolor1.id},
+  {body: "Excellent beginners tutorial. Scarlett is a great teacher -  I love her style. So many great tips and ideas on how to become a better watercolorist!", user_id: user4.id, course_id: watercolor1.id},
+  {body: "Great instruction! Very detailed and clear explanations, with answers to all my questions before they even popped into my head!", user_id: user2.id, course_id: watercolor1.id},
+  {body: "I wholeheartedly recommend this class.  As long as you're not too ambitious in your project, you will have something really cool at the end.", user_id: user7.id, course_id: watercolor1.id},
+  {body: "The videos for this class are extremely helpful.  I watched it once through before even picking up my tools, just to understand the process and visualize.", user_id: user11.id, course_id: watercolor1.id},
+])
+
+Review.create!([
+  {body: "This is a very beginner friendly course! I've really enjoyed the lessons so far :)", user_id: user1.id, course_id: watercolor2.id},
+  {body: "This is a great beginners watercolors class! Loved how simple it was, how clear. I think I'll be returning to the class and the exercises many times as I start my watercolor practice.", user_id: user5.id, course_id: watercolor2.id},
+  {body: "As an aspiring artist, I wholeheartedly recommend this class. The course materials are awesome and the lessons are great fun.", user_id: user10.id, course_id: watercolor2.id},
+  {body: "Excellent beginners tutorial. I really learned so much from this class. By the end of the course you really feel comfortable with your own work.", user_id: user12.id, course_id: watercolor2.id},
+])
+
+Review.create!([
+  {body: "This class is useful and inspiring and provides a lot of helpful tips for someone who is a beginner like me! Thank you.", user_id: user3.id, course_id: mixedmedia.id},
+  {body: "Awesome class and instructor, picked up lots of great tips. Wonderful talent!", user_id: user10.id, course_id: mixedmedia.id},
+  {body: "I love to create and design, and art journaling is such a fun way to boost your creativity! This was a very cool class with lots of usefull information", user_id: user7.id, course_id: mixedmedia.id},
+  {body: "Another high quality set of tutorials. Highly recommended! I'm looking forward to applying these techniques in my own art journals.", user_id: user14.id, course_id: mixedmedia.id},
+])
+
+Review.create!([
+  {body: "Really good class. Good place to start if you are a lost begginer. Excellent teacher, very organized, well prepared.", user_id: user9.id, course_id: knitting.id},
+  {body: "Very very informative! Thorough without being dull. Wish I had taken this course months ago!", user_id: user10.id, course_id: knitting.id},
+  {body: "Perfectly accessible for a complete newbie. Thank you so much, I will definitely try the project! :)", user_id: user11.id, course_id: knitting.id},
+  {body: "Easy to follow instructions in pretty short and clear very useful videos. Fantastic class !", user_id: user14.id, course_id: knitting.id},
+  {body: " Very good explanations of how things work, easy to follow, and great examples. I will be going through all these lessons again very soon.", user_id: user1.id, course_id: knitting.id},
+])
+
+Review.create!([
+  {body: "This class is very technical, academic and detailed. Good for beginners and for those wishing to refresh on their basic skills. ", user_id: user8.id, course_id: drawing.id},
+  {body: "This class really breaks down the tips I needed to work on key elements in such a quick and easy way.  Would recommend it it to anyone wants to learn drawing professionally.", user_id: user6.id, course_id: drawing.id},
+  {body: "Simple and effective lecturing. I learned new techniques that I haven't tried before and it was fun to see how my work improved. ", user_id: user13.id, course_id: drawing.id},
+  {body: "An excellent class on realistic pencil drawing .  Everything flowed and made sense, and was really well explained. ", user_id: user11.id, course_id: drawing.id},
+])
+
+Review.create!([
+  {body: "Great Class! Loved it! After this class my drawing improved quite dramatically.", user_id: user12.id, course_id: charcoal.id},
+  {body: "Fantastic techniques, clear guidelines. Observing these artists' work has made my own charcoal portraits so much better.", user_id: user9.id, course_id: charcoal.id},
+  {body: "Great advice for those who are new to drawing and very inspiring for experience artists. Just brilliant!", user_id: user15.id, course_id: charcoal.id},
+  {body: "Well researched class with good coverage of the basics of light/shade and foundational techniques. I had so many aha moments throughout this course.", user_id: user4.id, course_id: charcoal.id},
+  {body: "This is the best online drawing course I have taken! Definitely worth watching if you're wanting to improve your charcoal skills.", user_id: user3.id, course_id: charcoal.id},
+])
+
+Project.create!([
+  {title: "Galaxy Project", description: "I have always had a love for painting and design. This class looked really interesting and overall I couldn't be happier with the finished product and with this class!  In this project, I was playing with different styles of watercolor. I really like mixing colors and playing with transparencies. I'm pretty happy with the way it turned out, but mostly it was a lot of fun just to experiment!",
+  user_id: user4.id, assignment_id: 3, cover_img_file_name: "galaxy-6.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 110128, cover_img_updated_at: "2017-01-20 10:31:42"},
+  {title: "My First Three Scarves!", description: "Thanks for the great first knitting project!  I combined a bunch of the techniques I learned in this class. I was really excited to begin this project and I'm really happy with the way they turned out, even though I had some challenges. ",
+    user_id: user1.id, assignment_id: 7, cover_img_file_name: "scarf-1.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 68009, cover_img_updated_at: "2017-01-20 09:35:57"},
+  {title: "It Matches My Hat", description: "Thanks for the great first knitting project! Learning to knit takes time and effort and it was frustrating when I skipped a stitch here and there. Learning to grip the needles the right way was quite the process. But in the end, I'm really happy with how it turned out. The techniques were all new to me, yet I found them to be intuitive and very relaxing.",
+    user_id: user7.id, assignment_id: 7, cover_img_file_name: "scarf-3.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 104653, cover_img_updated_at: "2017-01-20 09:40:34"},
+  {title: "Tri-Color Scarf", description: "I'm proud to present you my finished piece! I had a BLAST doing this part of the class. I was so excited when I found this class. Knitting this scarf brought me some years back when I made my very first, slightly imperfect scarf. This one turned out much better, but was just as fun to knit.",
+    user_id: user11.id, assignment_id: 7, cover_img_file_name: "scarf-2.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 104116, cover_img_updated_at: "2017-01-20 09:38:27"},
+  {title: "Ink Splotch Galaxy", description: "Thanks for the great beginners watercolor class! I think my project could be better, but I feel like I really learned a lot. All of the techniques were all new to me, and I just completed this basic color study. It takes time and effort but I definitely think I am improving. I am excited to have a place to play and experiment.",
+    user_id: user15.id, assignment_id: 3, cover_img_file_name: "galaxy-4.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 154458, cover_img_updated_at: "2017-01-20 10:29:24"},
+  {title: "Great Face", description: "I had been curious about drawing portraits in pencil for a while until I saw this class and decided to finally start working on it. I only did the final project, but I'm really happy with the way it turned out. I usually use charcoal and pastels, but I think I will try it a few more times to see what else I can come up with. It is really interesting to use new materials and techniques.",
+    user_id: user3.id, assignment_id: 8, cover_img_file_name: "portrait-4.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 88476, cover_img_updated_at: "2017-01-20 09:50:56"},
+  {title: "Watercolor Animals", description: "After trying a lot of different papers and art techniques, i finally finished my Portrait Project.  I really like mixing colors and playing with transparencies. The techniques were not new to me, but they were very informative and useful in brushing up my skills. I have been practicing with different styles and also playing with different kinds of watercolor. I'm really happy with the way it turned out.",
+    user_id: user12.id, assignment_id: 1, cover_img_file_name: "owl.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 127671, cover_img_updated_at: "2017-01-20 09:53:51"},
+  {title: "Landscape ", description: "Overall I couldn't be happier with the finished product and with this class!  I first did a pencil sketch first to use as a guide for the watercolor version. I combined a bunch of the techniques I learned in this class. Playing with different watercolor techniques and media was really fun. ",
+    user_id: user14.id, assignment_id: 1, cover_img_file_name: "landscape-1.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 84340, cover_img_updated_at: "2017-01-20 10:00:58"},
+  {title: "Rainbow Galaxy", description: "There are so many beautiful galaxies... but I have to rely on photos to paint them. I've never used watercolor before so it was interesting to see how it turned out. It ended up being a little tougher that I thought it would be. It's amazing i to know how much goes into a piece of art! I'm looking forward to practicing more and I can't wait to try more of your classes...",
+    user_id: user2.id, assignment_id: 3, cover_img_file_name: "galaxy-3.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 144148, cover_img_updated_at: "2017-01-20 10:23:39"},
+  {title: "In Contemplation", description: "I would like to start off by saying that I LOVED this project so much.  I decided to use these lessons in my daily sketchbook journal. It was exciting to have a place to play, experiment, and develop my own style. So far I really love all the experiments and practice stuff we've been doing. I combined a bunch of the techniques I learned in this class and I've decided I love portrait drawing, especially with pencil! Thanks.",
+    user_id: user1.id, assignment_id: 8, cover_img_file_name: "portrait-2.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 69896, cover_img_updated_at: "2017-01-20 09:46:43"},
+  {title: "Pencil Portrait # 1", description: "This ended up being a little tougher that I thought it would be.  I typically draw in charcoal, and I've never used mechanical pencils for blending before so it was interesting to try new techniques. After much effort and diligent practice I bring you my final project. Overall I couldn't be happier with the finished product and with this class! ",
+    user_id: user8.id, assignment_id: 8, cover_img_file_name: "portrait-1.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 128528, cover_img_updated_at: "2017-01-20 09:43:35"},
+  {title: "Nebulous Nebula", description: "I combined a bunch of the techniques I learned in this class. I was so excited when I found this class. It's just what I needed. I had a BLAST doing this part of the class -- the universe is fascinating! This is work in progress, but I'm really happy with what I have so far.",
+    user_id: user9.id, assignment_id: 3, cover_img_file_name: "galaxy-5.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 117653, cover_img_updated_at: "2017-01-20 10:26:15"}
+])
+
+food = Project.create!({title: "Coffee and Cake", description: "Thanks for the great watercolor class! The tutorials were really useful and I enjoyed practicing with different styles. I try to keep myself amused when practicing by choosing different subject matter, so I decided to go with food paintings for my project. The result is a combination of diligent practice and a combination of different watercolor techniques and tips learned from this course. Overall I couldn't be happier.",
+  user_id: user5.id, assignment_id: 3, cover_img_file_name: "coffeemug.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 106588, cover_img_updated_at: "2017-01-20 10:14:13"})
+plant = Project.create!({title: "Trio of Green", description: "I would like to start off by saying that I LOVED this project so much.  I decided to use those lessons in my daily sketchbook journal.  Here are some examples of what I've been working on. I combined a bunch of the techniques I learned in this class to make three different paintings of a plant from a photo I found online. I don't have a lot of brushes so it was a difficult to do the thin lines. Most of the techniques were new to me, yet I found them to be very useful and well explained.",
+  user_id: user6.id, assignment_id: 1, cover_img_file_name: "plant-1.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 110363, cover_img_updated_at: "2017-01-20 10:18:30"})
+motel = Project.create!({title: "On the Highway", description: "So far I really love all the experiments and practice stuff we've been doing. I really like mixing colors and playing with transparencies. This is work in progress,  I am experimenting with a bunch of the techniques I learned in this class. See the attachments for another version I did of this same photo. I am excited to have a place to play and experiment. Thanks for the great class and I can't wait to try more Artistera classes!",
+  user_id: user13.id, assignment_id: 1, cover_img_file_name: "motel-2.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 80042, cover_img_updated_at: "2017-01-20 10:04:54"})
+hiking = Project.create!({title: "Hiking at Dusk", description: "I have always had a love for watercolors and painting,  and now would like to concentrate on developing a painting style of my own. I was so excited when I found this class. I had a blast playing with different watercolor techniques and media. I'm love the way my landscape turned out, and the water was difficult but the whale photo turned into a painting I'm really proud of.",
+  user_id: user3.id, assignment_id: 1, cover_img_file_name: "sunset-2.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 97601, cover_img_updated_at: "2017-01-20 10:11:17"})
+
+Attachment.create!([
+  {attachable_type: "Assignment", attachable_id: painting.id, document_file_name: "Watercolor-For-Beginners.pdf", document_content_type: "application/pdf", document_file_size: 234278, document_updated_at: "2017-01-14 02:05:13"},
+  {attachable_type: "Project", attachable_id: motel.id, document_file_name: "motel-1.jpg", document_content_type: "image/jpeg", document_file_size: 78969, document_updated_at: "2017-01-20 10:04:56"},
+  {attachable_type: "Project", attachable_id: hiking.id, document_file_name: "whale-1.jpg", document_content_type: "image/jpeg", document_file_size: 100778, document_updated_at: "2017-01-20 10:11:19"},
+  {attachable_type: "Project", attachable_id: food.id, document_file_name: "breakfast.jpg", document_content_type: "image/jpeg", document_file_size: 146727, document_updated_at: "2017-01-20 10:14:15"},
+  {attachable_type: "Project", attachable_id: plant.id, document_file_name: "plant-2.jpg", document_content_type: "image/jpeg", document_file_size: 110994, document_updated_at: "2017-01-20 10:18:32"},
+  {attachable_type: "Project", attachable_id: plant.id, document_file_name: "plant-3.jpg", document_content_type: "image/jpeg", document_file_size: 122699, document_updated_at: "2017-01-20 10:18:32"},
+  {attachable_type: "Assignment", attachable_id: painting.id, document_file_name: "lizard.jpg", document_content_type: "image/jpeg", document_file_size: 107278, document_updated_at: "2017-01-20 10:19:11"}
+])

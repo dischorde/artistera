@@ -19,6 +19,13 @@ class Reviews extends React.Component {
     this.props.requestCourseReviews(this.props.params.courseId);
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.params.courseId !== this.props.params.courseId) {
+      this.props.requestCourseReviews(newProps.params.courseId);
+      this.props.clearReviewErrors();
+    }
+  }
+
   openModal(id) {
     return e => {
       this.setState({

@@ -25,12 +25,12 @@ class Assignment extends React.Component {
 
     if (assignment.materials) {
       materialsHeader = <h4>Materials</h4>;
-      materials = <p>{assignment.materials}</p>;
+      materials = <p dangerouslySetInnerHTML={{__html: assignment.materials}}></p>;
     }
 
     if (assignment.resources) {
       resourcesHeader = <h4>Resources</h4>;
-      resources = <p>{assignment.resources}</p>;
+      resources = <p dangerouslySetInnerHTML={{__html: assignment.resources}}></p>;
     }
 
     return (

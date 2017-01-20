@@ -37,3 +37,16 @@
   flex-direction: column;
   padding-top: 40px;
 }
+
+p > a {
+  color: $dark-green;
+}
+
+p > a:hover {
+  color: $dark-sage;
+}
+
+p > em {
+  font-family: $lato;
+  font-weight: bold;
+}
