@@ -286,5 +286,5 @@ Attachment.create!([
 {attachable_type: "Project", attachable_id: 2, document_file_name: "wip-dog-1.jpg", document_content_type: "image/jpeg", document_file_size: 64574, document_updated_at: "2017-01-20 18:05:56"},
 {attachable_type: "Project", attachable_id: 2, document_file_name: "wip-dog-2.jpg", document_content_type: "image/jpeg", document_file_size: 59500, document_updated_at: "2017-01-20 18:05:57"},
 {attachable_type: "Project", attachable_id: 2, document_file_name: "wip-dog-3.jpg", document_content_type: "image/jpeg", document_file_size: 61420, document_updated_at: "2017-01-20 18:05:57"},
-{attachable_type: "Project", attachable_id: 21, document_file_name: "orvieto-2.jpg", document_content_type: "image/jpeg", document_file_size: 110968, document_updated_at: "2017-01-20 18:16:13"}
+{attachable_type: "Project", attachable_id: 9, document_file_name: "orvieto-2.jpg", document_content_type: "image/jpeg", document_file_size: 110968, document_updated_at: "2017-01-20 18:16:13"}
 ])
