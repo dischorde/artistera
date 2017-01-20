@@ -144,6 +144,25 @@ pencilportrait = Assignment.create!(
   resources: nil
 )
 
+Attachment.create!([
+  {attachable_type: "Assignment", attachable_id: painting.id, document_file_name: "Watercolor-For-Beginners.pdf", document_content_type: "application/pdf", document_file_size: 234278, document_updated_at: "2017-01-20 19:12:23"},
+  {attachable_type: "Assignment", attachable_id: galaxy.id, document_file_name: "Watercolor-For-Beginners.pdf", document_content_type: "application/pdf", document_file_size: 234278, document_updated_at: "2017-01-20 19:12:23"},
+  {attachable_type: "Assignment", attachable_id: pencilportrait.id, document_file_name: "example-pdf.pdf", document_content_type: "application/pdf", document_file_size: 143080, document_updated_at: "2017-01-20 19:11:18"},
+  {attachable_type: "Assignment", attachable_id: charcoaldrawing.id, document_file_name: "example-pdf.pdf", document_content_type: "application/pdf", document_file_size: 143080, document_updated_at: "2017-01-20 19:11:18"},
+  {attachable_type: "Assignment", attachable_id: scarf.id, document_file_name: "example-pdf.pdf", document_content_type: "application/pdf", document_file_size: 143080, document_updated_at: "2017-01-20 19:11:18"},
+  {attachable_type: "Assignment", attachable_id: tenminute.id, document_file_name: "example-pdf.pdf", document_content_type: "application/pdf", document_file_size: 143080, document_updated_at: "2017-01-20 19:11:18"},
+  {attachable_type: "Assignment", attachable_id: quote.id, document_file_name: "example-pdf.pdf", document_content_type: "application/pdf", document_file_size: 143080, document_updated_at: "2017-01-20 19:11:18"},
+  {attachable_type: "Assignment", attachable_id: envelope.id, document_file_name: "example-pdf.pdf", document_content_type: "application/pdf", document_file_size: 143080, document_updated_at: "2017-01-20 19:11:18"},
+  {attachable_type: "Assignment", attachable_id: painting.id, document_file_name: "Example-Attachment-African-Daisy.gif", document_content_type: "image/gif", document_file_size: 2624, document_updated_at: "2017-01-20 19:12:20"},
+  {attachable_type: "Assignment", attachable_id: galaxy.id, document_file_name: "Example-Attachment-Dandelion.gif", document_content_type: "image/gif", document_file_size: 2728, document_updated_at: "2017-01-20 19:12:20"},
+  {attachable_type: "Assignment", attachable_id: pencilportrait.id, document_file_name: "Example-Attachment-Diamond-Heart.gif", document_content_type: "image/gif", document_file_size: 2836, document_updated_at: "2017-01-20 19:12:21"},
+  {attachable_type: "Assignment", attachable_id: charcoaldrawing.id, document_file_name: "Example-Attachment-Diamond-Square.gif", document_content_type: "image/gif", document_file_size: 2204, document_updated_at: "2017-01-20 19:12:21"},
+  {attachable_type: "Assignment", attachable_id: scarf.id, document_file_name: "Example-Attachment-Ixia.gif", document_content_type: "image/gif", document_file_size: 2613, document_updated_at: "2017-01-20 19:12:21"},
+  {attachable_type: "Assignment", attachable_id: tenminute.id, document_file_name: "Example-Attachment-Pear.gif", document_content_type: "image/gif", document_file_size: 1748, document_updated_at: "2017-01-20 19:12:21"},
+  {attachable_type: "Assignment", attachable_id: quote.id, document_file_name: "Example-Attachment-Ruby-Heart.gif", document_content_type: "image/gif", document_file_size: 2781, document_updated_at: "2017-01-20 19:12:22"},
+  {attachable_type: "Assignment", attachable_id: envelope.id, document_file_name: "Example-Attachment-Strawberry.gif", document_content_type: "image/gif", document_file_size: 1947, document_updated_at: "2017-01-20 19:12:22"}
+])
+
 #REVIEWS
 Review.create!([
   {body: "Great class that inspired me to create and keep practicing! Thank you sooo much!", user_id: user3.id, course_id: pointedpen.id},
@@ -232,18 +251,18 @@ Project.create!([
   {title: "My First Three Scarves!",
     description: "Thanks for the great first knitting project!  I combined a bunch of the techniques I learned in this class. I was really excited to begin this project and I'm really happy with the way they turned out, even though I had some challenges. ",
     user_id: user13.id, assignment_id: scarf.id, cover_img_file_name: "scarf-1.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 68009, cover_img_updated_at: "2017-01-20 17:50:07"},
-  {title: "Placeholder Currently",
-    description: "Fill in online",
-    user_id: user1.id, assignment_id: quote.id, cover_img_file_name: nil, cover_img_content_type: nil, cover_img_file_size: nil, cover_img_updated_at: nil},
+    {title: "Be True To YOU!!", description: "I had a BLAST doing this part of the class. I combined a bunch of the techniques I learned in this class, including watercolor lettering and pens. I was so excited when I found this class. It's just what I needed. This is work in progress, and I definitely need to practice a lot, but I'm really happy with what I have so far.\r\n",
+  user_id: user1.id, assignment_id: quote.id,
+    cover_img_content_type: "image/jpeg", cover_img_file_size: 98613, cover_img_updated_at: "2017-01-20 19:34:16"},
   {title: "Orvieto Duomo Sculptures",
     description: "These charcoal drawings are from the reliefs on the side of the Duomo in Orvieto, Italy. I really enjoyed drawing the carvings with charcoal as you can capture so many different variations of light and shade so easily. I love that it almost looks 3D! Smaller size drawings are definitely harder, but luckily since the reliefs themselves are not perfect representations of people they are very forgiving to draw. (Drawings by / copyright Katarina Rossi)",
     user_id: user2.id, assignment_id: charcoaldrawing.id, cover_img_file_name: "orvieto-cover.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 94010, cover_img_updated_at: "2017-01-20 18:16:12"},
   {title: "Night Owl",
     description: "After trying a lot of different papers and art techniques, i finally finished my Portrait Project.  I really like mixing colors and playing with transparencies. The techniques were not new to me, but they were very informative and useful in brushing up my skills. I have been practicing with different styles and also playing with different kinds of watercolor. I'm really happy with the way it turned out.",
     user_id: user6.id, assignment_id: painting.id, cover_img_file_name: "owl.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 127671, cover_img_updated_at: "2017-01-20 17:42:34"},
-  {title: "Placeholder Currently",
-    description: "Fill in online",
-    user_id: user1.id, assignment_id: tenminute.id, cover_img_file_name: nil, cover_img_content_type: nil, cover_img_file_size: nil, cover_img_updated_at: nil},
+  {title: "Mixed Media in 10 Minutes", description: "I was so excited when I found this class. It's just what I needed!\r\nI am excited to have a place to play and experiment with different materials, techniques and media. I have been practicing with different styles and also playing with different colored inks. The 10 minute challenge was intense but super fun. I've decided to use those lessons in my daily sketchbook art journal. ",
+    user_id: user1.id, assignment_id: tenminute.id,
+    cover_img_file_name: nil, cover_img_content_type: nil, cover_img_file_size: nil, cover_img_updated_at: nil},
   {title: "Rainbow Galaxy",
     description: "There are so many beautiful galaxies... but I have to rely on photos to paint them. I've never used watercolor before so it was interesting to see how it turned out. It ended up being a little tougher that I thought it would be. It's amazing i to know how much goes into a piece of art! I'm looking forward to practicing more and I can't wait to try more of your classes...",
     user_id: user12.id, assignment_id: galaxy.id, cover_img_file_name: "galaxy-5.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 117653, cover_img_updated_at: "2017-01-20 17:51:11"},
@@ -261,8 +280,8 @@ Project.create!([
     user_id: user10.id, assignment_id: galaxy.id, cover_img_file_name: "galaxy-3.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 144148, cover_img_updated_at: "2017-01-20 17:56:21"}
 ])
 
-calligraphy1 = Project.create!({title: "Placeholder Currently", description: "Fill in online",
-    user_id: user1.id, assignment_id: envelope.id})
+calligraphy1 = Project.create!({title: "Lettering A Letter", description: "I would like to start off by saying that I LOVED this project so much. I have always had a love for typography and hand lettering. I was playing with different styles of letters, changing the slant and getting used to the nibs and ink. The result is a combination of diligent practice, what I learnt, script that I love and my hand.",
+      user_id: user1.id, assignment_id: envelope.id, cover_img_file_name: "addressed-letter.jpg", cover_img_content_type: "image/jpeg", cover_img_file_size: 42276, cover_img_updated_at: "2017-01-20 19:41:28"})
 
 motel = Project.create!({title: "On the Highway",
   description: "So far I really love all the experiments and practice stuff we've been doing. I really like mixing colors and playing with transparencies. This is work in progress,  I am experimenting with a bunch of the techniques I learned in this class. See the attachments for another version I did of this same photo. I am excited to have a place to play and experiment. Thanks for the great class and I can't wait to try more Artistera classes!",
