@@ -21,7 +21,9 @@ const ProjectDetailReducer = (state = _nullState, action) => {
 
   switch(action.type) {
     case RECEIVE_PROJECT_DETAILS:
-      return merge(newState, action.project);
+      merge(newState, action.project);
+      newState.attachments = action.project.attachments;
+      return newState;
     case REPLACE_ATTACHMENTS:
       newState.attachments = action.attachments;
       return newState;

@@ -66,13 +66,6 @@ class ProjectDetail extends React.Component {
       deleteable = true;
     }
 
-    if (project.attachments) {
-      attachments =
-        <AttachmentList attachments={project.attachments}
-                        deleteable={deleteable}
-                        deleteAttachment={this.props.deleteAttachment}/>;
-    }
-
     let errors;
     if (this.props.attachmentErrors.length > 0) {
       errors = this.props.attachmentErrors.map( (message, i) => <li key={i}>{message}</li>);
@@ -93,11 +86,13 @@ class ProjectDetail extends React.Component {
           <section className="project-cover-img">
             <img src={project.cover_img_src} />
           </section>
-          {attachments}
+          <AttachmentList attachments={project.attachments}
+                          deleteable={deleteable}
+                          deleteAttachment={this.props.deleteAttachment}/>
         </section>
         <section className="project-details">
           <div className="proj-edit-and-delete">
-            <h3>Uploaded to {project.course_title}</h3>
+            <h3>Uploaded to <Link to={`/courses/${project.id}/about`}>{project.course_title}</Link></h3>
             {editButton}{deleteButton}
           </div>
           <h4>Updated {project.updated_at} ago</h4>
