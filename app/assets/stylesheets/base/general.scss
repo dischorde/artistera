@@ -63,6 +63,7 @@ button, .button {
 
 button:hover, .button:hover {
   background: $flying-bird;
+  cursor: pointer;
 }
 
 textarea {

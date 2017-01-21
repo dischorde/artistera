@@ -129,19 +129,6 @@ class ProjectForm extends React.Component {
     }
   }
 
-  catLoader() {
-    return (
-      <div class="box">
-        <div class="cat">
-          <div class="cat__body"></div>
-          <div class="cat__body"></div>
-          <div class="cat__tail"></div>
-          <div class="cat__head"></div>
-        </div>
-      </div>
-    );
-  }
-
   render() {
     let errors;
     let errorStatus = "hidden-errors";
