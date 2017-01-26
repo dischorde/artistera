@@ -48,7 +48,7 @@ Artistera is a single-page application built on Rails and React.js, with many de
 ## Additional Features
 Future features to implement in Artistera are rich-text formatting for project submissions, course enrollments, a user dashboard, and sorting courses by category.
 
-[artistera]: https://www.artistera.info
+[artistera]: http://www.artistera.info
 [proposal]: ./docs/README.md
 [backend]: ./docs/backend.md
 [frontend]: ./docs/frontend.md
