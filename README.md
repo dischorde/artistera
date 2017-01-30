@@ -17,9 +17,54 @@
 <br>
 ![](https://s3.amazonaws.com/artistera-pro/screenshots/splash-2.jpg)
 
-## Course Projects
-Artistera courses consist of a video playlist, resources, and a course assignment. Users are able to upload their projects with a title and description along with an uploaded cover image and variable number of image or PDF attachments. Projects are then displayed in a course gallery and detail view.
+## About Courses & Search
+Artistera courses consist of a video playlist, resources, and a course assignment. Courses are displayed on a class index view, and can also be discovered through the search field in the nav bar which dynamically displays matching classes as the user types.
 
+```
+  redirect() {
+    if (this.props.location.pathname !== "/search") {
+      this.props.router.push("/search");
+    }
+  }
+
+  handleSearch (e) {
+    this.props.searchCourses(e.currentTarget.value).then(
+      this.redirect
+    );
+  }
+
+  render() {
+    return (
+      <section className="nav-search">
+        <input type="text" className="search-bar" onChange={this.handleSearch} placeholder="Search Courses By Keyword..." />
+      </section>
+    );
+  }
+```
+
+Using an onchange event handler, an AJAX call is sent for each letter typed in the search bar, redirecting to the search display route only if the user is currently on another route (using the React Router). On the back end, the index controller takes an optional query parameter, returning courses filtered to only include those that have the query string in their title or description.
+
+```
+  def index
+    @courses = Course.all
+    if query && !query.empty?
+      @courses = @courses.where(
+        [
+          'title ILIKE :query OR description ILIKE :query',
+          { query: "%#{query}%" }
+        ]
+      )
+    end
+  end
+
+  def query
+    params[:search]
+  end
+```
+
+
+## Course Projects
+Users are able to upload projects to courses on the course assignment page. Projects consist of a title and description along with an uploaded cover image and variable number of image or PDF attachments, uploaded to S3 using AJAX and the paperclip gem. Projects are then displayed in a course gallery and detail view.
 
 ![](https://s3.amazonaws.com/artistera-pro/screenshots/project-detail.jpg)
 
