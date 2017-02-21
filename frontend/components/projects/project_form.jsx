@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import {Editor, EditorState} from 'draft-js';
 
 class ProjectForm extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class ProjectForm extends React.Component {
     this.readyAttachments = this.readyAttachments.bind(this);
     this.updateAttachments = this.updateAttachments.bind(this);
     this.disable = this.disable.bind(this);
+    this.updateEditor = (editorState) => this.setState({editorState});
   }
 
   getInitialState() {
@@ -27,7 +29,8 @@ class ProjectForm extends React.Component {
         user_id: this.props.userId,
         disabled: false,
         loaderOn: "loader-off",
-        attachments: []
+        attachments: [],
+        editorState: EditorState.createEmpty()
       });
     }
     else {
@@ -40,7 +43,8 @@ class ProjectForm extends React.Component {
         user_id: this.props.userId,
         disabled: false,
         loaderOn: "loader-off",
-        attachments: []
+        attachments: [],
+        editorState: EditorState.createEmpty()
       });
     }
   }
@@ -153,6 +157,7 @@ class ProjectForm extends React.Component {
 
     return (
     <div className="project-form">
+      <Editor editorState={this.state.editorState} onChange={this.updateEditor} />
         <form>
           <section className="project-fields">
             <label htmlFor="project-title">Project Title</label>
