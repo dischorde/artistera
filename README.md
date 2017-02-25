@@ -2,8 +2,6 @@
 
 [Artistera.info][artistera] is a web application inspired by Skillshare for taking online, bite-sized art courses. Don't know Skillshare? Think Coursera, but shorter, smaller classes with less academic subject matter.
 
- Artistera  is a personal project by Katarina Rossi.
-
 ![](https://s3.amazonaws.com/artistera-pro/screenshots/splash-1.jpg)
 
 ## Features
