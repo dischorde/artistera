@@ -11,4 +11,6 @@ class Course < ApplicationRecord
   has_one :assignment
   has_many :projects, through: :assignment, source: :projects
   has_many :reviews
+  has_many :enrollments
+  has_many :students, through: :enrollments, source: :user
 end

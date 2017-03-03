@@ -8,6 +8,9 @@ class User < ApplicationRecord
   has_many :projects
   has_many :reviews
 
+  has_many :enrollments
+  has_many :enrolled_courses, through: :enrollments, source: :course
+
   def self.find_by_credentials(email, password)
     user = User.find_by_email(email)
     user && user.is_password?(password) ? user : nil
