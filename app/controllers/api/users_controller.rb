@@ -3,10 +3,15 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in(@user)
-      render :show
+      render :info
     else
       render json: @user.errors.full_messages, status: 422
     end
+  end
+
+  def show
+    @enrolled_courses = current_user.enrolled_courses
+    @projects = current_user.projects
   end
 
   private
