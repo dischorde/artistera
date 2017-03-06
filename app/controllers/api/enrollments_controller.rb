@@ -12,8 +12,9 @@ class Api::EnrollmentsController < ApplicationController
   end
 
   def destroy
-    enrollment = Enrollment.find(user_id: enroll_params[:user_id],
-                                 course_id: enroll_params[:course_id])
+    # using /api/courses/:course_id/enrollments/:id where :id is user_id
+    enrollment = Enrollment.find_by(user_id: enroll_params[:id],
+                                    course_id: enroll_params[:course_id])
     enrollment.destroy
     render 'api/users/info'
   end
@@ -25,7 +26,7 @@ class Api::EnrollmentsController < ApplicationController
   end
 
   def enroll_params
-    params.require(:enrollment).permit(:user_id, :course_id)
+    params.permit(:user_id, :id, :course_id)
   end
 
 end
