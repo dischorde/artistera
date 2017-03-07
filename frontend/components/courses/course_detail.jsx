@@ -24,8 +24,11 @@ class CourseDetail extends React.Component {
     const currentPath = this.props.location.pathname.split("/");
     return (
       <div className="course-detail">
-        <EmbeddedPlaylist title={course.title} playlistSrc={course.playlist_src} />
-        <CourseTabs id={this.props.params.courseId} active={currentPath[currentPath.length - 1]} />
+        <EmbeddedPlaylist title={course.title}
+                          playlistSrc={course.playlist_src} />
+        <CourseTabs id={this.props.params.courseId}
+                    active={currentPath[currentPath.length - 1]}
+                    currentUser={this.props.currentUser} />
         {this.props.children}
       </div>
 

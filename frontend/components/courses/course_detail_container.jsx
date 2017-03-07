@@ -4,7 +4,8 @@ import { clearErrors } from '../../actions/projects_actions.js';
 import CourseDetail from './course_detail.jsx';
 
 const mapStateToProps = state => ({
-  courseDetail: state.courseDetail
+  courseDetail: state.courseDetail,
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({

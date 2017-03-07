@@ -4,11 +4,24 @@
   border-bottom: 1px solid #D1D1D1;
 }
 
+.tabs-wrapper {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .tab-items {
   display: flex;
   flex-direction: row;
-  width: 75%;
 }
+
+.enrolled {
+  height: 35px;
+  padding: 0 10px 0 10px;
+  min-width: 75px;
+}
+
 .tab-items a {
   padding: 26px 21px;
 
