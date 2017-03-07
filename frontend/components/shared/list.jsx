@@ -10,7 +10,6 @@ const List = ({elements, listType}) => {
     ));
   }
 
-  // TODO: Remove fake classes here for styling
   return (
       <section className="item-list">
         <ul>
