@@ -20,7 +20,40 @@
   height: 35px;
   padding: 0 10px 0 10px;
   min-width: 75px;
+  background: $sage;
+  border-bottom: 1px solid $darker-sage;
 }
+
+.unenrolled {
+  height: 35px;
+  padding: 0 10px 0 10px;
+  min-width: 75px;
+}
+
+.enrolled:hover {
+  background: $darker-sage;
+  border-bottom: 1px solid $dark-sage;
+}
+
+.enrolled::before {
+  content: "\f097";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding: 0 8px 0 0;
+}
+
+.unenrolled::before {
+  content: "\f02e";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding: 0 8px 0 0;
+}
+
+
 
 .tab-items a {
   padding: 26px 21px;

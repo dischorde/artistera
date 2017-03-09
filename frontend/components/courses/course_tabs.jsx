@@ -22,6 +22,16 @@ class CourseTabs extends React.Component {
   render () {
     const { id, currentUser } = this.props;
     const { about, reviews, assignment, projects } = this.state;
+    let enrollmentButton;
+
+    if (currentUser.enrollments.includes(parseInt(id))) {
+      enrollmentButton = <button className="enrolled">Unenroll</button>;
+    }
+    else {
+      enrollmentButton = <button className="unenrolled">Enroll</button>;
+    }
+
+
     return (
       <section className="course-tabs">
         <section className="tabs-wrapper">
@@ -31,7 +41,7 @@ class CourseTabs extends React.Component {
             <Link to={`/courses/${id}/assignment`} className={assignment}><li >Course Project</li></Link>
             <Link to={`/courses/${id}/projects`} className={projects}><li>All Projects</li></Link>
           </ul>
-          <button className="enrolled">{ currentUser.enrollments.includes(parseInt(id)) ? 'Unenroll' : 'Enroll' }</button>
+          {enrollmentButton}
         </section>
       </section>
     );
