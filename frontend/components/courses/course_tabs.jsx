@@ -31,7 +31,7 @@ class CourseTabs extends React.Component {
             <Link to={`/courses/${id}/assignment`} className={assignment}><li >Course Project</li></Link>
             <Link to={`/courses/${id}/projects`} className={projects}><li>All Projects</li></Link>
           </ul>
-          <button className="enrolled">{ `${currentUser.enrollments} & ${id} = ${currentUser.enrollments.includes(id)}`}</button>
+          <button className="enrolled">{ currentUser.enrollments.includes(parseInt(id)) ? 'Unenroll' : 'Enroll' }</button>
         </section>
       </section>
     );
