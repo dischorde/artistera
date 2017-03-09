@@ -20,17 +20,20 @@ class CourseTabs extends React.Component {
   }
 
   render () {
-    const { id, currentUser } = this.props;
+    const { id, currentUser, enroll, unenroll } = this.props;
     const { about, reviews, assignment, projects } = this.state;
     let enrollmentButton;
 
     if (currentUser.enrollments.includes(parseInt(id))) {
-      enrollmentButton = <button className="enrolled">Unenroll</button>;
+      enrollmentButton =
+      <button onClick={() => unenroll(id, currentUser.id)}
+                                 className="enrolled">Unenroll</button>;
     }
     else {
-      enrollmentButton = <button className="unenrolled">Enroll</button>;
+      enrollmentButton =
+      <button onClick={() => enroll(id, currentUser.id)}
+              className="unenrolled">Enroll</button>;
     }
-
 
     return (
       <section className="course-tabs">
@@ -38,7 +41,7 @@ class CourseTabs extends React.Component {
           <ul className="tab-items">
             <Link to={`/courses/${id}/about`} className={about}><li>About</li></Link>
             <Link to={`/courses/${id}/reviews`}  className={reviews}><li>Reviews</li></Link>
-            <Link to={`/courses/${id}/assignment`} className={assignment}><li >Course Project</li></Link>
+            <Link to={`/courses/${id}/assignment`} className={assignment}><li>Course Project</li></Link>
             <Link to={`/courses/${id}/projects`} className={projects}><li>All Projects</li></Link>
           </ul>
           {enrollmentButton}

@@ -28,7 +28,9 @@ class CourseDetail extends React.Component {
                           playlistSrc={course.playlist_src} />
         <CourseTabs id={this.props.params.courseId}
                     active={currentPath[currentPath.length - 1]}
-                    currentUser={this.props.currentUser} />
+                    currentUser={this.props.currentUser}
+                    enroll={this.props.enroll}
+                    unenroll={this.props.unenroll} />
         {this.props.children}
       </div>
 
