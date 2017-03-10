@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import SessionForm from './session_form.jsx';
-import { signup, signin, receiveErrors } from '../../actions/session_actions.js';
+import { signin, receiveErrors } from '../../actions/session_actions.js';
+import { signup } from '../../actions/users_actions.js';
 
 const mapStateToProps = ({session}, {location}) => ({
   loggedIn: Boolean(session.currentUser),
