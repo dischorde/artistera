@@ -13,6 +13,7 @@ import AssignmentContainer from './courses/assignment/assignment_container.jsx';
 import ReviewsContainer from './courses/reviews/reviews_container.jsx';
 import SearchIndexContainer from './search/search_index_container.jsx';
 import SplashPageContainer from './splash_page/splash_page_container.jsx';
+import ProfileContainer from './profile/profile_container.jsx';
 
 const Root = ({ store }) => {
   const _redirectIfLoggedIn = (nextState, replace) => {
@@ -45,6 +46,7 @@ const Root = ({ store }) => {
           </Route>
           <Route path="/projects/:projectId" component={ ProjectDetailContainer } onEnter={ _ensureSignedIn } />
           <Route path="/search" component={ SearchIndexContainer } onEnter={ _ensureSignedIn } />
+          <Route path="/profile" component={ ProfileContainer } onEnter={ _ensureSignedIn } />
         </Route>
       </Router>
     </Provider>
