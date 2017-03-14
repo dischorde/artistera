@@ -4,7 +4,7 @@ import configureStore from './store/store.js';
 import Root from './components/root.jsx';
 import Modal from 'react-modal';
 // import { deleteEnrollment, createEnrollment } from './util/enrollments_api_util.js';
-import { enroll, unenroll } from './actions/session_actions.js';
+import { enroll, unenroll, requestProfile } from './actions/user_actions.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     Modal.setAppElement(document.body);
@@ -19,8 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.store = store;
     // window.deleteEnrollment = deleteEnrollment;
     // window.createEnrollment = createEnrollment;
-    window.enroll = enroll;
-    window.unenroll = unenroll;
+    // window.enroll = enroll;
+    // window.unenroll = unenroll;
+    window.requestProfile = requestProfile;
 
     ReactDOM.render(<Root store={ store }/>, root);
 });

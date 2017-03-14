@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { requestCourse } from '../../actions/courses_actions.js';
 import { clearErrors } from '../../actions/projects_actions.js';
-import { enroll, unenroll } from '../../actions/users_actions.js';
+import { enroll, unenroll } from '../../actions/user_actions.js';
 import CourseDetail from './course_detail.jsx';
 
 const mapStateToProps = state => ({
