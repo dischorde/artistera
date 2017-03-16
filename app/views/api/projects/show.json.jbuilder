@@ -8,6 +8,7 @@ json.updated_at time_ago_in_words(@project.updated_at)
 json.user_id @project.user_id
 json.author_name "#{author.first_name} #{author.last_name}"
 json.course_title @project.course.title
+json.course_id @project.course.id
 json.assignment_id @project.assignment_id
 
 if @project.attachments

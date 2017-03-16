@@ -92,7 +92,7 @@ class ProjectDetail extends React.Component {
         </section>
         <section className="project-details">
           <div className="proj-edit-and-delete">
-            <h3>Uploaded to <Link to={`/courses/${project.id}/about`}>{project.course_title}</Link></h3>
+            <h3>Uploaded to <Link to={`/courses/${project.course_id}/about`}>{project.course_title}</Link></h3>
             {editButton}{deleteButton}
           </div>
           <h4>Updated {project.updated_at} ago</h4>
