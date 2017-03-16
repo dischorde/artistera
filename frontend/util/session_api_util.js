@@ -14,9 +14,10 @@ export const signin = (user) => (
   })
 );
 
-export const logout = () => (
-  $.ajax({
+export const logout = () => {
+  localStorage.removeItem('currentUser');
+  return $.ajax({
     method: 'DELETE',
     url: '/api/session'
-  })
-);
+  });
+};

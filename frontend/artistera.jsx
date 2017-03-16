@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     Modal.setAppElement(document.body);
     const root = document.getElementById('root');
     let store;
-    if (window.currentUser) {
-      const preloadedState = { session: { currentUser: window.currentUser } };
+    if (localStorage.currentUser) {
+      const preloadedState = { session: { currentUser: JSON.parse(localStorage.currentUser) } };
       store = configureStore(preloadedState);
     } else {
       store = configureStore();
