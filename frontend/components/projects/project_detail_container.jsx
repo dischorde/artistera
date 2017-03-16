@@ -6,7 +6,7 @@ const mapStateToProps = state => ({
   projectDetail: state.projectDetail,
   attachmentErrors: state.projectDetail.errors.attachments,
   projectErrors: state.projectDetail.errors.project,
-  userId: state.session.currentUser.id
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({

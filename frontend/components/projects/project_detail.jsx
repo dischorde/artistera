@@ -57,7 +57,7 @@ class ProjectDetail extends React.Component {
     let deleteable = false;
     let attachments, editButton, deleteButton;
 
-    if (project.user_id === this.props.userId) {
+    if (this.props.currentUser && (project.user_id  === this.props.currentUser.id)) {
       editButton =
         <button className="edit-delete"
                 onClick={this.openModal}>Edit</button>;
