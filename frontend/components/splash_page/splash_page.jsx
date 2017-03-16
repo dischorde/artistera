@@ -71,7 +71,7 @@ class SplashPage extends React.Component {
           </section>
           <section className="splash-projects-text">
             <h2>Student Projects</h2>
-            <p>{"Every Artistera class has has a project that give students an opportunity to practice what they learned and hone their skills. Check out these exciting submissions from our community!"}</p>
+            <p>{"Every Artistera class has a project that gives students an opportunity to practice what they've learned and hone their skills. Check out these exciting submissions from our community!"}</p>
             <button onClick={this.goTo("/projects")}>See Projects</button>
           </section>
         </section>
