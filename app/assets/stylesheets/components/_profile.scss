@@ -12,13 +12,42 @@
 }
 
 .user-edit-form {
-  display: block;
-  height: 400px;
-  background: pink;
+  display: flex;
   margin-bottom: 20px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 20px;
+}
+
+.user-info {
+  padding: 20px 20px 20px 70px;
 }
 
 .profile-wrapper h2 {
   margin-left: 8px;
   padding: 30px 0 30px 0;
+}
+
+.profile-wrapper h1, h3 {
+  padding: 10px;
+}
+
+.prof-gravatar {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: $flying-bird; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, $red , $flying-bird); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, $red, $flying-bird); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, $red, $flying-bird); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, $red, $flying-bird);
+}
+
+.prof-gravatar-letter {
+  color: $white;
+  position: absolute;
+  top: 45px;
+  left: 53px;
+  z-index: 1;
+  font-size: 60px;
 }
