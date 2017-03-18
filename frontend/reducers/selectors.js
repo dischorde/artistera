@@ -12,6 +12,14 @@ export const selectAllReviews = (state) => {
   return values(state.reviews);
 };
 
+export const selectEnrolledCourses = (profile) => {
+  return values(profile.enrollments);
+};
+
+export const selectOwnProjects = (profile) => {
+  return values(profile.projects);
+};
+
 export const selectFourProjects = (state) => {
   return selectAllProjects(state).slice(0, 4);
 };

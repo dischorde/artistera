@@ -1,9 +1,11 @@
 import { connect } from 'react-redux';
 import { requestProfile } from '../../actions/user_actions.js';
+import { selectEnrolledCourses, selectOwnProjects } from '../../reducers/selectors.js';
 import Profile from './profile.jsx';
 
 const mapStateToProps = state => ({
-  profile: state.profile,
+  enrollments: selectEnrolledCourses(state.profile),
+  projects: selectOwnProjects(state.profile),
   currentUser: state.session.currentUser
 });
 
