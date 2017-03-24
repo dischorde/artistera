@@ -13,17 +13,34 @@ class Profile extends React.Component {
   }
 
   render() {
-    const { enrollments, projects, currentUser } = this.props;
+    const { enrollments, projects, currentUser, joinDate } = this.props;
     return (
       <section className="profile-wrapper">
         <section className="user-edit-form">
-          <div className="prof-gravatar">
-            <span className="prof-gravatar-letter">{currentUser.first_name[0]}</span>
-            <img src={`https://www.gravatar.com/avatar/${currentUser.gravatar_hash}?d=blank`}/>
+          <div className="user-info-wrapper">
+            <div className="prof-gravatar">
+              <span className="prof-gravatar-letter">{currentUser.first_name[0]}</span>
+              <img src={`https://www.gravatar.com/avatar/${currentUser.gravatar_hash}?d=blank`}/>
+            </div>
+            <div className="user-info">
+              <h1>{`${currentUser.first_name} ${currentUser.last_name}`}</h1>
+              <h3>{currentUser.email}</h3>
+              <h4>Joined {joinDate}</h4>
+            </div>
           </div>
-          <div className="user-info">
-            <h1>{`${currentUser.first_name} ${currentUser.last_name}`}</h1>
-            <h3>{currentUser.email}</h3>
+          <div className="profile-buttons">
+            <ul>
+              <li>
+                <button>Edit Account</button>
+              </li>
+              <li className="enrolled-count">
+                <span className="bold-num">{enrollments.length}</span> Enrolled Courses
+              </li>
+              <li className="project-count">
+                <span className="bold-num">{projects.length}</span> Projects
+              </li>
+            </ul>
+
           </div>
         </section>
         <section className="profile-courses">

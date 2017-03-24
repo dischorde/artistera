@@ -10,8 +10,7 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    @enrolled_courses = current_user.enrolled_courses
-    @projects = current_user.projects
+    @current_user = current_user
   end
 
   private

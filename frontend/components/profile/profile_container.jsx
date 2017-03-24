@@ -6,6 +6,7 @@ import Profile from './profile.jsx';
 const mapStateToProps = state => ({
   enrollments: selectEnrolledCourses(state.profile),
   projects: selectOwnProjects(state.profile),
+  joinDate: state.profile.join_date,
   currentUser: state.session.currentUser
 });
 

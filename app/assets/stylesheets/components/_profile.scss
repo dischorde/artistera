@@ -29,6 +29,13 @@
 
 .profile-wrapper h1, h3 {
   padding: 10px;
+  margin-bottom: 0px;
+}
+
+.profile-wrapper h4 {
+  font-weight: 400;
+  padding: 10px;
+  margin-bottom: 0px;
 }
 
 .prof-gravatar {
@@ -50,4 +57,54 @@
   left: 53px;
   z-index: 1;
   font-size: 60px;
+}
+
+.prof-gravatar img {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+.user-info-wrapper {
+  display: flex;
+  width: 75%;
+}
+
+.profile-buttons {
+  width: 25%;
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+}
+
+.profile-buttons li {
+  padding: 10px;
+}
+
+.bold-num {
+  font-weight: 700;
+}
+
+.profile-buttons button {
+  width: 100%;
+}
+
+.enrolled-count::before {
+  content: "\f02e";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding: 0 8px 0 0;
+}
+
+.project-count::before {
+  content: "\f1fc";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding: 0 8px 0 0;
 }
