@@ -11,8 +11,8 @@
 - Image and PDF attachments for user projects
 - Searching for courses by keyword
 - Course Reviews
-
 <br>
+
 ![](https://s3.amazonaws.com/artistera-pro/screenshots/splash-2.jpg)
 
 ## About Courses & Search
