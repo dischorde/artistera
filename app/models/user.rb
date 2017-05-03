@@ -3,7 +3,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
   attr_reader :password
-  after_initialize :ensure_session_token, :create_gravatar_hash
+  after_initialize :ensure_session_token
 
   has_many :projects
   has_many :reviews
@@ -18,6 +18,11 @@ class User < ApplicationRecord
     self.password_digest = BCrypt::Password.create(password)
   end
 
+  def email=(email)
+    self.gravatar_hash = Digest::MD5.hexdigest(email) if email
+    super(email)
+  end
+
   def reset_session_token!
     self.session_token = SecureRandom.urlsafe_base64(16)
     self.save!
@@ -29,10 +34,6 @@ class User < ApplicationRecord
   end
 
   private
-
-  def create_gravatar_hash
-    self.gravatar_hash ||= Digest::MD5.hexdigest(self.email)
-  end
 
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64(16)
