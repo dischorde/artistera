@@ -6,7 +6,7 @@ RSpec.describe Project, type: :model do
   it { should have_attached_file(:cover_img) }
   it do
     should validate_attachment_content_type(:cover_img)
-      .allowing('image/png', 'image/gif')
+      .allowing('image/png', 'image/gif', 'image/jpeg')
       .rejecting('text/plain', 'text/xml')
   end
 
