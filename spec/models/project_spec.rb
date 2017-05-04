@@ -13,5 +13,5 @@ RSpec.describe Project, type: :model do
   it { should belong_to(:user) }
   it { should belong_to(:assignment) }
   it { should have_many(:attachments) }
-  it { should have_one(:course) }
+  it { should have_one(:course).through(:assignment) }
 end
