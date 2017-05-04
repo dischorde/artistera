@@ -3,9 +3,4 @@ class Review < ApplicationRecord
 
   belongs_to :user
   belongs_to :course
-
-  def siblings
-    self.course.reviews
-  end
-
 end

@@ -18,10 +18,6 @@ RSpec.describe User, type: :model do
   it { should have_many(:projects) }
   it { should have_many(:reviews) }
 
-  it "creates a password digest when a password is given" do
-    expect(user.password_digest).to_not be_nil
-  end
-
   it "creates a gravatar hash when a email is given" do
     expect(user.gravatar_hash).to_not be_nil
   end
@@ -29,6 +25,18 @@ RSpec.describe User, type: :model do
   it "creates a session token before validation" do
     user.valid?
     expect(user.session_token).to_not be_nil
+  end
+
+  describe "password encryption" do
+    it "creates a password digest when a password is given" do
+      expect(user.password_digest).to_not be_nil
+    end
+
+    it "does not save password to the database" do
+      user.save!
+      saved_user = User.find_by(email: "imatest@email.com")
+      expect(saved_user.password).to_not eq("ismypass")
+    end
   end
 
   describe "#reset_session_token!" do
