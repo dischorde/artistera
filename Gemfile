@@ -42,6 +42,8 @@ gem "font-awesome-rails"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :development do
@@ -55,6 +57,14 @@ group :development do
   gem 'binding_of_caller'
   gem 'annotate'
   gem 'bullet'
+end
+
+group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'launchy'
+  gem 'shoulda-matchers', '~> 3.0'
 end
 
 group :production do

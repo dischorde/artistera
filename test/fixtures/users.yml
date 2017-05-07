@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  email: MyString
-  gravatar_hash: MyString
-
-two:
-  email: MyString
-  gravatar_hash: MyString
