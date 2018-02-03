@@ -35,9 +35,11 @@ gem 'seed_dump'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'figaro'
-gem "paperclip", '~> 5.0.0'
+gem "paperclip"
 gem 'aws-sdk', '>= 2.0'
 gem "font-awesome-rails"
+gem "cloudinary"
+gem "paperclip-cloudinary"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -61,7 +63,6 @@ end
 
 group :test do
   gem 'faker'
-  gem 'capybara'
   gem 'guard-rspec'
   gem 'launchy'
   gem 'shoulda-matchers', '~> 3.0'

@@ -24,7 +24,7 @@ charcoal = Course.create!(title: "Introduction to Charcoal Drawing",
 description: "This course introduces classical drawing principles in charcoal. In this class, you will learn materials to use as well as how to analyze light and shadow utilizing the 5-value system, apply form/cast shadow edge distinctions to model form using charcoal, and incorporate perspective, composition and value pattern concepts. You will also learn how to accurately draw portraits using gesture, correct proportions, and light and shade and practice anatomy and shapes for drawing the eyes, nose, mouth, hair, and ears. You will also practice using charcoal to depict landscapes and other objects.\nWhile you draw, you will also discover the subjects and techniques that work best for you in your charcoal projects.",
 assignment_summary: "Draw a portrait, landscape, or something from a reference photo.",
 playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD3Z28e66B0SEaKwE6nL6PnA",
-cover_img_src: "http://res.cloudinary.com/dischorde/image/upload/v1517622788/intro-charcoal-md_zalnll.jpg"
+cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/intro-charcoal-md.jpg"
 )
 
 watercolor1 = Course.create!(
@@ -32,46 +32,46 @@ watercolor1 = Course.create!(
   description: "Learn to create beautiful watercolor illustrations with this series of basic watercolor tutorials by Scarlett Damen. This course is designed for the beginning watercolorist, but includes some full length intermediate lessons and speed painting demonstrations as well - so there is surely something to gain for even more experienced artists. You'll learn about proper materials including paints, brushes, and paper types, as well as how to mix colors, create washes, paint wet on wet, and more.\nFrom the creator:  'On WATERCOLOR by Scarlett Damen youll find lots of watercolor painting tutorials for beginners and new artists with simple step by step classes covering how to use watercolour and basics and beginner watercolor techniques. (everything from how to paint a graduated and veragrated wash, chasing the right watercolour paper, to using salt, plastic wrap, soap and alcohol in your paintings as lets not forget watercolour texture medium and of course everything you ever wanted to know about watercolour masking fluid to name a few.) Ive also created many full length watercolour lessons for intermediate and advanced watercolorists wanting to learn how to paint botanical art in watercolour. These classes include both speed paintings with commentary and full watercolor painting step by step demonstrations to help you learn to master watercolour techniques as well as a lots of art tips, watercolour facts and fun painting tricks to help you along your art journey.\nSee more of Scarlett's work at www.ScarlettDamenArtistIllustrator.com",
   assignment_summary: "Use what you've learned to create four separate watercolors - from a view, a plant, a food, and a photo. Share your favorite!",
   playlist_src: "https://www.youtube.com/embed/videoseries?list=PLnGy6GHuNNvT-B7r8ICqgDzQoY49aANgc",
-  cover_img_src: "http://res.cloudinary.com/dischorde/image/upload/v1517622789/watercolor-intro-md_whbiot.jpg"
+  cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/watercolor-intro-md.jpg"
   )
 
 watercolor2 = Course.create!({title: "Watercolor Exercises",
   description: "Tune in with Meredith from The Witty Gritty Paper Co. for some super valuable tips on how to avoid beginner mistakes and master this awesome medium in no time. This approachable collection of beginner exercises and tutorials will give you confidence and help you find your own style in no time.\n<em>What to expect from this class:</em>\nPainting inspiration!\nA variety of demos and tutorials\nBasic principles of color theory and how to use watercolors\nRecommended materials specific to every tutorial",
   assignment_summary: "When I get around to writing this, the project is upload your favorites from following along",
   playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD0Dux53ndLcOB1Hm1lyW03k",
-  cover_img_src: "http://res.cloudinary.com/dischorde/image/upload/v1517622789/watercolor-exercises-md_va2vgh.jpg"
+  cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/watercolor-exercises-md.jpg"
 })
 
 lettering = Course.create!({title: "Modern Brush Calligraphy and Hand Lettering",
   description: "In this class we’ll be breaking down hand lettering and brush calligraphy and making it simple for you to learn! We'll cover the fundamentals, strokes, practice stokes, pen pressure, and the way to break all of those rules to form your own style. This course breaks down the basics of basic strokes necessary to properly use brush pens of all sizes. Starting using brush pens is a learning curve itself, apart from learning hand lettering. You want to get accustomed to the way to properly use the brush tip, as its variable pressure and thickness can make or break your piece. \nYou will learn simple strategies such as when to perform different motions with your fingers, wrists, and applying variable pressure, in conjunction with very desirable techniques like mixing color throughout your letters while drawing them and adding bounce to your hand lettering.",
   assignment_summary: "Make your favorite quote into a piece of lettering art",
   playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD1MatWNEZo-8s1k5h-9j65f",
-  cover_img_src: "http://res.cloudinary.com/dischorde/image/upload/v1517622788/brush-lettering-md_ta13ri.jpg"})
+  cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/brush-lettering-md.jpg"})
 
 pointedpen = Course.create!({title: "Pointed Pen Calligraphy 101",
   description: "A 9 video introduction to pointed pen calligraphy for beginners, from OpenInkStand Art & Calligraphy. This warm and inviting beginner course covers the basic techniques, tools, and tips for creating gorgeous calligraphy. Whether youre a seasoned calligraphist or a total beginner this course provides you the tools to transform your work. Each lesson is full of insider tips, from how different styles of nibs affect your slant to how your breathing can influence your writing.\n<em>You'll find out how to:\n</em>Improve your slants, strokes, and spacing technique\nElevate your capital letters and flourishes\nCultivate your personal penmanship style",
   assignment_summary: "Use your new skills to write a letter and address an envelope in calligraphy",
   playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD3LTvgDjirM835uCCwvuASw",
-  cover_img_src: "http://res.cloudinary.com/dischorde/image/upload/v1517622789/pointed-pen-callig-md_qhp5zv.jpg"})
+  cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/pointed-pen-callig-md.jpg"})
 
 mixedmedia = Course.create!({title: "Mixed Media Art Journaling",
   description: "In this course from Maremi SmallArt, students will discover new possibilities by mixing media and using varied drawing surfaces to create art journaling layouts and mixed media art. This is a perfect series for every art journaler and mixed media artist, for those who are just beginning and also for those who already have a passion for creating! This course will teach you techniques to start an art journaling practice, covering everything from how to break in a page to how to use various mediums and surfaces to add texture and vitality, as well as convey a personal expression. Demos will focus on design, balance, weight, texture,  and the appropriate use of mediums.\n<em>This class contains:</em>\nAn introduction to mixed media for beginners\nAn overview of supplies and how to use them\nDemonstrations\nAnd an art challenge!",
   assignment_summary: "Your assignment is to do a 10 minute art challege, like Marta does in the last video",
   playlist_src: "https://www.youtube.com/embed/videoseries?list=PLTJAAMQ-RjD1w-qGjjqDUG3sP4RFYBca2",
-  cover_img_src: "http://res.cloudinary.com/dischorde/image/upload/v1517622788/mixed-media-md_v7gyyo.jpg"})
+  cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/mixed-media-md.jpg"})
 
 knitting = Course.create!(title: "Knitting 101",
   description: "Learn to knit with Knitting 101 by NEW STITCH A DAY. In this class, you'll first learn how to to make a slip knot. The slip knot is the very first thing you must make before starting most knitting projects, as you need to know how to make a slip not in order to begin most cast ons. Next the class will break down the basics, including the four fundamental techniques at the heart of knitting the cast on, the knit stitch, the purl stitch, and the cast off. By the end, youll have your very own scarf, and the skills to begin more new and exciting knitting projects.\nCheck out written instructions at <a href='http://newstitchaday.com/category/guides/knitting-101/'>http://newstitchaday.com/category/guides/knitting-101/</a>",
   assignment_summary: "Make a basic scarf",
   playlist_src: "https://www.youtube.com/embed/videoseries?list=PLR1ElIXW5YKJFob5KJvHS01Tj30Zyy2EQ",
-  cover_img_src: "http://res.cloudinary.com/dischorde/image/upload/v1517622788/knitting-101-md_zkxzli.jpg"
+  cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/knitting-101-md.jpg"
 )
 
 drawing = Course.create!(title: "Drawing Lessons for Beginners",
   description: "In this series of videos from the Art of Wei, you will learn the basics and how to get started drawing your own beautiful life-like pencil portraits.  This is an in-depth investigation into basic drawing principles which face both fine artists and illustrators. Composition, perspective, proportion, focal point, value pattern and the use of light and shadow are developed. We'll cover: \n<em>Materials:</em> Which materials and references will make for the best portraits.\n<em>Basic Sketching:</em> How to compose your basic sketch through gesture and accurate proportions.Planes. How to understand light and shade on the planes of the face.\n<em>Features and Forms:</em> How to structure the forms of your subject's eyes, nose, mouth, and hair. \n<em>Finishing Touches:</em> How to capture those finishing details that will really make your portrait special.\nThis drawing course deals with the understanding and application of perspective, proportion, gesture, and foreshortening. Through the use of line, tone, and modeling, students will learn to depict objects as wells as figures.",
   assignment_summary: "Attempt a portrait in pencil from a reference photo.",
   playlist_src: "https://www.youtube.com/embed/videoseries?list=PLhnHFsOn0cgdjNrlX4qeytqAUIhRqKbAI",
-  cover_img_src: "http://res.cloudinary.com/dischorde/image/upload/v1517622788/begging-drawing-md_xr5ibx.jpg"
+  cover_img_src: "https://s3.amazonaws.com/artistera-pro/cover-imgs/begging-drawing-md.jpg"
 )
 
 # ASSIGNMENT
