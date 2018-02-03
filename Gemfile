@@ -35,8 +35,7 @@ gem 'seed_dump'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'figaro'
-gem "paperclip"
-gem 'aws-sdk', '>= 2.0'
+gem "paperclip",'~> 5.2.1'
 gem "font-awesome-rails"
 gem "cloudinary"
 gem "paperclip-cloudinary"
